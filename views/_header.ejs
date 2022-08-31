@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/css/_header.css">
+
+<header>
+    <div id="text">
+        <h1>codial</h1>
+    </div>
+    <div id="user">
+        <% if(locals.user){ %>
+            <div id="text">
+                <h5><%= user.name %></h5>
+            </div>
+            <div id="info">
+                <p><a href="">Log out</a></p>
+            </div>
+        <% } else { %>
+            <div id="info">
+                <p><a href="">Log in </a></p>
+            </div>
+
+        <% } %>
+    </div>
+</header>
