@@ -1,4 +1,8 @@
-header {
+body {
+  margin: 0;
+}
+
+body header {
   width: 100%;
   height: 100px;
   background-color: #6a82fb;
@@ -7,39 +11,82 @@ header {
   align-items: center;
 }
 
-header #text {
+body header #text {
   text-align: center;
+  margin-left: 5px;
 }
 
-header #text h1 {
+body header #text h1 {
   font-family: sans-serif;
   color: white;
 }
 
-header #user {
-  width: 200px;
+body header #user {
+  width: auto;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header #user #text h5 {
-  font-family: sans-serif;
-  color: white;
-}
-
-header #user #info {
-  width: auto;
-  height: auto;
+body header #user #text {
+  margin-right: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-header #user #info a {
-  list-style: none;
+body header #user #text h4 {
+  font-family: sans-serif;
+  color: white;
+}
+
+body header #user #info form input {
+  width: 80px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 8px;
+  background-color: burlywood;
+  text-align: center;
+  border: none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+body header #user #info1 {
+  width: 80px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body header #user #info1 p a {
   text-decoration: none;
   color: white;
   font-family: sans-serif;
+  font-size: 1rem;
+}
+
+body header #user #info2 {
+  width: 80px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body header #user #info2 p a {
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
 }

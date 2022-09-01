@@ -7,14 +7,19 @@
     <div id="user">
         <% if(locals.user){ %>
             <div id="text">
-                <h5><%= user.name %></h5>
+                <h4><%= user.first + ' ' + user.last %></h4>
             </div>
             <div id="info">
-                <p><a href="">Log out</a></p>
+                <form action="/destroy" method="post">
+                    <input type="submit" value="Log out">
+                </form>
             </div>
         <% } else { %>
-            <div id="info">
+            <div id="info1">
                 <p><a href="/login">Log in </a></p>
+            </div>
+            <div id="info2">
+                <p><a href="/">Sign up </a></p>
             </div>
 
         <% } %>
