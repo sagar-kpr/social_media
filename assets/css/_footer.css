@@ -1,0 +1,15 @@
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: darkgray;
+}
+
+footer #text {
+  text-align: center;
+  margin-left: 5px;
+}
+
+footer #text h1 {
+  font-family: sans-serif;
+  color: white;
+}

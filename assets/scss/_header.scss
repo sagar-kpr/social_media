@@ -1,92 +1,90 @@
 body{
-
-margin: 0;
-
-header{
-    width:100%;
-    height: 100px;
-    background-color:#6a82fb ;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    #text {
-        text-align: center;
-        margin-left: 5px;
-        h1{
-            font-family: sans-serif;
-            color: white;
-        }
-    }
-    #user{
-        width:auto;
-        height: 50px;
+    margin: 0;
+    header{
+        width:100%;
+        height: 100px;
+        background-color:#6a82fb ;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        #text{
-            margin-right: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            h4{
+        
+        #text {
+            text-align: center;
+            margin-left: 5px;
+            h1{
                 font-family: sans-serif;
                 color: white;
             }
         }
-        #info{
-            form{
-                input{
-                    width: 80px;
-                    height: 40px;
-                    margin: 5px;
-                    border-radius: 8px;
-                    background-color: burlywood;
-                    text-align: center;
-                    border: none;
-                    color: white;
+        #user{
+            width:auto;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            #text{
+                margin-right: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h4{
                     font-family: sans-serif;
-                    font-size: 1rem;
-                    cursor: pointer;
+                    color: white;
                 }
             }
-        }
-        #info1{
-            width: 80px;
-            height: 40px;
-            margin: 10px;
-            border-radius: 8px;
-            background-color: burlywood;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            p{
-                a{
-                text-decoration: none;
-                color: white;
-                font-family: sans-serif;
-                font-size: 1rem;
+            #info{
+                form{
+                    input{
+                        width: 80px;
+                        height: 40px;
+                        margin: 5px;
+                        border-radius: 8px;
+                        background-color: burlywood;
+                        text-align: center;
+                        border: none;
+                        color: white;
+                        font-family: sans-serif;
+                        font-size: 1rem;
+                        cursor: pointer;
+                    }
                 }
             }
-        }#info2{
-            width: 80px;
-            height: 40px;
-            margin: 10px;
-            border-radius: 8px;
-            background-color: burlywood;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            p{
-                a{
+            #info1{
+                width: 80px;
+                height: 40px;
+                margin: 10px;
+                border-radius: 8px;
+                background-color: burlywood;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    a{
                     text-decoration: none;
                     color: white;
                     font-family: sans-serif;
                     font-size: 1rem;
+                    }
+                }
+            }#info2{
+                width: 80px;
+                height: 40px;
+                margin: 10px;
+                border-radius: 8px;
+                background-color: burlywood;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-family: sans-serif;
+                        font-size: 1rem;
+                    }
                 }
             }
-        }
 
+        }
     }
-}
 }

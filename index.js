@@ -8,6 +8,7 @@ const passport = require('passport');
 const passport_local = require('./config/passport_local');
 const sassMiddlware = require('node-sass-middleware'); 
 const session = require('express-session');
+const mongoStore = require('connect-mongo');
 app.use(sassMiddlware({
     src: './assets/scss',
     dest: './assets/css',
@@ -33,9 +34,14 @@ app.use(session({
     secret: 'kwality',
     saveUninitialized: false,
     resave: false,
+    outputStyle: 'expended',
     cookie: {
         maxAge: (1000*60*20)
-    }
+    },
+    store: mongoStore.create({
+        mongoUrl:'mongodb://localhost/social_development',
+        autoRemove:'disabled',
+    })
 }));
 
 app.use(passport.initialize());
