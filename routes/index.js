@@ -11,4 +11,6 @@ router.get('/profile', passport.checkAuthentication ,homeController.profile);
 router.post('/destroy', homeController.destroy );
 router.post('/create', homeController.create);
 router.post('/session', passport.authenticate('local', {failureRedirect: '/login'}), homeController.session);
+router.use('/post', require('./post'));
+
 module.exports = router;

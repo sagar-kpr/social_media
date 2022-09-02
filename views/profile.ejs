@@ -5,19 +5,25 @@
         <h1>My Posts</h1>
     </div>
     <div>
-        <form action="" method="post">
-            <textarea type="text" placeholder="Type here..." required cols="40" rows="8"></textarea>
-            <input type="submit" value="Post">
-        </form>
+        <% if(locals.user){ %>
+            <form action="/post/create" method="post">
+                <textarea type="text" name="content" placeholder="Type here..." required cols="40" rows="8"></textarea>
+                <input type="submit" value="Post">
+            </form>
+        <% } %>
+        
     </div>
     <div id="post-box">
         <ul>
-            <li>
-                <div id="posts">
-                    <h3><%= %></h3>
-                    <p><%=  %></p>
-                </div>
-            </li>
+            <% for(let post of posts) { %>
+                <li>
+                    <div id="posts">
+                        <h3><%= post.user.first + ' ' + post.user.last %></h3>
+                        <p><%= post.content %></p>
+                    </div>
+                </li>
+            <% } %>
+            
         </ul>
     </div>
 </main>

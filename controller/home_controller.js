@@ -1,4 +1,5 @@
 const User = require('../models/user_schema');
+const Post = require('../models/post_schema');
 
 module.exports.home = function(req,res){
     if(req.isAuthenticated()){
@@ -16,7 +17,12 @@ module.exports.login = function(req,res){
 }
 
 module.exports.profile = function(req,res){
-    return res.render('profile');
+    Post.find({}).populate('user').exec(function(err,post){
+        if(err) { console.log('finding in post'); return }
+        return res.render('profile', {
+            posts:post
+        });
+    });    
 }
 
 
