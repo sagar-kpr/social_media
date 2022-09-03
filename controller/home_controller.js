@@ -17,7 +17,15 @@ module.exports.login = function(req,res){
 }
 
 module.exports.profile = function(req,res){
-    Post.find({}).populate('user').exec(function(err,post){
+    Post.find({})
+    .populate('user')
+    .populate({
+        path: 'comment',
+        populate : {
+            path: 'user'
+        }
+    })
+    .exec(function(err,post){
         if(err) { console.log('finding in post'); return }
         return res.render('profile', {
             posts:post

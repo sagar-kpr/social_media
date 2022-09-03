@@ -1,29 +1,67 @@
 <link rel="stylesheet" type="text/css" href="/css/profile.css">
 
 <main>
-    <div >
-        <h1>My Posts</h1>
+    <div id="text-box">
+        <h1>Feeds</h1>
     </div>
-    <div>
+    <div id="form-box">
         <% if(locals.user){ %>
             <form action="/post/create" method="post">
                 <textarea type="text" name="content" placeholder="Type here..." required cols="40" rows="8"></textarea>
-                <input type="submit" value="Post">
+                <input id="post-btn" type="submit" value="Post">
             </form>
         <% } %>
         
     </div>
     <div id="post-box">
-        <ul>
+        <% for(post of posts) { %>
+            <div id="posts">
+                <h3><%= post.user.first + ' ' + post.user.last %> <small>posted a status </small></h3>
+                <div>
+                    <p><%= post.content %></p>
+                </div>
+                <div id="comment-box">
+                    <form action="/comment/create" method="post">
+                        <input type="text" name="content" required>
+                        <input type="hidden" name="post" value="<%=post._id %>"> 
+                        <input type="submit" value="add coment">
+                    </form>
+                        
+                    <% for(comment of post.comment) { %>
+                        <div id="comment">
+                            <p><%= comment.content %></p>
+                        </div>
+                                
+                                
+                    <% } %> 
+                    
+                    
+                </div>
+                
+            </div>
+        <% } %>    
+
+        <!-- <ul>
             <% for(let post of posts) { %>
                 <li>
                     <div id="posts">
-                        <h3><%= post.user.first + ' ' + post.user.last %></h3>
-                        <p><%= post.content %></p>
+                        <h3><%= post.user.first + ' ' + post.user.last %> <small>posted a status </small></h3>
+                        <div>
+                            <p><%= post.content %></p>
+                        </div>
+                        <div>
+                            <p>thisis comment</p>
+                        </div>
+                        <div>
+                            <form action="/comment/create" method="post">
+                                <input type="text">
+                            </form>
+                        </div>
+                        
                     </div>
                 </li>
             <% } %>
             
-        </ul>
+        </ul> -->
     </div>
 </main>
