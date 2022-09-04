@@ -12,5 +12,10 @@ module.exports.create = function(req,res){
     });
 }
 
-
+module.exports.destroy = function(req,res){
+    Post.findById(req.params._id, function(err,post){
+        post.remove();
+        
+    })
+}
 

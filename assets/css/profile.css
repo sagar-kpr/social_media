@@ -1,5 +1,6 @@
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
+  max-height: 15px;
 }
 
 ::-webkit-scrollbar-track {
@@ -7,14 +8,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-  min-height: 5px;
-  border-radius: 50px;
+  /*background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 50px;*/
+  visibility: hidden;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 50px;
+  visibility: visible;
 }
 
 main {
@@ -79,8 +83,6 @@ main #post-box {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid gray;
-  overflow: scroll;
   /*ul{
             width:90%;
             height: 90%;
@@ -122,34 +124,100 @@ main #post-box {
 main #post-box #posts {
   width: 90%;
   height: auto;
-  background-color: aliceblue;
+  background-color: beige;
   text-align: left;
-  border-radius: 2px;
+  border-radius: 10px;
   margin-top: 20px;
 }
 
-main #post-box #posts h3 {
-  margin: 5px;
+main #post-box #posts #name-and-del-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+main #post-box #posts #name-and-del-box div h1 {
+  margin: 5px 5px 5px 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
 }
 
-main #post-box #posts p {
+main #post-box #posts #post-content {
+  width: 80%;
+  min-height: 100px;
+  margin-left: 2rem;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+main #post-box #posts #post-content p {
   margin-left: 5px;
-  color: dimgray;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   word-wrap: break-word;
+  padding: 5px;
 }
 
 main #post-box #posts #comment-box {
-  width: 200px;
-  height: auto;
-  border: 1px solid red;
+  width: auto;
+  max-width: 80%;
+  max-height: 400px;
+  margin-left: 2rem;
 }
 
-main #post-box #posts #comment-box #comment {
+main #post-box #posts #comment-box #comment-scroller {
+  max-width: 100%;
+  max-height: 300px;
+  overflow: scroll;
+  margin: 20px 0 20px 0;
+}
+
+main #post-box #posts #comment-box #comment-scroller #comment {
   width: auto;
-  height: auto;
-  border: 1px solid pink;
+  max-width: 70%;
+  margin: 20px 20px 20px 5px;
+  min-height: 60px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  word-wrap: break-word;
+}
+
+main #post-box #posts #comment-box #comment-scroller #comment h3 {
+  margin: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main #post-box #posts #comment-box #comment-scroller #comment p {
+  margin-left: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main #post-box #posts #comment-box form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+main #post-box #posts #comment-box form textarea {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+main #post-box #posts #comment-box form #comment-btn {
+  width: auto;
+  height: 35px;
+  background-color: cornflowerblue;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  margin: 20px;
 }

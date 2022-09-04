@@ -2,7 +2,7 @@
 
 <main>
     <div id="text-box">
-        <h1>Feeds</h1>
+        <h1>My Feeds</h1>
     </div>
     <div id="form-box">
         <% if(locals.user){ %>
@@ -16,28 +16,38 @@
     <div id="post-box">
         <% for(post of posts) { %>
             <div id="posts">
-                <h3><%= post.user.first + ' ' + post.user.last %> <small>posted a status </small></h3>
-                <div>
+                <div id="name-and-del-box">
+                    <div>
+                        <h1><%= post.user.first + ' ' + post.user.last %> <small>posted a status </small></h1>
+                    </div>
+                    <% if(locals.user.id == post.user.id) { %>
+                        <div><h1><a href="/post/destroy/:post.id">x</a></h1></div>
+                    <% } %>
+                    
+                </div>
+                <div id="post-content">
                     <p><%= post.content %></p>
                 </div>
                 <div id="comment-box">
+                    <div id="comment-scroller">
+                        <% for(comment of post.comment) { %>
+            
+                            <div id="comment">
+                                <h3><%= comment.user.first + ' ' + comment.user.last %></h3>
+                                <p><%= comment.content %></p>
+                            </div>
+                                    
+                                    
+                        <% } %> 
+                    </div>
                     <form action="/comment/create" method="post">
-                        <input type="text" name="content" required>
+                        <textarea type="text" name="content" placeholder="Add comment..." required cols="40" rows="3"></textarea>
                         <input type="hidden" name="post" value="<%=post._id %>"> 
-                        <input type="submit" value="add coment">
+                        <input type="submit" value="Comment" id="comment-btn">
                     </form>
-                        
-                    <% for(comment of post.comment) { %>
-                        <div id="comment">
-                            <p><%= comment.content %></p>
-                        </div>
-                                
-                                
-                    <% } %> 
-                    
                     
                 </div>
-                
+            
             </div>
         <% } %>    
 
