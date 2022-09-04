@@ -21,7 +21,7 @@
                         <h1><%= post.user.first + ' ' + post.user.last %> <small>posted a status </small></h1>
                     </div>
                     <% if(locals.user.id == post.user.id) { %>
-                        <div><h1><a href="/post/destroy/:post.id">x</a></h1></div>
+                        <div><h1><a href="/post/destroy/<%=post.id%>">x</a></h1></div>
                     <% } %>
                     
                 </div>
