@@ -142,6 +142,15 @@ main #post-box #posts #name-and-del-box div h1 {
   font-weight: 500;
 }
 
+main #post-box #posts #name-and-del-box div {
+  margin: 2px 10px 10px 10px;
+}
+
+main #post-box #posts #name-and-del-box div span a {
+  text-decoration: none;
+  color: dimgray;
+}
+
 main #post-box #posts #post-content {
   width: 80%;
   min-height: 100px;
@@ -185,9 +194,24 @@ main #post-box #posts #comment-box #comment-scroller #comment {
   word-wrap: break-word;
 }
 
-main #post-box #posts #comment-box #comment-scroller #comment h3 {
-  margin: 2px;
+main #post-box #posts #comment-box #comment-scroller #comment #comment-and-del-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+main #post-box #posts #comment-box #comment-scroller #comment #comment-and-del-box div h3 {
+  margin: 0 0 0 -5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main #post-box #posts #comment-box #comment-scroller #comment #comment-and-del-box div {
+  margin: 2px 10px 10px 10px;
+}
+
+main #post-box #posts #comment-box #comment-scroller #comment #comment-and-del-box div span a {
+  text-decoration: none;
+  color: dimgray;
 }
 
 main #post-box #posts #comment-box #comment-scroller #comment p {
