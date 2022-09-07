@@ -13,7 +13,7 @@ module.exports.create = function(req,res){
                     
                     post.comment.push(comments);
                     post.save();
-                    res.redirect('/profile');
+                    res.redirect('back');
                 }
             );
 

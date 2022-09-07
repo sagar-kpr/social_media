@@ -1,16 +1,40 @@
 <link rel="stylesheet" type="text/css" href="/css/home.css">
-
 <main>
-    <div id="box">
-        <form action="/create" method="post">
-            <input type="text" name="first" placeholder="First name" required>
-            <input type="text" name="last" placeholder="Last name" required>
-            <input type="text" name="age" placeholder="Age" required>
-            <input type="email" name="email" placeholder="abc@Example.com" required>
-            <input type="password" name="password" placeholder="Create password" required>
-            <input type="password" name="confirm" placeholder="Confirm password" required>
-            <button type="submit">Sign up</button>
-        </form>
-    </div>
-</main>    
+    <section id="my-links">
 
+    </section>
+    <section id="my-feeds">
+        
+        <div id="form-box">
+            <% if(locals.user){ %>
+                <form action="/post/create" method="post">
+                    <textarea type="text" name="content" placeholder="Whats's on your mind, <%= user.first %>" required cols="45" rows="8"></textarea>
+                    <input id="post-btn" type="submit" value="Post">
+                </form>
+            <% } %>
+            
+        </div>
+        <div id="post-box">
+            <% for(post of posts) { %>
+                <%- include('_post') -%>
+            <% } %>    
+        </div>
+    </section>
+    <section id="friends-list">
+        <div>
+            <h3>Friends</h3>
+        </div>
+        <% for(list of users) { %>
+            <% if(locals.user.id != list.id) { %>
+                <div id="friends">
+                    
+                    <p><%= list.first %></p>
+                </div>
+            <% } %>
+            
+        <% } %>
+        
+        
+
+    </section>
+</main>

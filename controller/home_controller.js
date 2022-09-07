@@ -1,22 +1,25 @@
 const User = require('../models/user_schema');
 const Post = require('../models/post_schema');
 
-module.exports.home = function(req,res){
+module.exports.signup = function(req,res){
     if(req.isAuthenticated()){
-        return res.redirect('/profile');
+        return res.redirect('/home');
     }
-    return res.render('home');
+    return res.render('signup');
     
+}
+module.exports.profile = function(req,res){
+    return res.render('profile');
 }
 
 module.exports.login = function(req,res){
     if(req.isAuthenticated()){
-        return res.redirect('/profile');
+        return res.redirect('/home');
     }
     return res.render('login');
 }
 
-module.exports.profile = function(req,res){
+module.exports.home = function(req,res){
     Post.find({})
     .populate('user')
     .populate({
@@ -27,9 +30,12 @@ module.exports.profile = function(req,res){
     })
     .exec(function(err,post){
         if(err) { console.log('finding in post'); return }
-        return res.render('profile', {
-            posts:post
-        });
+        User.find({}, function(err,user){
+            return res.render('home', {
+                posts:post,
+                users: user
+            });
+        })
     });    
 }
 
@@ -45,7 +51,7 @@ module.exports.create = function(req,res){
             User.create(req.body, function(err,user){
                 if(err) { console.log('error finding user create2'); return }
 
-                return res.redirect('/login');
+                return res.redirect('/');
             })
         }else{
             return res.redirect('back');
@@ -56,12 +62,12 @@ module.exports.create = function(req,res){
 }
 
 module.exports.session = function(req,res){
-    return res.redirect('/profile');
+    return res.redirect('/home');
 }
 
 module.exports.destroy = function(req,res){
     req.logout(function(err,user){
         if(err) { console.log('error in logout'); return}
-        return res.redirect('/login');
+        return res.redirect('/');
     });
 }

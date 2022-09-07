@@ -1,21 +1,26 @@
 <link rel="stylesheet" type="text/css" href="/css/profile.css">
 
-<main>
-    <div id="text-box">
-        <h1>My Feeds</h1>
+
+<div id="user_profile">
+    <div id="profile">
+        <div id="my-img">
+            
+        </div>
+
     </div>
-    <div id="form-box">
-        <% if(locals.user){ %>
-            <form action="/post/create" method="post">
-                <textarea type="text" name="content" placeholder="Type here..." required cols="40" rows="8"></textarea>
-                <input id="post-btn" type="submit" value="Post">
-            </form>
-        <% } %>
+    <div id="name">
+        <h2><%= user.first + ' ' + user.last %></h2>
+    </div>
+    <div id="about">
+        <div>
+            <img width="25" src="/icons/home (1).png">
+            <span>Punjab, india</span>
+        </div>
+        <div>
+            <img width="25" src="/icons/smartphone.png">
+            <span>8566848794</span>
+        </div>
         
     </div>
-    <div id="post-box">
-        <% for(post of posts) { %>
-            <%- include('_post') -%>
-        <% } %>    
-    </div>
-</main>
+
+</div>
