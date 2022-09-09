@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
     <script src="https://kit.fontawesome.com/baa7d5937a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/css/_header.css">
     <%- style %>
@@ -15,5 +17,26 @@
     <%- body %>
     <%- include('_footer')%>
     <%- script %>
+    <script>
+        <% if(flash.success && flash.success.length > 0) { %>
+            new Noty({
+                theme: 'semanticui',
+                text: '<%= flash.success %>',
+                type: 'success',
+                layout: 'topRight',
+                timeout: 1500,
+                
+            }).show();
+        <% }  else if(flash.error && flash.error.length > 0){ %>
+            new Noty({
+                theme: 'semanticui',
+                text: '<%= flash.error %>',
+                type: 'error',
+                layout: 'topRight',
+                timeout: 1500
+            }).show();
+            
+        <% } %>
+    </script>
 </body>
 </html>

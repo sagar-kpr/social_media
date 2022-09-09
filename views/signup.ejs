@@ -3,6 +3,11 @@
 <main>
     <div id="box">
         <form action="/create" method="post">
+            <% if(flash.error && flash.error.length > 0) { %>
+                <div style="width: 100%; background-color: beige ; color:red; font-family:Verdana, Geneva, Tahoma, sans-serif;">
+                <p ><%= flash.error %></p>
+                 </div>   
+            <% } %> 
             <input type="text" name="first" placeholder="First name" required>
             <input type="text" name="last" placeholder="Last name" required>
             <input type="text" name="age" placeholder="Age" required>

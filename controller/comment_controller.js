@@ -16,6 +16,7 @@ module.exports.create = async function(req,res){
 
             post.comment.push(comments);
             post.save();
+            req.flash('success', 'Comment posted successfully');
             return res.redirect('back');
         }else{
             return res.redirect('back');
@@ -33,6 +34,7 @@ module.exports.destroy = function(req,res){
             let postId = comment.post;
             comment.remove();
             Post.findByIdAndUpdate(postId, { $pull : {comment: req.params.id}}, function(err){
+                req.flash('error', 'Comment deleted successfully');
                 return res.redirect('back');
             });
         }else{

@@ -58,8 +58,10 @@ module.exports.create = async function(req,res){
       
         if(!userFind){
             await User.create(req.body);
+            req.flash('success', "Sign up successfully ");
             return res.redirect('/');
         }else{
+            req.flash('error', "User already exits ")
             return res.redirect('back');
         }
 
@@ -69,12 +71,14 @@ module.exports.create = async function(req,res){
 }
 
 module.exports.session = function(req,res){
+    req.flash('success', "loged in successfully ")
     return res.redirect('/home');
 }
 
 module.exports.destroy = function(req,res){
     req.logout(function(err,user){
         if(err) { console.log('error in logout'); return}
+        req.flash('success', "loged out successfully ")
         return res.redirect('/');
     });
 }
@@ -82,6 +86,7 @@ module.exports.destroy = function(req,res){
 module.exports.change = function(req,res){
     if(req.user.id == req.params.id){
         User.findByIdAndUpdate(req.params.id, req.body, function(err,user){
+            req.flash('success', "Name changed successfully ")
             return res.redirect('back');
         } );
     } else {
