@@ -141,7 +141,7 @@ main{
                             #inner-comment{
                                 min-width: 150px;
                                 max-width: 70%;
-                                min-height: 45px;
+                                min-height: 25px;
                                 display: inline-block;
                                 background-color: whitesmoke;
                                 border-radius: 10px;
@@ -222,22 +222,37 @@ main{
         height: 1000px;
         border-left: 1px solid lightgray;
         
-        
-        div{
+        #friends-logo{
             text-align: center;
+            border-bottom: 2px solid lightgrey;
             h3{
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
-                color: white;
-                background-color: #4267B2;
             }
         }
         #friends{
             width:95%;
-            height: auto;
-            margin:5px 0 5px 2px;
-            border: 1px solid dimgray;
-            border-radius: 20px;
+            height: 40px;
+            margin:10px 0 5px 10px;
+            border-right: 10px solid green;
+            border-bottom: 2px solid lightgray;
+            font-size: 1rem;
+            text-align: center;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            i{
+                font-size: 2.3rem;
+                margin-bottom: 5px;
+            }
+            p{
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+            }
     
         }
     }  

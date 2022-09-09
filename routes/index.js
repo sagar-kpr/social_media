@@ -8,12 +8,14 @@ console.log('router loaded');
 router.get('/signup', homeController.signup);
 router.get('/', homeController.login);
 router.get('/home', passport.checkAuthentication ,homeController.home);
-router.get('/home/profile', passport.checkAuthentication, homeController.profile);
+router.get('/home/profile/:id', passport.checkAuthentication, homeController.profile);
 
 //post methods
 router.post('/destroy', homeController.destroy );
 router.post('/create', homeController.create);
 router.post('/session', passport.authenticate('local', {failureRedirect: '/'}), homeController.session);
+router.post('/change/:id', passport.checkAuthentication, homeController.change );
+
 //use methods
 router.use('/post', require('./post'));
 router.use('/comment', require('./comment'));

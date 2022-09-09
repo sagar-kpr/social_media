@@ -9,12 +9,25 @@
 
     </div>
     <div id="name">
-        <h2><%= user.first + ' ' + user.last %></h2>
+        <h2><%= thatUser.first + ' ' + thatUser.last %>
+            <% if(locals.user.id == thatUser.id){ %>
+                <sup ><i class="fa-solid fa-pen-to-square" id="edit-btn"></i></sup> 
+            <% } %>
+        </h2>
+        <% if(locals.user.id == thatUser.id){ %>
+            <div id="edit">
+                <form action="/change/<%= thatUser.id %>" method="post">
+                    <input type="text" name = "first" value="<%= thatUser.first  %>" required >
+                    <input type="text" name = "last" value="<%= thatUser.last  %>" required >
+                    <input type="submit" value="Change">
+                </form>
+            </div>
+        <% } %>
     </div>
     <div id="about">
         <div>
             <img width="25" src="/icons/home (1).png">
-            <span>Punjab, india</span>
+            <span><%= thatUser.email %></span>
         </div>
         <div>
             <img width="25" src="/icons/smartphone.png">
@@ -24,3 +37,6 @@
     </div>
 
 </div>
+
+
+<script src="/js/index.js"></script>

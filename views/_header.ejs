@@ -11,7 +11,7 @@
     <div id="user">
         <% if(locals.user){ %>
             <div id="text">
-                <h4><a href="/home/profile"><%= user.first + ' ' + user.last %></a></h4>
+                <h4><a href="/home/profile/<%= user.id %>"><%= user.first + ' ' + user.last %></a></h4>
             </div>
             <div id="info">
                 <form action="/destroy" method="post">

@@ -21,14 +21,14 @@
         </div>
     </section>
     <section id="friends-list">
-        <div>
+        <div id="friends-logo">
             <h3>Friends</h3>
         </div>
         <% for(list of users) { %>
             <% if(locals.user.id != list.id) { %>
                 <div id="friends">
-                    
-                    <p><%= list.first %></p>
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p><a href="/home/profile/<%= list.id %>"><%= list.first + ' ' + list.last %></a></p>
                 </div>
             <% } %>
             
