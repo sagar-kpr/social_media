@@ -1,217 +1,113 @@
-::-webkit-scrollbar {
-  width: 5px;
-  max-height: 15px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  /*background-color: darkgrey;
-    outline: 1px solid slategrey;
-    border-radius: 50px;*/
-  visibility: hidden;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-  border-radius: 50px;
-  visibility: visible;
-}
-
-main {
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: white;
-  background-image: url("https://content-tooling.spotifycdn.com/images/af63e367-ad10-4063-a8e2-5a50ae2a4b28_lie_circles-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-main #text-box {
-  width: 500px;
-  text-align: center;
-  border-radius: 5px;
-}
-
-main #text-box h1 {
-  font-size: 2.5rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-}
-
-main #form-box {
-  width: auto;
-  margin: 20px;
-}
-
-main #form-box form {
-  display: flex;
-  align-items: center;
-}
-
-main #form-box form textarea {
-  font-size: 1.2rem;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-main #form-box form #post-btn {
-  width: 80px;
-  height: 35px;
-  background-color: cornflowerblue;
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-  border-radius: 8px;
-  cursor: pointer;
-  border: none;
-  font-size: 1rem;
-  margin: 20px;
-}
-
-main #post-box {
-  height: auto;
-  width: 60%;
-  margin-top: 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-main #post-box #posts {
-  width: 90%;
-  height: auto;
-  background-color: beige;
-  text-align: left;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-main #post-box #posts #name-and-del-box {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-main #post-box #posts #name-and-del-box div h1 {
-  margin: 5px 5px 5px 5px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 500;
-}
-
-main #post-box #posts #name-and-del-box div {
-  margin: 2px 10px 10px 10px;
-}
-
-main #post-box #posts #name-and-del-box div span a {
-  text-decoration: none;
-  color: dimgray;
-}
-
-main #post-box #posts #post-content {
-  width: 80%;
-  min-height: 100px;
-  margin-left: 2rem;
-  background-color: whitesmoke;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-}
-
-main #post-box #posts #post-content p {
-  margin-left: 5px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 400;
-  word-wrap: break-word;
-  padding: 5px;
-}
-
-main #post-box #posts #comment-box {
-  width: auto;
-  max-width: 80%;
-  max-height: 400px;
-  margin-left: 2rem;
-}
-
-main #post-box #posts #comment-box #comment-scroller {
-  max-width: 100%;
-  max-height: 300px;
-  overflow: scroll;
-  margin: 20px 0 20px 0;
-}
-
-main #post-box #posts #comment-box #comment-scroller #comment {
+#user_profile {
   width: 100%;
-  margin: 20px 20px 20px 5px;
   height: auto;
-}
-
-main #post-box #posts #comment-box #comment-scroller #comment #inner-comment {
-  min-width: 150px;
-  max-width: 70%;
-  min-height: 45px;
-  display: inline-block;
-  background-color: whitesmoke;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  padding: 5px;
-  word-wrap: break-word;
-}
-
-main #post-box #posts #comment-box #comment-scroller #comment #inner-comment #comment-and-del-box {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-main #post-box #posts #comment-box #comment-scroller #comment #inner-comment #comment-and-del-box div h3 {
-  margin: 0 0 0 -5px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-main #post-box #posts #comment-box #comment-scroller #comment #inner-comment #comment-and-del-box div {
-  margin: 2px 2px 2px 10px;
-}
-
-main #post-box #posts #comment-box #comment-scroller #comment #inner-comment #comment-and-del-box div span a {
-  text-decoration: none;
-  color: dimgray;
-}
-
-main #post-box #posts #comment-box #comment-scroller #comment #inner-comment p {
-  margin: 2px 0 2px 5px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-main #post-box #posts #comment-box form {
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 5px;
 }
 
-main #post-box #posts #comment-box form textarea {
-  margin-bottom: 5px;
-  font-size: 1rem;
-  border-radius: 5px;
-  padding: 10px;
+#user_profile #profile {
+  width: 100%;
+  height: 450px;
+  background-image: url("../images/pic2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+  position: relative;
 }
 
-main #post-box #posts #comment-box form #comment-btn {
-  width: auto;
-  height: 35px;
-  background-color: cornflowerblue;
-  color: white;
-  font-family: sans-serif;
+#user_profile #profile #my-img {
+  width: 300px;
+  height: 300px;
+  background-image: url("../images/pic1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 57%;
+  left: 39%;
+  border: 2px solid white;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#user_profile #name {
+  width: 100%;
+  height: 50px;
   text-align: center;
-  border-radius: 8px;
+  position: relative;
+}
+
+#user_profile #name h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-right: 25px;
+  display: inline-block;
+}
+
+#user_profile #name h2 sup {
+  color: dimgray;
   cursor: pointer;
+}
+
+#user_profile #name #edit {
+  width: 300px;
+  height: auto;
+  background-color: aliceblue;
+  position: absolute;
+  left: 40%;
+  display: none;
+  top: 60px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+#user_profile #name #edit form {
+  width: 90%;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user_profile #name #edit form #inp {
+  width: 90%;
+  padding: 7px;
+  margin: 5px;
+}
+
+#user_profile #name #edit form #btn {
+  width: 95%;
+  padding: 7px;
+  margin: 5px;
+  background-color: #4267B2;
   border: none;
-  font-size: 1rem;
-  margin: 20px;
+  color: white;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#user_profile #name #edit form #btn:hover {
+  background-color: #375695;
+}
+
+#user_profile #about {
+  width: 45%;
+  height: 130px;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+#user_profile #about div {
+  margin: 5px;
+}
+
+#user_profile #about div span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: gray;
+  margin-left: 10px;
 }

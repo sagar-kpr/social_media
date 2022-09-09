@@ -1,13 +1,17 @@
 
 
 <header>
+    
     <div id="text">
-        <h1>Codial</h1>
+        <a href="/"><img width="40" src="/images/fb.jpg">
+            <span>unbook</span>
+        </a>    
     </div>
+
     <div id="user">
         <% if(locals.user){ %>
             <div id="text">
-                <h4><%= user.first + ' ' + user.last %></h4>
+                <h4><a href="/home/profile/<%= user.id %>"><%= user.first + ' ' + user.last %></a></h4>
             </div>
             <div id="info">
                 <form action="/destroy" method="post">
@@ -16,10 +20,10 @@
             </div>
         <% } else { %>
             <div id="info1">
-                <p><a href="/login">Log in </a></p>
+                <p><a href="/">Log in </a></p>
             </div>
             <div id="info2">
-                <p><a href="/">Sign up </a></p>
+                <p><a href="/signup">Sign up </a></p>
             </div>
 
         <% } %>

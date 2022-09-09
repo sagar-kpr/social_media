@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="/css/signupAndsignin.css">
+
+<main>
+    <div id="box">
+        <form action="/create" method="post">
+            <% if(flash.error && flash.error.length > 0) { %>
+                <div style="width: 100%; background-color: beige ; color:red; font-family:Verdana, Geneva, Tahoma, sans-serif;">
+                <p ><%= flash.error %></p>
+                 </div>   
+            <% } %> 
+            <input type="text" name="first" placeholder="First name" required>
+            <input type="text" name="last" placeholder="Last name" required>
+            <input type="text" name="age" placeholder="Age" required>
+            <input type="email" name="email" placeholder="abc@Example.com" required>
+            <input type="password" name="password" placeholder="Create password" required>
+            <input type="password" name="confirm" placeholder="Confirm password" required>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+</main>    
+

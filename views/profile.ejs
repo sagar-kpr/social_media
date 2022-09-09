@@ -1,21 +1,42 @@
 <link rel="stylesheet" type="text/css" href="/css/profile.css">
 
-<main>
-    <div id="text-box">
-        <h1>My Feeds</h1>
+
+<div id="user_profile">
+    <div id="profile">
+        <div id="my-img">
+            
+        </div>
+
     </div>
-    <div id="form-box">
-        <% if(locals.user){ %>
-            <form action="/post/create" method="post">
-                <textarea type="text" name="content" placeholder="Type here..." required cols="40" rows="8"></textarea>
-                <input id="post-btn" type="submit" value="Post">
-            </form>
+    <div id="name">
+        <h2><%= thatUser.first + ' ' + thatUser.last %>
+            <% if(locals.user.id == thatUser.id){ %>
+                <sup ><i class="fa-solid fa-pen-to-square" id="edit-btn"></i></sup> 
+            <% } %>
+        </h2>
+        <% if(locals.user.id == thatUser.id){ %>
+            <div id="edit">
+                <form action="/change/<%= thatUser.id %>" method="post">
+                    <input id="inp" type="text" name = "first" value="<%= thatUser.first  %>" required >
+                    <input id="inp" type="text" name = "last" value="<%= thatUser.last  %>" required >
+                    <input id="btn" type="submit" value="Change">
+                </form>
+            </div>
         <% } %>
+    </div>
+    <div id="about">
+        <div>
+            <img width="25" src="/icons/home (1).png">
+            <span><%= thatUser.email %></span>
+        </div>
+        <div>
+            <img width="25" src="/icons/smartphone.png">
+            <span>8566848794</span>
+        </div>
         
     </div>
-    <div id="post-box">
-        <% for(post of posts) { %>
-            <%- include('_post') -%>
-        <% } %>    
-    </div>
-</main>
+
+</div>
+
+
+<script src="/js/index.js"></script>

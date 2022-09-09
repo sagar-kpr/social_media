@@ -8,7 +8,7 @@ module.exports.create = function(req,res){
             user: req.user._id
         }, function(err,post){
             if(err) { console.log('erro creating post'); return }
-
+            req.flash('success', 'Status posted successfully');
             return res.redirect('back');
     });
 }
@@ -18,6 +18,7 @@ module.exports.destroy = function(req,res){
         if(post.user == req.user.id) {
             post.remove();
             Comment.deleteMany({post:req.body.id}, function(err){
+                req.flash('error', 'Status deleted successfully');
                 return res.redirect('back');
             });
         }else{
