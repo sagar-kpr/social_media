@@ -25,4 +25,11 @@
             </form>
        
     </div>
+    <div id="like-box">
+        <form action="/post/likes/<%= post.id %>" method="post">
+            <button type="submit"><i class="fa-regular fa-thumbs-up"></i></button>
+            <span id="count"></span>
+        </form>
+        
+    </div>
 </div>

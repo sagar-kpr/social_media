@@ -1,5 +1,7 @@
 const Post = require('../models/post_schema');
 const Comment = require('../models/comment_schema');
+const Likes = require('../models/likes_schema');
+
 
 module.exports.create = function(req,res){
     Post.create(
@@ -28,3 +30,11 @@ module.exports.destroy = function(req,res){
     });
 }
 
+module.exports.likes = function(req,res){
+    Post.findById(req.params.id, function(err,post){
+        if(post.user == req.user.id){
+            return res.redirect('back');
+        }
+    });
+
+}

@@ -4,7 +4,7 @@
             <div>
                 <h3><%= comment.user.first + ' ' + comment.user.last %></h3>
             </div>
-            <% if(locals.user.id == comment.user.id) { %>
+            <% if(locals.user.id == post.user.id || locals.user.id == comment.user.id) { %>
                 <div><span><a href="/comment/destroy/<%=comment.id%>">x</a></span></div>
             <% } %>
         </div>
