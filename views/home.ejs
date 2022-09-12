@@ -11,7 +11,7 @@
         
         <div id="form-box">
             <% if(locals.user){ %>
-                <form action="/post/create" method="post">
+                <form action="/post/create" id="post-form" method="post">
                     <textarea type="text" name="content" placeholder="Whats's on your mind, <%= user.first %>" required cols="45" rows="8"></textarea>
                     <input id="post-btn" type="submit" value="Post">
                 </form>
@@ -37,8 +37,6 @@
             <% } %>
             
         <% } %>
-        
-        
-
     </section>
+    <script src="/js/home_post.js"></script>
 </main>
