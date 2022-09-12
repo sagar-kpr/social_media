@@ -97,6 +97,12 @@
   background-color: #375695;
 }
 
+@media screen and (max-width: 650px) {
+  #user_profile #name #edit {
+    left: 25%;
+  }
+}
+
 #user_profile #about {
   width: 45%;
   height: 130px;

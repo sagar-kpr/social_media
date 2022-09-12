@@ -87,6 +87,12 @@
             }
 
         }
+        @media screen and (max-width:650px) {
+            #edit{
+                left:25%;
+            }
+        }
+
     }
     #about{
         width:45%;
