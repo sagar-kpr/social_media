@@ -31,6 +31,12 @@
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (max-width: 650px) {
+  #user_profile #profile #my-img {
+    left: 20%;
+  }
+}
+
 #user_profile #name {
   width: 100%;
   height: 50px;
@@ -40,7 +46,6 @@
 
 #user_profile #name h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-right: 25px;
   display: inline-block;
 }
 
@@ -103,11 +108,18 @@
 }
 
 #user_profile #about div {
-  margin: 5px;
+  margin: 5px 5px 5px 0;
 }
 
 #user_profile #about div span {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: gray;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  #user_profile #about div span {
+    display: block;
+    margin-left: 0px;
+  }
 }
