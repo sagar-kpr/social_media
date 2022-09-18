@@ -4,7 +4,7 @@
 <div id="user_profile">
     <div id="profile">
         <div id="my-img">
-            
+            <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>" width="100">
         </div>
 
     </div>
@@ -16,10 +16,11 @@
         </h2>
         <% if(locals.user.id == thatUser.id){ %>
             <div id="edit">
-                <form action="/change/<%= thatUser.id %>" method="post">
+                <form action="/change/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
                     <input id="inp" type="text" name = "first" value="<%= thatUser.first  %>" required >
                     <input id="inp" type="text" name = "last" value="<%= thatUser.last  %>" required >
-                    <input id="btn" type="submit" value="Change">
+                    <input id= "inp" type="file" name = "avatar" >
+                    <input id="btn" type="submit" value="Update">
                 </form>
             </div>
         <% } %>

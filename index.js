@@ -17,10 +17,14 @@ app.use(sassMiddlware({
     dest: './assets/css',
     outputStyle: 'expanded',
     prefix: '/css'
-}))
+}));
+
+app.use(parser.urlencoded({extended:false}));
 
 app.use(express.static('./assets'));
-app.use(parser.urlencoded({extended:false}));
+app.use('/uploads', express.static(__dirname + '/uploads'));
+
+
 app.use(layout);
 
 
@@ -39,7 +43,7 @@ app.use(session({
     resave: false,
     outputStyle: 'expended',
     cookie: {
-        maxAge: (1000*60*20)
+        maxAge: (1000*60*200)
     },
     store: mongoStore.create({
         mongoUrl:'mongodb://localhost/social_development',

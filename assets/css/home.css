@@ -1,6 +1,6 @@
 ::-webkit-scrollbar {
-  width: 5px;
-  max-height: 15px;
+  width: 10px;
+  max-height: 25px;
 }
 
 ::-webkit-scrollbar-track {
@@ -8,10 +8,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  /*background-color: darkgrey;
-    outline: 1px solid slategrey;
-    border-radius: 50px;*/
-  visibility: hidden;
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -100,7 +99,7 @@ main #my-feeds #post-box .posts {
   width: 90%;
   height: auto;
   border-left: 5px solid #95d2f4;
-  background-color: #f7f9f9;
+  background-color: #f9f9fa;
   text-align: left;
   border-radius: 10px;
   margin-top: 20px;
@@ -118,6 +117,10 @@ main #my-feeds #post-box .posts #name-and-del-box div h1 {
   font-weight: 500;
 }
 
+main #my-feeds #post-box .posts #name-and-del-box div h1 span {
+  font-size: 15px;
+}
+
 main #my-feeds #post-box .posts #name-and-del-box div {
   margin: 2px 10px 10px 10px;
 }
@@ -131,7 +134,7 @@ main #my-feeds #post-box .posts #post-content {
   width: 70%;
   min-height: 100px;
   margin-left: 2rem;
-  background-color: whitesmoke;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
 }
@@ -151,7 +154,7 @@ main #my-feeds #post-box .posts #comment-box {
   margin-left: 2rem;
 }
 
-main #my-feeds #post-box .posts #comment-box #comment-scroller {
+main #my-feeds #post-box .posts #comment-box .comment-scroller {
   max-width: 100%;
   max-height: 300px;
   overflow: scroll;
@@ -159,46 +162,46 @@ main #my-feeds #post-box .posts #comment-box #comment-scroller {
   margin: 20px 0 20px 0;
 }
 
-main #my-feeds #post-box .posts #comment-box #comment-scroller #comment {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment {
   width: 100%;
   margin: 20px 20px 20px 5px;
   height: auto;
 }
 
-main #my-feeds #post-box .posts #comment-box #comment-scroller #comment #inner-comment {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment {
   min-width: 150px;
   max-width: 70%;
   min-height: 25px;
   display: inline-block;
-  background-color: whitesmoke;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
   padding: 5px;
   word-wrap: break-word;
 }
 
-main #my-feeds #post-box .posts #comment-box #comment-scroller #comment #inner-comment #comment-and-del-box {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment #comment-and-del-box {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
 
-main #my-feeds #post-box .posts #comment-box #comment-scroller #comment #inner-comment #comment-and-del-box div h3 {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment #comment-and-del-box div h3 {
   margin: 0 0 0 -5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: grey;
 }
 
-main #my-feeds #post-box .posts #comment-box #comment-scroller #comment #inner-comment #comment-and-del-box div {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment #comment-and-del-box div {
   margin: 2px 2px 2px 10px;
 }
 
-main #my-feeds #post-box .posts #comment-box #comment-scroller #comment #inner-comment #comment-and-del-box div span a {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment #comment-and-del-box div span a {
   text-decoration: none;
   color: dimgray;
 }
 
-main #my-feeds #post-box .posts #comment-box #comment-scroller #comment #inner-comment p {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment p {
   margin: 2px 0 2px 5px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

@@ -13,9 +13,18 @@ module.exports.create = async function(req,res){
                     user: req.user._id
                 }
             );
-
             post.comment.push(comments);
             post.save();
+
+            if(req.xhr){
+                return res.status(200).json({
+                    data : {
+                        comment : comments,
+                        user : req.user
+                    },
+                    message: 'coment created!'
+                });
+            }
             req.flash('success', 'Comment posted successfully');
             return res.redirect('back');
         }else{
@@ -28,27 +37,43 @@ module.exports.create = async function(req,res){
 }
 
 
-module.exports.destroy = function(req,res){
-   
-    Comment.findById(req.params.id, function(err,comment){
-        if(comment.user == req.user.id){
-            let postId = comment.post;
-            comment.remove();
-            Post.findByIdAndUpdate(postId, { $pull : {comment: req.params.id}}, function(err){
-                req.flash('error', 'Comment deleted successfully');
-                return res.redirect('back');
-            });
-        }else{
-            let postId = comment.post;
-            comment.remove();
-            Post.findByIdAndUpdate(postId, { $pull : {comment: req.params.id}}, function(err){
-                req.flash('error', 'Comment deleted successfully');
-                return res.redirect('back');
-            });
+module.exports.destroy =async function(req,res){
+   try{
+    let comment = await Comment.findById(req.params.id);
 
+    if(comment.user == req.user.id){
+        let postId = comment.post;
+        comment.remove();
+        await Post.findByIdAndUpdate(postId, { $pull : {comment: req.params.id}});
+        if(req.xhr){
+            return res.status(200).json({
+                data: {
+                    comment_id : req.params.id
+                },
+                message: 'comment deleted'
+            });
         }
-    });
-
+        req.flash('error', 'Comment deleted successfully');
+        return res.redirect('back');
+    }else{
+        let postId = comment.post;
+        comment.remove();
+        await Post.findByIdAndUpdate(postId, { $pull : {comment: req.params.id}});
+        if(req.xhr){
+            return res.status(200).json({
+                data: {
+                    comment_id : req.params.id
+                },
+                message: 'comment deleted'
+            });
+        }
+        req.flash('error', 'Comment deleted successfully');
+        return res.redirect('back');
     
 
+    }
+   }catch(err){
+    console.log(err);
+   }
+    
 }

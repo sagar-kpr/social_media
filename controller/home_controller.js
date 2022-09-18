@@ -83,13 +83,42 @@ module.exports.destroy = function(req,res){
     });
 }
 
-module.exports.change = function(req,res){
-    if(req.user.id == req.params.id){
+module.exports.change = async function(req,res){
+    /*if(req.user.id == req.params.id){
         User.findByIdAndUpdate(req.params.id, req.body, function(err,user){
             req.flash('success', "Name changed successfully ")
             return res.redirect('back');
         } );
     } else {
         return res.status(401).send('unauthorized');
+    }*/
+    if(req.user.id == req.params.id){
+        try{
+            let user = await User.findById(req.params.id);
+
+            User.uploadedAvatar(req, res, function(err){
+                if(err) { 
+                    console.log('error in multer',err); 
+                    return;
+                 }
+                 
+                console.log(req.file); 
+                user.first = req.body.first;
+                user.last = req.body.last;
+
+                if(req.file){
+                    user.avatar = User.avatarPath + '/' + req.file.filename;
+                }
+
+                user.save();
+                return res.redirect('back');
+            });
+
+        }catch(err){
+            console.log(err)
+        }
+
+    }else {
+        return res.status(401).send('unauthorized');
     }
-}
+}    
