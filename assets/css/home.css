@@ -33,14 +33,16 @@ main #my-links {
 }
 
 main #my-links #my-img {
-  min-width: 100%;
+  width: 100%;
   height: 200px;
-  background-image: url("../images/pic1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   box-sizing: border-box;
   box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+main #my-links #my-img img {
+  width: 100%;
+  height: 100%;
 }
 
 main #my-feeds {
@@ -274,9 +276,14 @@ main #friends-list #friends {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-main #friends-list #friends i {
-  font-size: 2.3rem;
-  margin-bottom: 5px;
+main #friends-list #friends #friends-img {
+  width: 40px;
+  height: 40px;
+}
+
+main #friends-list #friends #friends-img img {
+  width: 100%;
+  height: 100%;
 }
 
 main #friends-list #friends p a {

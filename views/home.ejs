@@ -2,7 +2,7 @@
 <main>
     <section id="my-links">
        <div id="my-img">
-        
+            <img src="<%=user.avatar %>" alt="<%= user.first %>">
         </div>
 
 
@@ -31,7 +31,10 @@
         <% for(list of users) { %>
             <% if(locals.user.id != list.id) { %>
                 <div id="friends">
-                    <i class="fa-solid fa-circle-user"></i>
+                    <div id="friends-img">
+                        <img src="<%= list.avatar%>">
+                    </div>
+                    
                     <p><a href="/home/profile/<%= list.id %>"><%= list.first + ' ' + list.last %></a></p>
                 </div>
             <% } %>

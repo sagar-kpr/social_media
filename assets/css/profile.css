@@ -19,18 +19,19 @@
 #user_profile #profile #my-img {
   width: 300px;
   height: 300px;
-  border: 1px solid red;
-  /*border-radius: 50%;
-            position: absolute;
-            top:57%;
-            left:39%;
-            border: 2px solid white;
-            box-sizing: border-box;
-            box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.5);*/
+  border-radius: 50%;
+  position: absolute;
+  top: 57%;
+  left: 39%;
+  border: 2px solid white;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 #user_profile #profile #my-img img {
-  width: inherit;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 650px) {
