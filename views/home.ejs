@@ -2,7 +2,7 @@
 <main>
     <section id="my-links">
        <div id="my-img">
-        
+            <img src="<%=user.avatar %>" alt="<%= user.first %>">
         </div>
 
 
@@ -12,7 +12,7 @@
         <div id="form-box">
             <% if(locals.user){ %>
                 <form action="/post/create" id="post-form" method="post">
-                    <textarea type="text" name="content" placeholder="Whats's on your mind, <%= user.first %>" required cols="45" rows="8"></textarea>
+                    <textarea id="textarea" type="text" name="content" placeholder="Whats's on your mind, <%= user.first %>" required cols="45" rows="8"></textarea>
                     <input id="post-btn" type="submit" value="Post">
                 </form>
             <% } %>
@@ -31,13 +31,17 @@
         <% for(list of users) { %>
             <% if(locals.user.id != list.id) { %>
                 <div id="friends">
-                    <i class="fa-solid fa-circle-user"></i>
+                    <div id="friends-img">
+                        <img src="<%= list.avatar%>">
+                    </div>
+                    
                     <p><a href="/home/profile/<%= list.id %>"><%= list.first + ' ' + list.last %></a></p>
                 </div>
             <% } %>
-            
-        <% } %>      
-    </section>
-    
+
+        <% } %>
+    </section>    
+
 </main>
+
 <script src="/js/home_post.js"></script>
