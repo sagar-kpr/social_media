@@ -1,11 +1,11 @@
-<div id="comment">
+<div class="comment" id="comment-<%= comment.id %>">
     <div id="inner-comment">
         <div id="comment-and-del-box">
             <div>
                 <h3><%= comment.user.first + ' ' + comment.user.last %></h3>
             </div>
             <% if(locals.user.id == post.user.id || locals.user.id == comment.user.id) { %>
-                <div><span><a href="/comment/destroy/<%=comment.id%>">x</a></span></div>
+                <div><span><a class="del-cmnt" href="/comment/destroy/<%=comment.id%>">x</a></span></div>
             <% } %>
         </div>
         <p><%= comment.content %></p>
