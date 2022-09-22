@@ -2,16 +2,25 @@
 
 <header>
     
-    <div id="text">
-        <a href="/"><img width="40" src="/images/fb.jpg">
-            <span>unbook</span>
+    <div id="logo">
+        <a href="/"><img width="45" src="/icons/fb.png" alt="fb-logo">
         </a>    
+    </div>
+    <div id="search-box">
+        <% if(locals.user){ %>
+            <form action="/" method="get">
+                <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                <input type="search" placeholder="Search Facebook">
+                
+            </form>
+        <% } %>    
+
     </div>
 
     <div id="user">
         <% if(locals.user){ %>
             <div id="text">
-                <h4><a href="/home/profile/<%= user.id %>"><%= user.first + ' ' + user.last %></a></h4>
+                <a href="/home/profile/<%= user.id %>"><img src="<%=user.avatar%>" alt="<%=user.first%>"></a>
             </div>
             <div id="info">
                 <form action="/destroy" method="post">

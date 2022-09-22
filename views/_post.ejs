@@ -1,0 +1,47 @@
+<div class="posts" id="posts-<%=post.id %>">
+    <div id="name-and-del-box">
+
+        <div id="profile-name">
+            <div id="profile">
+                <img  src="<%=post.user.avatar %>" alt="<%= post.user.first %>">
+            </div>
+            <div id="name">
+                <h1><%= post.user.first + ' ' + post.user.last %></h1>
+            </div>
+            
+        </div>
+        <% if(locals.user.id == post.user.id) { %>
+            <div id="cross"><span><a class="del-btn" href="/post/destroy/<%=post.id %>">x</a></span></div>
+        <% } %>
+        
+    </div>
+    <div id="post-content">
+        <p><%= post.content %></p>
+        
+    </div>
+    <div id="comment-box">
+        <div class="comment-scroller" id="comment-scroller-<%= post._id %>">
+            <% for(comment of post.comment) { %>
+                <%- include('_comment') -%>      
+            <% } %> 
+        </div>
+     
+        <form action="/comment/create" class="comment-form" method="post">
+            <textarea type="text" name="content" placeholder="Write a comment..." required cols="45" rows="1"></textarea>
+            <input type="hidden" name="post" value="<%=post._id %>"> 
+            <input type="submit" value="Comment" id="comment-btn">
+        </form>
+       
+    </div>
+    <hr>
+    <div id="like-box">
+        
+        <form action="/post/likes/<%= post.id %>" method="post">
+            <button type="submit"><i class="fa-regular fa-thumbs-up"></i></button>
+            <span id="count"></span>
+        </form>
+        
+    </div>
+</div>
+
+<script src="/js/home_comment.js"></script>
