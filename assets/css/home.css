@@ -23,27 +23,52 @@ main {
   width: 100%;
   display: flex;
   flex-direction: row;
+  margin-top: 5px;
 }
 
 main #my-links {
-  width: 15%;
+  width: 20%;
   height: 1000px;
   border-right: 1px solid lightgray;
-  /*#my-img {
-            width: 100%;
-            height: 200px;
-            position: relative;
-            box-sizing: border-box;
-            box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.3);
-            img{
-                width:100%;
-                height: 100%;
-            }
-        }*/
+  display: flex;
+  flex-direction: column;
+}
+
+main #my-links .common-box {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 5px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid red;
+}
+
+main #my-links .common-box #profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+  margin: 5px;
+}
+
+main #my-links .common-box #profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+main #my-links .common-box #name {
+  width: 80%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: dimgray;
 }
 
 main #my-feeds {
-  width: 70%;
+  width: 60%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -314,7 +339,7 @@ main #my-feeds #post-box .posts #like-box button {
 }
 
 main #friends-list {
-  width: 15%;
+  width: 20%;
   height: 1000px;
   border-left: 1px solid lightgray;
 }

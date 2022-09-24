@@ -9,49 +9,56 @@ body header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
 }
 
-body header #logo {
+body header #logo-and-search {
+  width: 290px;
+  display: flex;
+  align-items: center;
+}
+
+body header #logo-and-search #logo {
   text-align: center;
-  margin-left: 10px;
+  margin: 7px;
 }
 
-body header #logo a {
+body header #logo-and-search #logo a {
   text-decoration: none;
 }
 
-body header #logo a img {
+body header #logo-and-search #logo a img {
   border-radius: 50%;
 }
 
-body header #search-box {
-  width: 40%;
+body header #logo-and-search #search-box {
+  width: 100%;
 }
 
-body header #search-box form {
+body header #logo-and-search #search-box form {
   padding: 5px;
   line-height: 2;
 }
 
-body header #search-box form button {
+body header #logo-and-search #search-box form button {
   width: 12%;
   margin-right: -4px;
-  padding: 7px;
+  padding: 10px;
   border: none;
   cursor: pointer;
   border-radius: 15px 0 0 15px;
   background-color: #F0F2F5;
 }
 
-body header #search-box form input {
+body header #logo-and-search #search-box form input {
   width: 85%;
-  padding: 7px;
+  padding: 10px;
   border: none;
   border-radius: 0 15px 15px 0;
   background-color: #F0F2F5;
 }
 
-body header #search-box form input:focus {
+body header #logo-and-search #search-box form input:focus {
   outline: none;
 }
 

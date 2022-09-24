@@ -1,22 +1,22 @@
 
 
 <header>
-    
-    <div id="logo">
-        <a href="/"><img width="45" src="/icons/fb.png" alt="fb-logo">
-        </a>    
-    </div>
-    <div id="search-box">
-        <% if(locals.user){ %>
-            <form action="/" method="get">
-                <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
-                <input type="search" placeholder="Search Facebook">
-                
-            </form>
-        <% } %>    
+    <div id="logo-and-search">
+        <div id="logo">
+            <a href="/"><img width="45" src="/icons/fb.png" alt="fb-logo">
+            </a>    
+        </div>
+        <div id="search-box">
+            <% if(locals.user){ %>
+                <form action="/" method="get">
+                    <button type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                    <input type="search" placeholder="Search Facebook">
+                    
+                </form>
+            <% } %>    
 
+        </div>
     </div>
-
     <div id="user">
         <% if(locals.user){ %>
             <div id="text">
