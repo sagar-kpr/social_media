@@ -1,5 +1,6 @@
 const User = require('../models/user_schema');
 const Post = require('../models/post_schema');
+const fs = require('fs');
 
 module.exports.signup = function(req,res){
     if(req.isAuthenticated()){
@@ -107,6 +108,9 @@ module.exports.change = async function(req,res){
                 user.last = req.body.last;
 
                 if(req.file){
+                    if(user.avatar){
+                        fs.unlinkSync(__dirname, '..' , user.avatar);
+                    }
                     user.avatar = User.avatarPath + '/' + req.file.filename;
                 }
 
