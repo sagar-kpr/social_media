@@ -14,31 +14,31 @@
     <%- style %>
     <link rel="stylesheet" type="text/css" href="/css/_footer.css">
 </head>
-<body style="width:100%; height: 100vh;">
+<body style="width:100%; height: 100vh; background-color: #F0F2F5;">
     <%- include('_header')%>
     <%- body %>
     <%- include('_footer')%>
     <%- script %>
-    <script>
-        <% if(flash.success && flash.success.length > 0) { %>
-            new Noty({
-                theme: 'semanticui',
-                text: '<%= flash.success %>',
-                type: 'success',
-                layout: 'topRight',
-                timeout: 500,
-                
-            }).show();
-        <% }  else if(flash.error && flash.error.length > 0){ %>
-            new Noty({
-                theme: 'semanticui',
-                text: '<%= flash.error %>',
-                type: 'error',
-                layout: 'topRight',
-                timeout: 500
-            }).show();
+
+    <% if(flash.success && flash.success.length > 0) { %>
+        new Noty({
+            theme: 'semanticui',
+            text: '<%= flash.success %>',
+            type: 'success',
+            layout: 'topRight',
+            timeout: 500,
             
-        <% } %>
-    </script>
+        }).show();
+    <% }  else if(flash.error && flash.error.length > 0){ %>
+        new Noty({
+            theme: 'semanticui',
+            text: '<%= flash.error %>',
+            type: 'error',
+            layout: 'topRight',
+            timeout: 500
+        }).show();
+        
+    <% } %>
+    
 </body>
 </html>

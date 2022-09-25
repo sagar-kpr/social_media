@@ -53,6 +53,9 @@
 
     let createCommentDom = function(comment,user){
         return $(`<div class="comment" id="comment-${comment._id}">
+        <div id="cmnt-img">
+            <img src="${user.avatar}" alt="${user.first}">
+        </div>
         <div id="inner-comment">
             <div id="comment-and-del-box">
                 <div>
@@ -70,10 +73,16 @@
     let createPostDom = function(post , user){
         return $(`<div class="posts" id="posts-${post._id}">
         <div id="name-and-del-box">
-            <div>
-                <h1>${user.first} ${user.last} <small>posted a status </small></h1>
+            <div id="profile-name">
+                <div id="profile">
+                    <img  src="${user.avatar}" alt="${user.first}">
+                </div>
+                <div id="name">
+                    <h1>${user.first} ${user.last}</h1>
+                </div>
+                
             </div>
-            <div><span><a class="del-btn" href="/post/destroy/${post._id}">x</a></span></div>
+            <div id="cross"><span><a class="del-btn" href="/post/destroy/${post._id}">x</a></span></div>
         </div>
         <div id="post-content">
             <p> ${post.content}</p>
@@ -108,6 +117,7 @@
                     $(`#comment-scroller-${data.data.comment.post}`).prepend(newComment);
                     deleteComment($(' .del-cmnt', newComment));
                     notySuccess('Comment Posted Successfully!');
+                    setInterval('location.reload()',7000);
                 },
                 error : function(err){
                     console.log(err.responseText);
@@ -156,4 +166,3 @@
     createPostForm();
 
 }
-

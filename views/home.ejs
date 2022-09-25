@@ -1,20 +1,36 @@
 <link rel="stylesheet" type="text/css" href="/css/home.css">
 <main>
     <section id="my-links">
-       <div id="my-img">
-            <img src="<%=user.avatar %>" alt="<%= user.first %>">
-        </div>
+       <div class="common-box">
+            <div id="profile">
+                <img src="<%=user.avatar %>" alt="<%= user.first %>">
+            </div>
+            <div id="name">
+                <h4><%= user.first + ' ' + user.last%></h4>
+            </div>
+       </div>
+       <div class="common-box"></div>
+       <div class="common-box"></div>
+       <div class="common-box"></div>
+       <div class="common-box"></div>
+       <div class="common-box"></div>
 
-
+       
     </section>
     <section id="my-feeds">
         
         <div id="form-box">
             <% if(locals.user){ %>
-                <form action="/post/create" id="post-form" method="post">
-                    <textarea id="textarea" type="text" name="content" placeholder="Whats's on your mind, <%= user.first %>" required cols="45" rows="8"></textarea>
-                    <input id="post-btn" type="submit" value="Post">
-                </form>
+                <div id="my-img">
+                    <img src="<%=user.avatar %>" alt="<%= user.first %>">
+                </div>
+                <div>
+                    <form action="/post/create" id="post-form" method="post">
+                        <textarea id="textarea" type="text" name="content" placeholder="Whats's on your mind, <%= user.first %>" required cols="45" rows="1"></textarea>
+                        <input id="post-btn" type="submit" value="Post">
+                    </form>
+                   
+                </div>
             <% } %>
             
         </div>
@@ -43,5 +59,4 @@
     </section>    
 
 </main>
-
 <script src="/js/home_post.js"></script>

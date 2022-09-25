@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const multer = require('multer');
 const path = require('path');
-const AVATAR_PATH = '/uploads/users/avatar';
+const AVATAR_PATH = '/upload/user/avatar';
 
 
 const schema = new mongoose.Schema({
@@ -29,6 +29,7 @@ const schema = new mongoose.Schema({
     avatar : {
         type: String
     }
+    
 
 },{
     timestamps: true

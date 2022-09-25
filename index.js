@@ -22,7 +22,7 @@ app.use(sassMiddlware({
 app.use(parser.urlencoded({extended:false}));
 
 app.use(express.static('./assets'));
-app.use('/uploads', express.static(__dirname + '/uploads'));
+app.use('/upload', express.static(__dirname + '/upload'));
 
 
 app.use(layout);
