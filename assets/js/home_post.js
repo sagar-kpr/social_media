@@ -16,7 +16,6 @@
                     notySuccess('Status Posted Successfully.');
                     $('#post-box').prepend(newpost); 
                     deletePost($(' .del-btn', newpost));
-                    commentForm($(' .comment-form', newpost));
                 },
                 error : function(error){
                     console.log(error.responseText);
@@ -28,6 +27,7 @@
            
     }    
 
+    
     //NOTY FOR SUCCESS
     let notySuccess = function(text){
         new Noty({
@@ -51,24 +51,7 @@
         }).show();
     }
 
-    let createCommentDom = function(comment,user){
-        return $(`<div class="comment" id="comment-${comment._id}">
-        <div id="cmnt-img">
-            <img src="${user.avatar}" alt="${user.first}">
-        </div>
-        <div id="inner-comment">
-            <div id="comment-and-del-box">
-                <div>
-                    <h3> ${user.first} ${user.last }</h3>
-                </div>
-               
-                    <div><span><a class="del-cmnt" href="/comment/destroy/${comment._id}">x</a></span></div>
-               
-            </div>
-            <p>${comment.content } </p>
-        </div>
-    </div> `);
-    }
+   
 
     let createPostDom = function(post , user){
         return $(`<div class="posts" id="posts-${post._id}">
@@ -89,7 +72,7 @@
         </div>
         <div id="comment-box">
             <div class="comment-scroller" id="comment-scroller-${post._id}"></div>
-            <form action="/comment/create" class="comment-form" method="post">
+            <form action="/comment/create/${post.id}" class="comment-form" method="post">
                 <textarea type="text" name="content" placeholder="Write a comment..." required cols="40" rows="1"></textarea>
                 <input type="hidden" name="post" value="${post._id}"> 
                 <input type="submit" value="Comment" id="comment-btn">
@@ -104,27 +87,7 @@
     </div>`);
     }
 
-    let commentForm = function(comments){
-        $(comments).submit(function(e){
-            e.preventDefault();
-
-            $.ajax({
-                type: 'post',
-                url: '/comment/create',
-                data: comments.serialize(),
-                success: function(data) {
-                    let newComment = createCommentDom(data.data.comment, data.data.user );
-                    $(`#comment-scroller-${data.data.comment.post}`).prepend(newComment);
-                    deleteComment($(' .del-cmnt', newComment));
-                    notySuccess('Comment Posted Successfully!');
-                    setInterval('location.reload()',7000);
-                },
-                error : function(err){
-                    console.log(err.responseText);
-                }
-            });
-        });
-    }
+    
 
     let deletePost = function(deleteLink){
         $(deleteLink).click(function(e){
@@ -144,7 +107,54 @@
         })
     }
 
-    let deleteComment = function(commentLink){
+
+
+    createPostForm();
+
+
+    /*let commentForm = function(){
+        let comments = $(' .comment-form');
+        comments.submit(function(e){
+            e.preventDefault();
+            $.ajax({
+                type: 'post',
+                url: '/comment/create/<%=post._id%>',
+                data: comments.serialize(),
+                success: function(data) {
+                    //console.log('cmnt data',data);
+                    let newComment = createCommentDom(data.data.comment, data.data.user );
+                    $(`#comment-scroller-${data.data.comment.post}`).prepend(newComment);
+                    deleteComment($(' .del-cmnt', newComment));
+                    notySuccess('Comment Posted Successfully!');
+                },
+                error : function(err){
+                    console.log('12345',err.responseText);
+                }
+            });
+        });
+    }*/
+
+    /* let createCommentDom = function(comment,user){
+        return $(`<div class="comment" id="comment-${comment._id}">
+        <div id="cmnt-img">
+            <img src="${user.avatar}" alt="${user.first}">
+        </div>
+        <div id="inner-comment">
+            <div id="comment-and-del-box">
+                <div>
+                    <h3> ${user.first} ${user.last }</h3>
+                </div>
+               
+                    <div><span><a class="del-cmnt" href="/comment/destroy/${comment._id}">x</a></span></div>
+               
+            </div>
+            <p>${comment.content } </p>
+        </div>
+    </div> `);
+    }*/
+
+
+    /*let deleteComment = function(commentLink){
         $(commentLink).click(function(e){
             e.preventDefault();
 
@@ -161,8 +171,21 @@
             })
         })
 
-    }
+    }*/
 
-    createPostForm();
+    /*let convertPostsToAjax = function() {
+        $('#post-box').each(function() {
+            let self = $(this);
+            let deleteButton = $(' .del-btn', self);
+            deletePost(deleteButton);
+
+            // get the post's id by splitting the id attribute
+            let postId = self = self.prop('id').split("-")[1];
+            new PostComments(postId);
+        });
+    }*/
+
+   
+   
 
 }

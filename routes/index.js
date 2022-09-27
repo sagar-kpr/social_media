@@ -19,5 +19,6 @@ router.post('/change/:id', passport.checkAuthentication, homeController.change )
 //use methods
 router.use('/post', require('./post'));
 router.use('/comment', require('./comment'));
+router.use('/api', require('./api'));
 
 module.exports = router;

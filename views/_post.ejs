@@ -26,7 +26,7 @@
             <% } %> 
         </div>
      
-        <form action="/comment/create" class="comment-form" method="post">
+        <form action="/comment/create/<%=post._id%>" class="comment-form" method="post">
             <textarea type="text" name="content" placeholder="Write a comment..." required cols="45" rows="1"></textarea>
             <input type="hidden" name="post" value="<%=post._id %>"> 
             <input type="submit" value="Comment" id="comment-btn">
