@@ -54,3 +54,17 @@ module.exports.destroy = async function(req,res){
     }
     
 }
+
+
+module.exports.like = async function(req,res){
+    let likes = await Post.findById(req.body.params);
+    if(req.xhr){
+        return res.status(200).json({
+            data:{
+                postId:likes
+            }
+        });
+    }
+
+
+}

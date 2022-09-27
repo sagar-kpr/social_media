@@ -7,7 +7,7 @@
         <div id="my-img">
             <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>">
         </div>
-        <% if(locals.user.id == thatUser.id){ %>
+        <!-- <% if(locals.user.id == thatUser.id){ %>
             <sup><i class="fa-solid fa-pen-to-square" id="edit-btn"></i></sup> 
             <div id="edit">
                 <form action="/change/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
@@ -15,7 +15,7 @@
                     <input id="btn" type="submit" value="Update">
                 </form>
             </div>
-        <% } %>
+        <% } %> -->
 
     </div>
     <div id="name">
