@@ -3,29 +3,29 @@
 
 <div id="user_profile">
     <div id="profile">
-        <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>">
+        <img src="<%= thatUser.avatar2 %>" alt="<%= thatUser.first %>">
         <div id="my-img">
             <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>">
         </div>
-        <!-- <% if(locals.user.id == thatUser.id){ %>
-            <sup><i class="fa-solid fa-pen-to-square" id="edit-btn"></i></sup> 
-            <div id="edit">
-                <form action="/change/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
-                    <input id= "inp" type="file" name = "avatar" >
-                    <input id="btn" type="submit" value="Update">
+        <% if(locals.user.id == thatUser.id){ %>
+            <sup><i class="fa-solid fa-pen-to-square" id="edit-btn1"></i></sup> 
+            <div id="edit1" class="edit" >
+                <form action="/change2/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
+                    <input id= "inp" type="file" name = "avatar2" >
+                    <input id="btn"  type="submit" value="Update">
                 </form>
             </div>
-        <% } %> -->
+        <% } %> 
 
     </div>
     <div id="name">
         <h2><%= thatUser.first + ' ' + thatUser.last %>
             <% if(locals.user.id == thatUser.id){ %>
-                <sup ><i class="fa-solid fa-pen-to-square" id="edit-btn"></i></sup> 
+                <sup ><i class="fa-solid fa-pen-to-square "  id="edit-btn2"></i></sup> 
             <% } %>
         </h2>
         <% if(locals.user.id == thatUser.id){ %>
-            <div id="edit">
+            <div id="edit2" class="edit2">
                 <form action="/change/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
                     <input id="inp" type="text" name = "first" value="<%= thatUser.first  %>" required >
                     <input id="inp" type="text" name = "last" value="<%= thatUser.last  %>" required >

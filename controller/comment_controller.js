@@ -4,6 +4,7 @@ const Comment = require('../models/comment_schema');
 module.exports.create = async function(req,res){
     try{
         let post = await Post.findById(req.body.post);
+        console.log('+++',req.body);
         
         if(post){
             let comments = await Comment.create(

@@ -331,11 +331,20 @@ main #my-feeds #post-box .posts #comment-box form #comment-btn {
 main #my-feeds #post-box .posts #like-box {
   width: auto;
   margin: 5px 5px 10px 2rem;
+  /*button{
+                        border: none;
+                        cursor: pointer;
+                    }*/
 }
 
-main #my-feeds #post-box .posts #like-box button {
-  border: none;
-  cursor: pointer;
+main #my-feeds #post-box .posts #like-box span a {
+  color: black;
+}
+
+main #my-feeds #post-box .posts #like-box span a:hover {
+  color: #4267B2;
+  box-shadow: 0px 5px 20px 10px rgba(0, 0, 255, 0.2);
+  border-radius: 50%;
 }
 
 main #friends-list {
