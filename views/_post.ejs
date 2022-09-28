@@ -26,22 +26,24 @@
             <% } %> 
         </div>
      
-        <form action="/comment/create/<%=post._id%>" class="comment-form" method="post">
+        <form action="/comment/create/<%= post._id %>" class="comment-form" method="post">
             <textarea type="text" name="content" placeholder="Write a comment..." required cols="45" rows="1"></textarea>
-            <input type="hidden" name="post" value="<%=post._id %>"> 
+            <input type="hidden" name="post" id="hide" value="<%=post._id %>"> 
             <input type="submit" value="Comment" id="comment-btn">
         </form>
        
     </div>
     <hr>
     <div id="like-box">
-        
-        <form action="/post/likes/<%= post.id %>" method="post">
+        <span ><a href="/post/like/<%=post.id %>" id="like"><i class="fa-regular fa-thumbs-up"></i></a></span>
+        <span id="count"></span>
+        <!-- <form action="/post/likes/<%= post.id %>" method="post">
             <button type="submit"><i class="fa-regular fa-thumbs-up"></i></button>
             <span id="count"></span>
-        </form>
+        </form> -->
         
     </div>
 </div>
 
+<script src="/js/post_like.js"></script>
 <script src="/js/home_comment.js"></script>
