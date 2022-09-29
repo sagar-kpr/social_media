@@ -7,6 +7,7 @@ const layout = require('express-ejs-layouts');
 const passport = require('passport');
 const passport_local = require('./config/passport_local');
 const passport_jwt = require('./config/passport_jwt');
+const passport_google = require('./config/passport_google');
 const sassMiddlware = require('node-sass-middleware'); 
 const session = require('express-session');
 const mongoStore = require('connect-mongo');

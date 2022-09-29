@@ -48,9 +48,12 @@ let storage = multer.diskStorage({
     }
 });
 
-//static method
-schema.statics.uploadedAvatar = multer({storage : storage}).single('avatar');
-schema.statics.uploadedAvatar = multer({storage : storage}).single('avatar2');
+//static method for multi photos add (it access with req.files)
+schema.statics.uploadedAvatar = multer({storage : storage}).fields([{name:'avatar', maxCount :1}, {name: 'avatar2', maxCount:1}])
+
+//static method for single photo add (it access with req.file)
+//schema.statics.uploadedAvatar = multer({storage : storage}).single('avatar');
+
 schema.statics.avatarPath = AVATAR_PATH;
 
 

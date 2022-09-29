@@ -95,12 +95,12 @@ module.exports.change = async function(req,res){
                     return;
                  }
                  
-                console.log(req.file); 
+                console.log(req.files); 
                 user.first = req.body.first;
                 user.last = req.body.last;
 
-                if(req.file){
-                    user.avatar = User.avatarPath + '/' + req.file.filename;
+                if(req.files){
+                    user.avatar = User.avatarPath + '/' + req.files['avatar'][0].filename;
                 }
 
                 user.save();
@@ -127,10 +127,10 @@ module.exports.change2 = async function(req,res){
                     return;
                  }
                  
-                console.log('00000',req.file);  
+                console.log('00000',req.files['avatar2'][0]);  
 
-                if(req.file){
-                    user.avatar2 = User.avatarPath + '/' + req.file.filename;
+                if(req.files){
+                    user.avatar2 = User.avatarPath + '/' + req.files['avatar2'][0].filename;
                 }
 
                 user.save();
