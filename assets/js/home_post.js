@@ -13,7 +13,7 @@
                     notySuccess('Status Posted Successfully.');
                     $('#post-box').prepend(newpost); 
                     deletePost($(' .del-btn', newpost));
-                    commentForm($(' .comment-form', newpost));
+                    //commentForm($(' .comment-form', newpost));
                 },
                 error : function(error){
                     console.log(error.responseText);

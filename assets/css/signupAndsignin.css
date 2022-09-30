@@ -1,9 +1,10 @@
 main {
   width: 100%;
   height: 600px;
+  margin-top: 1px;
   display: flex;
   justify-content: flex-end;
-  background-color: white;
+  background-color: #F0F2F5;
   background-image: url("https://content-tooling.spotifycdn.com/images/af63e367-ad10-4063-a8e2-5a50ae2a4b28_lie_circles-mobile.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -17,10 +18,20 @@ main #box {
   text-align: center;
   box-sizing: border-box;
   margin: 5px;
-  box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 1px 1px 15px 5px rgba(0, 0, 0,0.2);*/
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*#social-login{
+            width:300px;
+            height: 50px;
+            border: 1px solid lightgray;
+            margin: 50px;
+        }
+        #user-login{
+            width: 300px;;
+            height: auto;
+            border: 1px solid lightgray;*/
 }
 
 main #box form {
@@ -33,7 +44,7 @@ main #box form {
 }
 
 main #box form input {
-  width: 100%;
+  width: 95%;
   line-height: 2;
   margin: 3px;
   padding: 6px;
@@ -41,6 +52,78 @@ main #box form input {
 }
 
 main #box form button {
+  width: 150px;
+  height: 45px;
+  background-color: #4267B2;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+main #signInbox {
+  width: 500px;
+  height: auto;
+  border: 1px solid white;
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 5px;
+  /*box-shadow: 1px 1px 15px 5px rgba(0, 0, 0,0.2);*/
+  /*display: flex;
+        flex-direction: column;
+        align-items: center;*/
+}
+
+main #signInbox #social-login {
+  width: 300px;
+  height: 50px;
+  border: 1px solid lightgray;
+  margin: 30px 30px 30px 95px;
+}
+
+main #signInbox #social-login button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  column-gap: 50px;
+  align-items: center;
+  font-size: 1.2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: gray;
+}
+
+main #signInbox #user-login {
+  width: 300px;
+  height: auto;
+  margin: 30px 30px 30px 95px;
+}
+
+main #signInbox #user-login form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+main #signInbox #user-login form input {
+  width: 95%;
+  line-height: 2;
+  margin: 3px;
+  padding: 6px;
+  font-size: 1.2rem;
+}
+
+main #signInbox #user-login form button {
   width: 150px;
   height: 45px;
   background-color: #4267B2;
