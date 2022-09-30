@@ -48,20 +48,20 @@
   color: dimgray;
 }
 
-#user_profile #profile #edit {
+#user_profile #profile .edit {
   width: 300px;
   height: auto;
   background-color: aliceblue;
   position: absolute;
-  left: 40%;
+  right: 0;
   display: none;
-  top: 60px;
+  top: 40px;
   box-sizing: border-box;
   box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
-#user_profile #profile #edit form {
+#user_profile #profile .edit form {
   width: 90%;
   padding: 12px;
   display: flex;
@@ -70,13 +70,13 @@
   align-items: center;
 }
 
-#user_profile #profile #edit form #inp {
+#user_profile #profile .edit form #inp {
   width: 90%;
   padding: 7px;
   margin: 5px;
 }
 
-#user_profile #profile #edit form #btn {
+#user_profile #profile .edit form #btn {
   width: 95%;
   padding: 7px;
   margin: 5px;
@@ -87,7 +87,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#user_profile #profile #edit form #btn:hover {
+#user_profile #profile .edit form #btn:hover {
   background-color: #375695;
 }
 
@@ -114,7 +114,7 @@
   cursor: pointer;
 }
 
-#user_profile #name #edit {
+#user_profile #name .edit2 {
   width: 300px;
   height: auto;
   background-color: aliceblue;
@@ -127,7 +127,7 @@
   border-radius: 10px;
 }
 
-#user_profile #name #edit form {
+#user_profile #name .edit2 form {
   width: 90%;
   padding: 12px;
   display: flex;
@@ -136,13 +136,13 @@
   align-items: center;
 }
 
-#user_profile #name #edit form #inp {
+#user_profile #name .edit2 form #inp {
   width: 90%;
   padding: 7px;
   margin: 5px;
 }
 
-#user_profile #name #edit form #btn {
+#user_profile #name .edit2 form #btn {
   width: 95%;
   padding: 7px;
   margin: 5px;
@@ -153,12 +153,12 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#user_profile #name #edit form #btn:hover {
+#user_profile #name .edit2 form #btn:hover {
   background-color: #375695;
 }
 
 @media screen and (max-width: 650px) {
-  #user_profile #name #edit {
+  #user_profile #name .edit2 {
     left: 25%;
   }
 }

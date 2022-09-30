@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports.session = async function(req,res){
     try{
+
         let user = await User.findOne({email:req.body.email});
 
         if(!user || user.password != req.body.password){
@@ -12,8 +13,12 @@ module.exports.session = async function(req,res){
         }
 
         return res.status(200).json({
-            message : 'your token is genrated',
-            token : jwt.sign(user.toJSON(), 'codial', {expiresIn : '1000000'} )
+
+            message:'token created',
+            data:{
+                token : jwt.sign(user.toJSON(), 'social', {expiresIn:'1000000'} )
+            }
+
         });
 
     }catch(err){

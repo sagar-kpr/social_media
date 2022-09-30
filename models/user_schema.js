@@ -28,6 +28,9 @@ const schema = new mongoose.Schema({
     },
     avatar : {
         type: String
+    },
+    avatar2 : {
+        type: String
     }
     
 
@@ -47,6 +50,7 @@ let storage = multer.diskStorage({
 
 //static method
 schema.statics.uploadedAvatar = multer({storage : storage}).single('avatar');
+schema.statics.uploadedAvatar = multer({storage : storage}).single('avatar2');
 schema.statics.avatarPath = AVATAR_PATH;
 
 

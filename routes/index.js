@@ -15,6 +15,7 @@ router.post('/destroy', homeController.destroy );
 router.post('/create', homeController.create);
 router.post('/session', passport.authenticate('local', {failureRedirect: '/'}), homeController.session);
 router.post('/change/:id', passport.checkAuthentication, homeController.change );
+router.post('/change2/:id', passport.checkAuthentication, homeController.change2 );
 
 //use methods
 router.use('/post', require('./post'));

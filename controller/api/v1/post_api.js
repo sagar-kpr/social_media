@@ -18,31 +18,28 @@ module.exports.index = async function(req,res){
     });
 }
 
-module.exports.destroy = async function(req,res){
+module.exports.delete = async function(req,res){
     try{
-        let post = await Post.findById(req.params.id); 
+        let post = await Post.findById(req.params.id);
         if(post.user == req.user.id){
             post.remove();
-            await Comment.deleteMany({post:req.body.id});
-
-                    
+            await Comment.deleteMany({post:req.params.id});
             return res.status(200).json({
-                message: ' post deleted'
+                message:'post deleted'
             });
 
         }else{
-            return res.status(404).json({
-                message: 'unauthorized user'
+            return res.status(401).json({
+                message:'u r not authorized user'
             });
         }
-            
-
     }catch(err){
+        console.log('err');
         return res.status(500).json({
-            message: ' internal error'
+            message:'server error'
         });
     }
     
+    
 }
-
 

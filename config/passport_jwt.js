@@ -5,7 +5,7 @@ const extract_jwt = require('passport-jwt').ExtractJwt;
 
 let opts = {
     jwtFromRequest: extract_jwt.fromAuthHeaderAsBearerToken(),
-    secretOrKey : 'codial'
+    secretOrKey : 'social'
 }
 
 passport.use(new jwt_strategy(opts, function(jwtPayLoad, done){
