@@ -3,7 +3,12 @@
 
         <div id="profile-name">
             <div id="profile">
-                <img  src="<%=post.user.avatar %>" alt="<%= post.user.first %>">
+                <% if(post.user.avatar) { %>
+                    <img src="<%=post.user.avatar %>" alt="<%= post.user.first %>">
+                <% } else { %> 
+                    <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= post.user.first %>">
+                <% } %>   
+
             </div>
             <div id="name">
                 <h1><%= post.user.first + ' ' + post.user.last %></h1>

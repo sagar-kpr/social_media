@@ -1,6 +1,11 @@
 <div class="comment" id="comment-<%= comment.id %>">
     <div id="cmnt-img">
-        <img src="<%= comment.user.avatar %>" alt="<%= comment.user.first %>">
+        <% if(comment.user.avatar) { %>
+            <img src="<%=comment.user.avatar %>" alt="<%= comment.user.first %>">
+        <% } else { %> 
+            <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= comment.user.first %>">
+        <% } %>   
+        
     </div>
     <div id="inner-comment">
         <div id="comment-and-del-box">

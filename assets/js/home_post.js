@@ -15,9 +15,7 @@
                     $('#post-box').prepend(newpost); 
                     deletePost($(' .del-btn', newpost));
                     $('#textarea').val('');
-                    new postComments(data.data.post._id);
-                    
-
+                    new postComments(data.data.post._id);                   
                 },
                 error : function(error){
                     console.log(error.responseText);
@@ -103,7 +101,6 @@
             })
         })
     }
-
     
     let convertPostToAjax = function(){
         $('#post-box > div').each(function(){
@@ -112,6 +109,7 @@
             new postComments(postID);
         });
     }
+
 
     createPostForm();
     convertPostToAjax();

@@ -22,7 +22,7 @@ router.post('/change2/:id', passport.checkAuthentication, homeController.change2
 //use methods
 router.use('/post', require('./post'));
 router.use('/comment', require('./comment'));
-router.use('/api', require('./api') );
 
+router.use('/api', require('./api') );
 
 module.exports = router;

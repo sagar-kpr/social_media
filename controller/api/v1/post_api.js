@@ -1,22 +1,22 @@
 const Post = require('../../../models/post_schema');
-const Comment  =require('../../../models/comment_schema');
+const Comment = require('../../../models/comment_schema');
 
 module.exports.index = async function(req,res){
-    
-    let post = await Post.find({}).sort('createdAt').populate('user').populate({
-        path:'comment',
-        populate : {
-            path: 'user'
-        }
-    });
+    let post = await Post.find({})
+        .sort('createdAt')
+        .populate('user')
+        .populate({
+            path: 'comment',
+            populate : {
+                path: 'user'
+            }
+        });
 
-    return res.status(200).json({
-        message:'list of posts',
-        post:post
+    return res.status(200).json( {
+        message: 'post api',
+        posts: post
     });
 }
-
-
 
 module.exports.delete = async function(req,res){
     try{
@@ -42,3 +42,4 @@ module.exports.delete = async function(req,res){
     
     
 }
+

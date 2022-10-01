@@ -3,10 +3,14 @@
 
 <div id="user_profile">
     <div id="profile">
-        
         <img src="<%= thatUser.avatar2 %>" alt="<%= thatUser.first %>">
         <div id="my-img">
-            <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>">
+            <% if(thatUser.avatar) { %>
+                <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>">
+            <% } else { %>
+                <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= thatUser.first %>">
+            <% } %>
+            
         </div>
         <% if(locals.user.id == thatUser.id){ %>
             <sup><i class="fa-solid fa-pen-to-square" id="edit-btn1"></i></sup> 

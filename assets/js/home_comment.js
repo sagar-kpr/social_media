@@ -1,3 +1,4 @@
+
 class postComments{
     constructor(postId){
         this.postId = postId;
@@ -55,6 +56,7 @@ class postComments{
 
     deleteComment(deleteLink){
         $(deleteLink).click(function(e){
+
             e.preventDefault();
             
             $.ajax({
@@ -70,4 +72,12 @@ class postComments{
 
         });
     }
+
 }
+
+
+    
+
+
+
+
