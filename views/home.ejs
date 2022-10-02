@@ -7,23 +7,54 @@
     <section id="my-feeds">
         <div id="form-box">
             <% if(locals.user){ %>
-                <div id="my-img">
-                    <% if(user.avatar) { %>
-                        <img src="<%=user.avatar %>" alt="<%= user.first %>">
-                    <% } else { %> 
-                        <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
-                    <% } %>   
+                <div id="form-inner">
+                    <div id="my-img">
+                        <% if(user.avatar) { %>
+                            <img src="<%=user.avatar %>" alt="<%= user.first %>">
+                        <% } else { %> 
+                            <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
+                        <% } %>   
+                    </div>
+                    <div id="main-form">
+                        <form action="/post/create" id="post-form" method="post">
+                            <textarea id="textarea" type="text" name="content" placeholder="Whats's on your mind, <%= user.first %>" required cols="50" rows="1"></textarea>
+                            <input id="post-btn" type="submit" value="Post">
+                        </form> 
+                    </div> 
                 </div>
-                <div>
-                    <form action="/post/create" id="post-form" method="post">
-                        <textarea id="textarea" type="text" name="content" placeholder="Whats's on your mind, <%= user.first %>" required cols="45" rows="1"></textarea>
-                        <input id="post-btn" type="submit" value="Post">
-                    </form>
-                   
+                <hr>
+                <div id="add-status">
+                    <div id="inner-status">
+                        <div class="status-box">
+                            <div class="status-logo">
+                                <img src="/icons/live.png" >
+                            </div>
+                            <div class="status-text">
+                                <span>Live video</span>
+                            </div>
+                        </div>
+                        <div class="status-box">
+                            <div class="status-logo">
+                                <img src="/icons/gallery.png" >
+                            </div>
+                            <div class="status-text">
+                                <span>Photo/video</span>
+                            </div>
+                        </div>
+                        <div class="status-box">
+                            <div class="status-logo">
+                                <img src="/icons/smile.png" >
+                            </div>
+                            <div class="status-text">
+                                <span>Feeling/activity</span>
+                            </div>
+                        </div>
+                    </div>    
+
                 </div>
             <% } %>
-            
         </div>
+        
         <div id="post-box">
             <% for(post of posts) { %>
                 <%- include('_post') -%>

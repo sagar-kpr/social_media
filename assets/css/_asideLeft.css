@@ -1,7 +1,6 @@
 #my-links {
   width: 20%;
   height: 700px;
-  border-right: 1px solid lightgray;
   display: inline-block;
   background-color: #F0F2F5;
   overflow: scroll;
@@ -9,7 +8,7 @@
   overflow-y: hidden;
   vertical-align: top;
   position: fixed;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 #my-links .links-container {
@@ -17,6 +16,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
+  margin-top: 5px;
 }
 
 #my-links .links-container ul {

@@ -1,18 +1,17 @@
 #friends-list{
     width: 20%;
     height: 700px;
-    border-left: 1px solid lightgray;
+    //border-left: 1px solid lightgray;
     display: inline-block;
-  
     vertical-align: top;
     position:fixed;
-    margin-top: 50px;
-
-    
+    margin-top: 60px; 
     #friends-logo{
         text-align: center;
+        margin-top: 5px;
         border-bottom: 2px solid lightgrey;
         h3{
+           
             font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
         }
     }

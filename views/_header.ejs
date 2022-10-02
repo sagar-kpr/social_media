@@ -18,9 +18,39 @@
 
         </div>
     </div>
+    <% if(locals.user){ %>
+        <div id="home">
+            <div id="inner-home">
+                <div class="home-icons">
+                   <img src="/icons/home.png" width="30">
+                </div>
+                <div class="home-icons">
+                    <img src="/icons/watchs.png" width="30">
+                  
+                </div>
+                <div class="home-icons">
+                    <img src="/icons/market.png" width="30">
+                </div>
+                <div class="home-icons">
+                    <img src="/icons/people.png" width="30">
+                </div>
+                <div class="home-icons">
+                    <img src="/icons/rubik.png" width="30">
+                </div>
+
+            </div>
+
+        </div>
+    <% }  %>    
     <div id="user">
         <% if(locals.user){ %>
-            <div id="text">
+            <div class="text">
+                <i class="fa-brands fa-facebook-messenger"></i>
+            </div>
+            <div class="text">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+            <div class="text">
                 <a href="/home/profile/<%= user.id %>">
                     <% if(user.avatar) { %>
                         <img src="<%=user.avatar%>" alt="<%=user.first%>">
