@@ -16,6 +16,7 @@ body{
             height: 50px;
             display: flex;
             align-items: center;
+            margin-top: 5px;
             #logo {
                 text-align:center;
                 margin: 12px;
@@ -62,6 +63,7 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 5px;
             #inner-home{
                 width:80%;
                 height: 50px;
@@ -91,7 +93,7 @@ body{
             display: flex;
             justify-content:flex-end;
             align-items: center;
-            
+            margin-top: 5px;
             /*#messenger{
                 width: 40px;
                 height: 40px;

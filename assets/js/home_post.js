@@ -58,7 +58,7 @@
                     <img  src="${user.avatar}" alt="${user.first}">
                 </div>
                 <div id="name">
-                    <h1>${user.first} ${user.last}</h1>
+                    <strong>${user.first} ${user.last}</strong>
                 </div>
                 
             </div>

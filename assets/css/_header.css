@@ -20,6 +20,7 @@ body header #logo-and-search {
   height: 50px;
   display: flex;
   align-items: center;
+  margin-top: 5px;
 }
 
 body header #logo-and-search #logo {
@@ -72,6 +73,7 @@ body header #home {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
 }
 
 body header #home #inner-home {
@@ -103,6 +105,7 @@ body header #user {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-top: 5px;
   /*#messenger{
                 width: 40px;
                 height: 40px;

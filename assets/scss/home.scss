@@ -33,12 +33,31 @@ main{
         flex-direction: column;
         align-items:center;
         background-color: #F0F2F5;
+        #story-box{
+            width:75%;
+            height:250px;
+            border: 1px solid red;
+            margin: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.1);
+            #story-header{
+                width: 100%;
+                height:50px;
+                border: 1px solid red;
+            }
+            #all-stories{
+                width:100%;
+                height: 180px;
+                border: 1px solid red;
+            }
+        }
         #form-box{
             width:75%;
+            border: 1px solid red;
             margin: 20px;
             display: block;
             background-color: white;
-            align-items: center;
             border-radius: 5px;
             box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.1);
             #form-inner{
@@ -330,6 +349,18 @@ main{
                                 border: 1px solid lightgray;
                             }
 
+                        }
+                        #form-img::after{
+                            content: ' ';
+                            bottom:-3px;
+                            right: 0;
+                            position:absolute;
+                            width:8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background-color: green;
+                            border: 2px solid white;
+                            
                         }
                         #form-text{
                             width: 90%;
