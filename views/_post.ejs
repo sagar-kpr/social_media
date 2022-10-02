@@ -3,10 +3,14 @@
 
         <div id="profile-name">
             <div id="profile">
-                <img  src="<%=post.user.avatar %>" alt="<%= post.user.first %>">  
+                <% if(post.user.avatar) { %>
+                    <img src="<%=post.user.avatar %>" alt="<%= post.user.first %>">
+                <% } else { %> 
+                    <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= post.user.first %>">
+                <% } %>   
             </div>
             <div id="name">
-                <h1><%= post.user.first + ' ' + post.user.last %></h1>
+                <strong><%= post.user.first + ' ' + post.user.last %></strong>
             </div>
             
         </div>
@@ -26,8 +30,8 @@
             <% } %> 
         </div>
      
-        <form action="/comment/create/<%= post._id %>" class="comment-form" method="post">
-            <textarea type="text" name="content" placeholder="Write a comment..." required cols="45" rows="1"></textarea>
+        <form action="/comment/create" id="comment-form-<%= post._id %>" method="post">
+            <textarea type="text" id="cmntArea" name="content" placeholder="Write a comment..." required cols="45" rows="1"></textarea>
             <input type="hidden" name="post" id="hide" value="<%=post._id %>"> 
             <input type="submit" value="Comment" id="comment-btn">
         </form>
@@ -37,10 +41,6 @@
     <div id="like-box">
         <span ><a href="/post/like/<%=post.id %>" ><i class="fa-regular fa-thumbs-up"></i></a></span>
         <span id="count"></span>
-        <!-- <form action="/post/likes/<%= post.id %>" method="post">
-            <button type="submit"><i class="fa-regular fa-thumbs-up"></i></button>
-            <span id="count"></span>
-        </form> -->
         
     </div>
 </div>

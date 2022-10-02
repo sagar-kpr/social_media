@@ -12,7 +12,7 @@ passport.use(new googleStrategy({
     callbackURL : "http://localhost:8000/auth/google/callback"
     },
     function(accessToken, refreshToken, profile, done){
-        
+
         User.findOne({email: profile.emails[0].value}).exec(function(err,user){
             if(err) { console.log('err in finding email'); return }
 
@@ -25,7 +25,7 @@ passport.use(new googleStrategy({
                     email: profile.emails[0].value,
                     age: '20',
                     password : crypto.randomBytes(20).toString('hex'),
-                    avatar : profile.photos[0].value
+                    profilePic : profile.photos[0].value 
                 }, function(err,user){
                     if(err) { console.log('err in finding email'); return }
                     return done(null, user);

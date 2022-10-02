@@ -3,7 +3,8 @@
 <header>
     <div id="logo-and-search">
         <div id="logo">
-            <a href="/"><img width="45" src="/icons/fb.png" alt="fb-logo">
+            <a href="/">
+                <img width="45" src="/icons/fb.png" alt="fb-logo">
             </a>    
         </div>
         <div id="search-box">
@@ -20,7 +21,14 @@
     <div id="user">
         <% if(locals.user){ %>
             <div id="text">
-                <a href="/home/profile/<%= user.id %>"><img src="<%=user.avatar%>" alt="<%=user.first%>"></a>
+                <a href="/home/profile/<%= user.id %>">
+                    <% if(user.avatar) { %>
+                        <img src="<%=user.avatar%>" alt="<%=user.first%>">
+                    <% } else { %>  
+                        <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
+                    <% } %>    
+
+                </a>
             </div>
             <div id="info">
                 <form action="/destroy" method="post">

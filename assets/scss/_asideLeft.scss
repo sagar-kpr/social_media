@@ -1,0 +1,75 @@
+#my-links{
+    width: 20%;
+    height: 700px;
+    border-right: 1px solid lightgray;
+    display: inline-block;
+    background-color:#F0F2F5 ;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    vertical-align: top;
+    position:fixed;
+    margin-top: 50px;
+    .links-container{
+        width:100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                width:95%;
+                height: 45px;
+                margin: 3px;
+                border-radius: 5px;
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                column-gap: 5px;
+                margin: 12px;
+                .link-logo{
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    position: relative;
+                    box-sizing: border-box;
+                    margin: 10px 10px 10px 1px;
+                    border-radius: 50%;
+                    img{
+                        width: 36px;
+                        height: 36px;
+                        object-fit: cover;
+                        vertical-align: -0.25em;
+                        border-radius: 50%;
+                    }
+                }   
+                .link-name{
+                    width: 90%;
+                    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+                    font-weight: 0;
+                    font-size: 15px;
+                    margin-left: 2px;
+                } 
+
+            }
+            li:hover{
+                background-color: rgba(0,0,0,0.1);
+            }
+        }
+        #hidden-container{
+            width:100%;
+            height: auto;
+            display: none;
+        }
+
+    }
+    
+    
+}
+
+#my-links:hover{
+    overflow-y: visible;
+}
