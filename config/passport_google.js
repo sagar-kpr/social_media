@@ -12,7 +12,7 @@ passport.use(new googleStrategy({
     callbackURL : "http://localhost:8000/auth/google/callback"
     },
     function(accessToken, refreshToken, profile, done){
-        console.log('---',profile.photos[0].value);
+        
         User.findOne({email: profile.emails[0].value}).exec(function(err,user){
             if(err) { console.log('err in finding email'); return }
 
