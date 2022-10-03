@@ -1,6 +1,6 @@
 #friends-list {
   width: 20%;
-  height: 700px;
+  height: 650px;
   display: inline-block;
   vertical-align: top;
   position: fixed;
@@ -29,12 +29,12 @@
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
 #friends-list #friends #friends-img {
-  width: 36px;
-  height: 36px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   position: relative;
   margin: 5px;

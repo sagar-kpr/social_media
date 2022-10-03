@@ -2,9 +2,9 @@
     <div class="links-container">
         <ul>
             <li>
-                <div class="link-logo" >
+                <div class="link-logo" style=" border: 1px solid lightgray;" >
                     <% if(user.avatar) { %>
-                        <img src="<%=user.avatar %>" style=" border: 1px solid lightgray;" alt="<%= user.first %>">
+                        <img src="<%=user.avatar %>"  alt="<%= user.first %>">
                     <% } else { %> 
                         <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
                     <% } %>   

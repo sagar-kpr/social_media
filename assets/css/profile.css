@@ -8,15 +8,18 @@
 
 #user_profile #profile {
   width: 99%;
-  height: 450px;
-  /*background-image: url("../images/pic2.jpg");
-        background-repeat: no-repeat;
-        background-size:cover;*/
-  margin-bottom: 100px;
+  height: 400px;
   position: relative;
+  margin-top: 60px;
+  margin-bottom: 130px;
 }
 
-#user_profile #profile img {
+#user_profile #profile #my-img2 {
+  width: 100%;
+  height: 400px;
+}
+
+#user_profile #profile #my-img2 img {
   width: 100%;
   height: 100%;
 }
@@ -37,6 +40,18 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
+}
+
+#user_profile #profile #my-img::after {
+  content: ' ';
+  bottom: 20px;
+  right: 37px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: green;
+  border: 2px solid white;
 }
 
 #user_profile #profile sup i {
@@ -99,7 +114,7 @@
 
 #user_profile #name {
   width: 100%;
-  height: 50px;
+  height: 60px;
   text-align: center;
   position: relative;
 }

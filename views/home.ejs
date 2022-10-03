@@ -7,10 +7,48 @@
     <section id="my-feeds">
         <div id="story-box">
             <div id="story-header">
+                <div class="text">
+                    <h3>Stories</h3>
+                </div>
+                <div class="text">
+                    <h3>Reels</h3>
+                </div>
+                <div class="text">
+                    <h3>Rooms</h3>
+                </div>
 
             </div>
             <hr>
             <div id="all-stories">
+                <div class="user-story-box" style="border:1px solid red;">
+                    <div class="user-story" style="height: 65%; border:1px solid red;">
+                        <% if(user.avatar) { %>
+                            <img src="<%= user.avatar %>" alt="<%= user.first %>">
+                        <% } else { %> 
+                            <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
+                        <% } %>  
+                    </div>
+                    <div id="create-story">
+                         
+                    </div> 
+
+                </div>
+                <% for (list of users) { %>
+                    <% if(locals.user.id != list.id) { %>
+                        <div class="user-story-box">
+                             <div class="user-story">
+                                <img src="/images/pic2.jpg">
+                            </div>
+                            <div class="user-img">
+                                <% if(list.avatar) { %>
+                                    <img src="<%= list.avatar %>" alt="<%= list.first %>">
+                                <% } else { %> 
+                                    <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
+                                <% } %>   
+                            </div>
+                        </div>
+                    <% } %>   
+                <% } %>
 
             </div>
 
