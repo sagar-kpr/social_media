@@ -21,7 +21,7 @@
     <% if(locals.user){ %>
         <div id="home">
             <div id="inner-home">
-                <div class="home-icons" >
+                <div class="home-icons" style="border-bottom: 4px solid #1877F2;">
                    <img src="/icons/home.png" width="25">
                 </div>
                 <div class="home-icons">
@@ -45,10 +45,14 @@
     <div id="user">
         <% if(locals.user){ %>
             <div class="text">
-                <i class="fa-brands fa-facebook-messenger"></i>
+                <a href="#">
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                </a>
             </div>
             <div class="text">
-                <i class="fa-solid fa-bell"></i>
+                <a href="#">
+                    <i class="fa-solid fa-bell"></i>
+                </a>    
             </div>
             <div class="text">
                 <a href="/home/profile/<%= user.id %>">

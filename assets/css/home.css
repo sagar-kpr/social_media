@@ -55,10 +55,10 @@ main #my-feeds #story-box #story-header {
 }
 
 main #my-feeds #story-box #story-header .text {
-  width: 30%;
+  width: 25%;
   height: 100%;
-  border-radius: 5px;
-  margin-top: 5px;
+  border-radius: 5px 5px 0 0;
+  margin-top: 12px;
 }
 
 main #my-feeds #story-box #story-header .text h3 {
@@ -81,13 +81,14 @@ main #my-feeds #story-box #all-stories {
   column-gap: 10px;
   flex-wrap: wrap;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 main #my-feeds #story-box #all-stories .user-story-box {
   width: 120px;
   height: 90%;
   border-radius: 10px;
-  margin: 5px 0 12px 7px;
+  margin: 5px 0 13px 7px;
   background-color: #F0F2F5;
   box-sizing: border-box;
   border: 1px solid lightgray;
