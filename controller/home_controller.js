@@ -1,5 +1,7 @@
 const User = require('../models/user_schema');
 const Post = require('../models/post_schema');
+const fs = require('fs');
+const path = require('path');
 
 module.exports.signup = function(req,res){
     if(req.isAuthenticated()){
@@ -39,7 +41,7 @@ module.exports.home = async function(req,res){
         });
 
         let user = await User.find({});
-
+        
         return res.render('home', {
             posts:post,
             users: user
@@ -101,6 +103,7 @@ module.exports.change = async function(req,res){
                 user.last = req.body.last;
 
                 if(req.files){
+                    
                     user.avatar = User.avatarPath + '/' + req.files['avatar'][0].filename;
                 }
 

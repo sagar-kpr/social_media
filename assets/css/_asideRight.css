@@ -21,7 +21,6 @@
   width: 95%;
   height: 45px;
   margin: 12px;
-  border-right: 10px solid green;
   font-size: 1rem;
   text-align: center;
   box-sizing: border-box;
@@ -45,6 +44,17 @@
   height: 100%;
   border-radius: 50%;
   border: 1px solid lightgray;
+}
+
+#friends-list #friends #friends-img #status {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FA383E;
+  border: 1px solid white;
 }
 
 #friends-list #friends p a {

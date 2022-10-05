@@ -20,6 +20,7 @@
     <%- body %>
     <!-- <%- include('_footer')%> -->
     <%- script %>
+    <script src="/js/profile.js"></script>
     <script>
         <% if(flash.success && flash.success.length > 0) { %>
             new Noty({
@@ -40,7 +41,8 @@
             }).show();
             
         <% } %>
-    </script>    
+    </script>   
+     
         
 </body>
 </html>

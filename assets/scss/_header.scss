@@ -71,19 +71,23 @@ body{
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
-                .home-icons{
-                    width: 100px;
-                    height: 50px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 5px 5px 0 0;  
-                    cursor: pointer; 
+                a{
+                    text-decoration: none;
+                    color: black;
+                    .home-icons{
+                        width: 100px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 5px 5px 0 0;  
+                        cursor: pointer; 
+                    }
+                    .home-icons:hover{
+                        background-color: rgba(0, 0, 0,0.1);
+                    }
                 }
-                .home-icons:hover{
-                    background-color: rgba(0, 0, 0,0.1);
-                }
-                
+                 
             }
         }
         

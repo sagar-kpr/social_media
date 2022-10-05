@@ -16,6 +16,7 @@
             <% } else { %>
                 <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= thatUser.first %>">
             <% } %>
+            <div id="status"></div>
             
         </div>
         <% if(locals.user.id == thatUser.id){ %>
@@ -61,4 +62,3 @@
 </div>
 
 
-<script src="/js/profile.js"></script>

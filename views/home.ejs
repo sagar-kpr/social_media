@@ -22,11 +22,12 @@
             <div id="all-stories">
                 <div class="user-story-box">
                     <div class="user-story" style="height:75%;" >
-                        <% if(user.avatar) { %>
+                        <img src="<%= user.avatar %>" style="border-radius: 10px 10px 0 0;" alt="<%= user.first %>">
+                        <!-- <% if(user.avatar) { %>
                             <img src="<%= user.avatar %>" style="border-radius: 10px 10px 0 0;" alt="<%= user.first %>">
                         <% } else { %> 
                             <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
-                        <% } %>  
+                        <% } %>   -->
                     </div>
                     <div id="create-story">
                          <div id="story-text">
@@ -45,11 +46,12 @@
                                 <img  src="/images/pic2.jpg">
                             </div>
                             <div class="user-img">
-                                <% if(list.avatar) { %>
+                                <img src="<%= list.avatar %>" alt="<%= list.first %>">
+                                <!-- <% if(list.avatar) { %>
                                     <img src="<%= list.avatar %>" alt="<%= list.first %>">
                                 <% } else { %> 
                                     <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
-                                <% } %>   
+                                <% } %>    -->
                             </div>
                         </div>
                     <% } %>   
@@ -62,11 +64,12 @@
             <% if(locals.user){ %>
                 <div id="form-inner">
                     <div id="my-img">
-                        <% if(user.avatar) { %>
+                        <img src="<%=user.avatar %>" alt="<%= user.first %>">
+                        <!-- <% if(user.avatar) { %>
                             <img src="<%=user.avatar %>" alt="<%= user.first %>">
                         <% } else { %> 
                             <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
-                        <% } %>   
+                        <% } %>    -->
                     </div>
                     <div id="main-form">
                         <form action="/post/create" id="post-form" method="post">

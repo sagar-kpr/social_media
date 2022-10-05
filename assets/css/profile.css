@@ -12,6 +12,18 @@
   position: relative;
   margin-top: 60px;
   margin-bottom: 130px;
+  /*#my-img::after{
+            content: ' ';
+            bottom:20px;
+            right:37px;
+            position:absolute;
+            width:15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: green;
+            border: 2px solid white;
+            
+        }*/
 }
 
 #user_profile #profile #my-img2 {
@@ -42,15 +54,14 @@
   border-radius: 50%;
 }
 
-#user_profile #profile #my-img::after {
-  content: ' ';
+#user_profile #profile #my-img #status {
   bottom: 20px;
   right: 37px;
   position: absolute;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: green;
+  background-color: #FA383E;
   border: 2px solid white;
 }
 
