@@ -2,192 +2,223 @@
     <div class="links-container">
         <ul>
             <li>
-                <div class="link-logo" style=" border: 1px solid lightgray;" >
-                    <% if(user.avatar) { %>
+                <a href="/home/profile/<%= user.id %>">
+                    <div class="link-logo" style=" border: 1px solid lightgray;" >
                         <img src="<%=user.avatar %>"  alt="<%= user.first %>">
-                    <% } else { %> 
-                        <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
-                    <% } %>   
-                </div>
-                <div class="link-name">
-                    <h4><%= user.first + ' ' + user.last%></h4>
-                </div>
+                        <!-- <% if(user.avatar) { %>
+                            <img src="<%=user.avatar %>"  alt="<%= user.first %>">
+                        <% } else { %> 
+                            <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
+                        <% } %>    -->
+                    </div>
+                    <div class="link-name">
+                        <h4><%= user.first + ' ' + user.last%></h4>
+                    </div>
+                </a>
             </li>
             <li>
-                <div class="link-logo">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png" alt="<%= user.first %>">
-                </div>
-                <div class="link-name">
-                    <h4>Friends</h4>
-                </div>
+                <a >
+                    <div class="link-logo">
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png" alt="<%= user.first %>">
+                    </div>
+                    <div class="link-name">
+                        <h4>Friends</h4>
+                    </div>
+                </a>
             </li>
             <li>
-                <div class="link-logo">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/PrjLkDYpYbH.png" alt="<%= user.first %>">
-                </div>
-                <div class="link-name">
-                    <h4>Groups</h4>
-                </div>
+                <a >
+                    <div class="link-logo">
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/PrjLkDYpYbH.png" alt="<%= user.first %>">
+                    </div>
+                    <div class="link-name">
+                        <h4>Groups</h4>
+                    </div>
+                </a>
             </li>
             <li>
-                <div class="link-logo">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yU/r/D2y-jJ2C_hO.png" alt="<%= user.first %>">
-                </div>
-                <div class="link-name">
-                    <h4>Marketplace</h4>
-                </div>
-            </li>
-            <li>
-                <div class="link-logo">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/duk32h44Y31.png" alt="<%= user.first %>">
-                </div>
-                <div class="link-name">
-                    <h4>Watch</h4>
-                </div>
-            </li>
-            <li>
-                <div class="link-logo">
-                    <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/he-BkogidIc.png" alt="<%= user.first %>">
-                </div>
-                <div class="link-name">
-                    <h4>Memories</h4>
-                </div>
-            </li>
-            <li>
-                <div class="link-logo"  style="cursor: pointer; background-color: rgba(0,0,0,0.1); display: flex; justify-content: center; align-items: center;">
-                    <i class="fa-solid fa-caret-down" id="arrow1"></i>
-                </div>
-                <div class="link-name">
-                    <h4>See more</h4>
-                </div>
+                <a >
+                    <div class="link-logo">
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yU/r/D2y-jJ2C_hO.png" alt="<%= user.first %>">
+                    </div>
+                    <div class="link-name">
+                        <h4>Marketplace</h4>
+                    </div>
+                </a>
 
+            </li>
+            <li>
+                <a >
+                    <div class="link-logo">
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/duk32h44Y31.png" alt="<%= user.first %>">
+                    </div>
+                    <div class="link-name">
+                        <h4>Watch</h4>
+                    </div>
+                </a>    
+            </li>
+            <li>
+                <a >
+                    <div class="link-logo">
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/he-BkogidIc.png" alt="<%= user.first %>">
+                    </div>
+                    <div class="link-name">
+                        <h4>Memories</h4>
+                    </div>
+                </a>    
+            </li>
+            <li>
+                <a>
+                    <div class="link-logo"  style="cursor: pointer; background-color: rgba(0,0,0,0.1); display: flex; justify-content: center; align-items: center;">
+                        <i class="fa-solid fa-caret-down" id="arrow1"></i>
+                    </div>
+                    <div class="link-name">
+                        <h4>See more</h4>
+                    </div>
+                </a>    
             </li>
         </ul>
         <div id="hidden-container">
             <ul>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/CwKNCefmHON.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Ad Center</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/CwKNCefmHON.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Ad Center</h4>
+                        </div>
+                    </a>    
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/DHBHg9MEeSC.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Ads Manager</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/DHBHg9MEeSC.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Ads Manager</h4>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/CpdWrf1nzR2.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Blood Donations</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/CpdWrf1nzR2.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Blood Donations</h4>
+                        </div>
+                    </a>    
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/Jr0q8qKF2-Y.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Climate Science Center</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/Jr0q8qKF2-Y.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Climate Science Center</h4>
+                        </div>
+                    </a>    
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yN/r/9s7nhm949yb.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Community Help</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yN/r/9s7nhm949yb.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Community Help</h4>
+                        </div>
+                    </a>    
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/5rR6LRpNc5u.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Covid-19 Information Center</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/5rR6LRpNc5u.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Covid-19 Information Center</h4>
+                        </div>
+                    </a>    
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/vxMUnHhu6Do.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Emotional Health</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/vxMUnHhu6Do.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Emotional Health</h4>
+                        </div>
+                    </a>    
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/qfMB40PdgWb.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Events</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/qfMB40PdgWb.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Events</h4>
+                        </div>
+                    </a>    
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/mAnT0r8GSOm.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Favorites</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/mAnT0r8GSOm.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Favorites</h4>
+                        </div>
+                    </a>    
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/n2vd2VduYc1.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Fundraisers</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/n2vd2VduYc1.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Fundraisers</h4>
+                        </div>
+                    </a>    
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yJ/r/fGWbDwbx9W4.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Gaming Video</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yJ/r/fGWbDwbx9W4.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Gaming Video</h4>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/BNA7dRpTdeH.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Live Videos</h4>
-                    </div>
-
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/BNA7dRpTdeH.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Live Videos</h4>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <div class="link-logo">
-                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/4Y9Xi2D3hJv.png" alt="<%= user.first %>">
-                    </div>
-                    <div class="link-name">
-                        <h4>Mesenger</h4>
-                    </div>
+                    <a >
+                        <div class="link-logo">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/4Y9Xi2D3hJv.png" alt="<%= user.first %>">
+                        </div>
+                        <div class="link-name">
+                            <h4>Mesenger</h4>
+                        </div>
+                    </a>
                 </li>
                 <li>
-                    <div class="link-logo"  style="cursor: pointer; background-color: rgba(0,0,0,0.1); display: flex; justify-content: center; align-items: center;">
-                        <i class="fa-solid fa-caret-up" id="arrow2"></i>
-                    </div>
-                    <div class="link-name">
-                        <h4>See less</h4>
-                    </div>
+                    <a >
+                        <div class="link-logo"  style="cursor: pointer; background-color: rgba(0,0,0,0.1); display: flex; justify-content: center; align-items: center;">
+                            <i class="fa-solid fa-caret-up" id="arrow2"></i>
+                        </div>
+                        <div class="link-name">
+                            <h4>See less</h4>
+                        </div>
+                    </a>
     
                 </li>
             </ul>

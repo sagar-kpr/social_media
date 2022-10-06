@@ -21,6 +21,7 @@ module.exports.create = async function(req,res){
             console.log('this++++', comments.user.email);
             commentMailer.newComment(comments);
             
+
             if(req.xhr){
                 return res.status(200).json({
                     data : {

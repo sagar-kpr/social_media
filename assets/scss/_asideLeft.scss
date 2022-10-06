@@ -30,30 +30,47 @@
                 justify-content: space-around;
                 column-gap: 5px;
                 margin: 12px;
-                .link-logo{
-                    width: 36px;
-                    height: 36px;
-                    border-radius: 50%;
-                    position: relative;
-                    box-sizing: border-box;
-                    margin: 10px 10px 10px 5px;
-                    border-radius: 50%;
-                    img{
+                
+                a{
+                    text-decoration: none;
+                    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    column-gap: 5px;
+                    color: black;
+                    width: 100%;
+                    height: 100%;
+                    
+                    .link-logo{
                         width: 36px;
                         height: 36px;
-                        object-fit: cover;
-                        vertical-align: -0.25em;
                         border-radius: 50%;
-                    }
-                }   
-                .link-name{
-                    width: 90%;
-                    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
-                    font-weight: 0;
-                    font-size: 15px;
-                    margin-left: 2px;
-                } 
+                        position: relative;
+                        box-sizing: border-box;
+                        margin: 10px 10px 10px 5px;
+                        border-radius: 50%;
+                        img{
+                            width: 36px;
+                            height: 36px;
+                            object-fit: cover;
+                            vertical-align: -0.25em;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                    }   
+                    .link-name{
+                        width: 90%;
+                        font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+                        font-weight: 0;
+                        font-size: 15px;
+                        margin-left: 2px;
+                    } 
+    
 
+                }
+                
             }
             li:hover{
                 background-color: rgba(0,0,0,0.1);

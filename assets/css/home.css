@@ -55,10 +55,10 @@ main #my-feeds #story-box #story-header {
 }
 
 main #my-feeds #story-box #story-header .text {
-  width: 30%;
+  width: 25%;
   height: 100%;
-  border-radius: 5px;
-  margin-top: 5px;
+  border-radius: 5px 5px 0 0;
+  margin-top: 12px;
 }
 
 main #my-feeds #story-box #story-header .text h3 {
@@ -81,17 +81,17 @@ main #my-feeds #story-box #all-stories {
   column-gap: 10px;
   flex-wrap: wrap;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 main #my-feeds #story-box #all-stories .user-story-box {
   width: 120px;
   height: 90%;
   border-radius: 10px;
-  margin: 5px 0 12px 7px;
-  background-color: #F0F2F5;
+  margin: 5px 0 13px 0px;
+  background-color: white;
   box-sizing: border-box;
   border: 1px solid lightgray;
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
   position: relative;
   cursor: pointer;
 }
@@ -100,12 +100,16 @@ main #my-feeds #story-box #all-stories .user-story-box .user-story {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
 }
 
 main #my-feeds #story-box #all-stories .user-story-box .user-story img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
 }
 
 main #my-feeds #story-box #all-stories .user-story-box #create-story {
@@ -134,8 +138,8 @@ main #my-feeds #story-box #all-stories .user-story-box #create-story #icon {
   height: 32px;
   background-color: #1877F2;
   border-radius: 50%;
-  position: absolute;
-  top: -40px;
+  position: relative;
+  top: -60px;
   left: 40px;
   border: 3px solid white;
   color: white;
@@ -160,6 +164,19 @@ main #my-feeds #story-box #all-stories .user-story-box .user-img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+main #my-feeds #story-box #all-stories .user-story-box:hover {
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.2) inset;
+}
+
+main #my-feeds #story-box #all-stories .user-story-box:hover img {
+  transform: scale(1.03);
+}
+
+main #my-feeds #story-box #all-stories .user-story-box:hover .user-img img {
+  transform: scale(1);
 }
 
 main #my-feeds #form-box {
@@ -196,6 +213,7 @@ main #my-feeds #form-box #form-inner #my-img img {
   height: 100%;
   border-radius: 50%;
   border: 1px solid lightgray;
+  object-fit: cover;
 }
 
 main #my-feeds #form-box #form-inner #main-form {
@@ -265,6 +283,7 @@ main #my-feeds #form-box #add-status #inner-status .status-box .status-logo {
 main #my-feeds #form-box #add-status #inner-status .status-box .status-logo img {
   width: 30px;
   height: 30px;
+  object-fit: cover;
 }
 
 main #my-feeds #form-box #add-status #inner-status .status-box .status-text {
@@ -327,6 +346,7 @@ main #my-feeds #post-box .posts #name-and-del-box #profile-name #profile img {
   height: 100%;
   border-radius: 50%;
   border: 1px solid lightgray;
+  object-fit: cover;
 }
 
 main #my-feeds #post-box .posts #name-and-del-box #profile-name #name {
@@ -405,6 +425,7 @@ main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmnt-im
   height: 100%;
   border-radius: 50%;
   border: 1px solid lightgray;
+  object-fit: cover;
 }
 
 main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment {
@@ -469,6 +490,7 @@ main #my-feeds #post-box .posts #comment-box #form-controller #form-img img {
   height: 100%;
   border-radius: 50%;
   border: 1px solid lightgray;
+  object-fit: cover;
 }
 
 main #my-feeds #post-box .posts #comment-box #form-controller #form-img::after {

@@ -41,7 +41,7 @@ module.exports.home = async function(req,res){
         });
 
         let user = await User.find({});
-
+        
         return res.render('home', {
             posts:post,
             users: user
@@ -103,9 +103,11 @@ module.exports.change = async function(req,res){
                 user.last = req.body.last;
 
                 if(req.files){
-                    if(user.avatar){
+
+                    /*if(user.avatar){
                         fs.unlinkSync(path.join(__dirname, '..', user.avatar));
-                    }
+                    }*/
+
                     user.avatar = User.avatarPath + '/' + req.files['avatar'][0].filename;
                 }
 

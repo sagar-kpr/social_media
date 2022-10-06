@@ -4,7 +4,7 @@
     <div id="logo-and-search">
         <div id="logo">
             <a href="/">
-                <img width="45" src="/icons/facebook.png" alt="fb-logo">
+                <img width="45" src="/icons/fb1.png" alt="fb-logo">
             </a>    
         </div>
         <div id="search-box">
@@ -21,23 +21,32 @@
     <% if(locals.user){ %>
         <div id="home">
             <div id="inner-home">
-                <div class="home-icons" >
-                   <img src="/icons/home.png" width="25">
-                </div>
-                <div class="home-icons">
-                    <img src="/icons/watchs.png" width="25">
-                  
-                </div>
-                <div class="home-icons">
-                    <img src="/icons/market.png" width="25">
-                </div>
-                <div class="home-icons">
-                    <img src="/icons/people.png" width="25">
-                </div>
-                <div class="home-icons">
-                    <img src="/icons/rubik.png" width="30">
-                </div>
-
+                <a href="/home" class="a-tag" >
+                    <div class="home-icons" id="1" data-value='false' style="border-bottom:4px solid #1877F2">
+                    <img class="img" id="1" data-value='false' src="/icons/home.png" width="25">
+                    </div>
+                </a>
+                <a class="a-tag" >
+                    <div class="home-icons" id="2" data-value="false">
+                        <img class="img" id="2" data-value="false" src="/icons/watchs.png" width="25">
+                    
+                    </div>
+                </a>  
+                <a class="a-tag" > 
+                    <div class="home-icons" id="3" data-value="false">
+                        <img class="img" id="3" data-value="false" src="/icons/market.png" width="25">
+                    </div>
+                </a>
+                <a class="a-tag" >
+                    <div class="home-icons" id="4" data-value="false">
+                        <img class="img" id="4" data-value="false" src="/icons/people.png" width="25">
+                    </div>
+                </a>
+                <a class="a-tag" >
+                    <div class="home-icons" id="5" data-value="5">
+                        <img class="img" id="5" data-value="5" data-value="5" src="/icons/rubik.png" width="30">
+                    </div>
+                </a>
             </div>
 
         </div>
@@ -45,18 +54,23 @@
     <div id="user">
         <% if(locals.user){ %>
             <div class="text">
-                <i class="fa-brands fa-facebook-messenger"></i>
+                <a href="#">
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                </a>
             </div>
             <div class="text">
-                <i class="fa-solid fa-bell"></i>
+                <a href="#">
+                    <i class="fa-solid fa-bell"></i>
+                </a>    
             </div>
             <div class="text">
                 <a href="/home/profile/<%= user.id %>">
-                    <% if(user.avatar) { %>
+                    <img src="<%=user.avatar%>" alt="<%=user.first%>">
+                    <!-- <% if(user.avatar) { %>
                         <img src="<%=user.avatar%>" alt="<%=user.first%>">
                     <% } else { %>  
                         <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
-                    <% } %>    
+                    <% } %>     -->
 
                 </a>
             </div>
@@ -78,3 +92,4 @@
         <% } %>
     </div>
 </header>
+<script src="/js/_header.js"></script>
