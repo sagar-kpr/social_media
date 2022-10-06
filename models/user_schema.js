@@ -32,9 +32,7 @@ const schema = new mongoose.Schema({
     avatar2 : {
         type: String
     },
-    profilePic : {
-        type: String
-    }
+    
     
 
 },{
