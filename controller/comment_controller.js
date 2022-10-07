@@ -1,11 +1,10 @@
 const Post = require('../models/post_schema');
 const Comment = require('../models/comment_schema');
-const commentMailer = require('../mailers/comment_mailer');
-
+const commentWorker =require('../worker/comment_worker');
+const queue = require('../config/kue');
 module.exports.create = async function(req,res){
     try{
         let post = await Post.findById(req.body.post);
-        console.log('+++',req.body);
         
         if(post){
             let comments = await Comment.create(
@@ -17,9 +16,7 @@ module.exports.create = async function(req,res){
             );
             post.comment.push(comments);
             post.save();
-            comments = await comments.populate('user', 'first email');
-            console.log('comment', comments);
-            commentMailer.newComment(comments);    
+            comments = await comments.populate('user');
             if(req.xhr){
                 return res.status(200).json({
                     data : {

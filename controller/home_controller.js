@@ -13,7 +13,6 @@ module.exports.signup = function(req,res){
 
 module.exports.profile = function(req,res){
     User.findById(req.params.id, function(err,user){
-        console.log('.....w',user);
         return res.render('profile',{
             thatUser: user
         });
