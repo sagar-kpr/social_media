@@ -31,11 +31,12 @@ const schema = new mongoose.Schema({
     },
     avatar2 : {
         type: String
-    }
 
+    }
 },{
     timestamps: true
 });
+
 
 let storage = multer.diskStorage({
     destination : function(req, file, cb){

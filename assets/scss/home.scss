@@ -73,26 +73,32 @@ main{
                 overflow: scroll;
                 overflow-x: hidden;
                 .user-story-box{
-                    width: 120px;
+                    width: 125px;
                     height: 90%;
                     border-radius: 10px;
-                    margin: 5px 0 13px 7px;
-                    background-color: #F0F2F5;
+                    margin: 5px 0 13px 0px;
+                    background-color: white;
                     box-sizing: border-box;
                     border: 1px solid lightgray;
-                    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1);
+                    //box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.1);
                     position: relative;
+
                     
                     cursor: pointer;
                     .user-story{
                         width: 100%;
                         height: 100%;
                         border-radius: 10px;
+                        overflow: hidden;
+                        border-radius: 10px 10px 0 0;
                         img{
                             width: 100%;
                             height: 100%;
                             border-radius: 10px;
+                            object-fit:cover;
+                            transition: all 0.5s ease-in-out;
                         }
+                        
                     }
                     #create-story{
                         width:100%;
@@ -116,8 +122,8 @@ main{
                             height: 32px;
                             background-color: #1877F2;
                             border-radius: 50%;
-                            position: absolute;
-                            top:-40px;
+                            position: relative;
+                            top:-60px;
                             left: 40px;
                             border: 3px solid white ;
                             color: white;
@@ -140,9 +146,26 @@ main{
                             width: 100%;
                             height: 100%;
                             border-radius: 50%;
+                            object-fit: cover;
                             
                         }
                     }
+                }
+                .user-story-box:hover{
+                    //background-color: #F0F2F5;
+                    box-shadow: 0px 0px 50px 20px rgba(0,0,0,0.2) inset;
+                    img{
+                        transform: scale(1.03);
+                    }
+                    .user-img{
+                        img{
+                            transform: scale(1);
+                        }
+                        
+                    }
+                }
+                .user-story-box:nth-child(5n){
+                    margin-left: 30px;
                 }
             }
         }
@@ -175,6 +198,7 @@ main{
                         height: 100%;
                         border-radius: 50%;
                         border: 1px solid lightgray;
+                        object-fit: cover;
                     }
                 }
                 #main-form{
@@ -236,6 +260,7 @@ main{
                             img{
                                 width: 30px;
                                 height: 30px;
+                                object-fit: cover;
                             }
                         }
                         .status-text{
@@ -293,6 +318,7 @@ main{
                                 height: 100%;
                                 border-radius: 50%;
                                 border: 1px solid lightgray;
+                                object-fit: cover;
                             }
 
                         }
@@ -370,6 +396,7 @@ main{
                                     height: 100%;
                                     border-radius: 50%;
                                     border: 1px solid lightgray;
+                                    object-fit: cover;
                                 }
                             }   
                             #inner-comment{
@@ -440,6 +467,7 @@ main{
                                 height: 100%;
                                 border-radius: 50%;
                                 border: 1px solid lightgray;
+                                object-fit: cover;
                             }
 
                         }

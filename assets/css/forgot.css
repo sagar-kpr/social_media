@@ -8,9 +8,10 @@ main {
   background-image: url("https://content-tooling.spotifycdn.com/images/af63e367-ad10-4063-a8e2-5a50ae2a4b28_lie_circles-mobile.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
-main #box {
+main #email-box {
   width: 500px;
   height: 100%;
   border: 1px solid white;
@@ -18,29 +19,30 @@ main #box {
   text-align: center;
   box-sizing: border-box;
   margin: 5px;
-  /*box-shadow: 1px 1px 15px 5px rgba(0, 0, 0,0.2);*/
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 60px;
 }
 
-main #box #user-signup {
-  width: 300px;
+main #email-box #forgot-email {
+  width: 100%;
   height: auto;
-  margin: 5px 30px 30px 55px;
 }
 
-main #box #user-signup form {
+main #email-box #forgot-email span {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+main #email-box #forgot-email form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   margin-top: 50px;
+  padding: 7px;
 }
 
-main #box #user-signup form input {
+main #email-box #forgot-email form input {
   width: 95%;
   line-height: 2;
   margin: 3px;
@@ -50,14 +52,14 @@ main #box #user-signup form input {
   border: 1px solid lightgray;
 }
 
-main #box #user-signup form button {
-  width: 100%;
+main #email-box #forgot-email form button {
+  width: 150px;
   height: 45px;
-  background-color: #4267B2;
+  background-color: #1877F2;
   color: white;
   font-family: sans-serif;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 7px;
   cursor: pointer;
   border: none;
   margin-top: 30px;

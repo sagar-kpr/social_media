@@ -66,6 +66,7 @@
   object-fit: cover;
   vertical-align: -0.25em;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 #my-links .links-container ul li a .link-name {

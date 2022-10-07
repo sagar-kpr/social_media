@@ -9,16 +9,19 @@ main{
     background-repeat: no-repeat;
     background-size: contain;
     #signIn-box{
+        
         width:500px;
-        height:auto;
+        height:100%;
         border: 1px solid white;
         background-color: white;
         text-align: center;
         box-sizing: border-box;
         margin: 5px;
+        margin-top: 60px;
         #social-login{
             width:300px;
             height: 50px;
+            border-radius: 7px;
             border: 1px solid lightgray;
             margin:30px 30px 50px 95px;
             button{
@@ -27,6 +30,7 @@ main{
                 background-color: transparent;
                 cursor: pointer;
                 border: none;
+                border-radius: 7px;
                 a{
                     display: flex;
                     column-gap: 50px;
@@ -90,6 +94,8 @@ main{
                     margin: 3px;
                     padding: 6px ;
                     font-size: 1.2rem;
+                    border-radius: 7px;
+                    border: 1px solid lightgray;
                 }
                 
                 button{
@@ -99,7 +105,7 @@ main{
                     color: white;
                     font-family: sans-serif;
                     text-align: center;
-                    border-radius: 8px;
+                    border-radius: 7px;
                     cursor: pointer;
                     border: none;
                     margin-top: 30px;
@@ -107,6 +113,16 @@ main{
     
                 }
                 
+            }
+            span{
+                a{
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    color: dimgray;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: 400;
+
+                }
             }
     
         }

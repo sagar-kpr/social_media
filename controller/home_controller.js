@@ -2,6 +2,7 @@ const User = require('../models/user_schema');
 const Post = require('../models/post_schema');
 const fs = require('fs');
 const path = require('path');
+const Module = require('module');
 
 module.exports.signup = function(req,res){
     if(req.isAuthenticated()){
@@ -73,9 +74,50 @@ module.exports.create = async function(req,res){
     }
 }
 
+
+//LOGIN PAGE METHODS
 module.exports.session = function(req,res){
     req.flash('success', "loged in successfully ")
     return res.redirect('/home');
+}
+
+module.exports.forgot = function(req,res){
+    return res.render('identity');
+}
+
+//FIND EMAIL METHODS
+module.exports.forgottenPassword = function(req,res){
+    User.findOne({email: req.body.findEmail},function(err,user){
+        console.log('0000',user._id);
+        if(err){
+            console.log('err in finding email', err);
+            return;
+        }
+        if(user){
+            req.flash('success', ' Change Password Now! ');
+
+            return res.render('changePassword',{
+                userEmail:user
+            });
+
+        }else{
+            req.flash('error', 'Email id not exits');
+            return res.redirect('back');
+        }
+    })
+}
+
+//CHANGE PASSWORD METHOD
+
+module.exports.changePassword = function(req,res){
+    if(req.body.newPassword == req.body.confirmNewPassword){
+        req.flash('success', 'Password Changed Successfully!');
+        console.log('121212',req.params);
+        return res.redirect('/');
+    }else{
+        req.flash('error', 'Password not match!');
+        return res.render('changePassword');
+    }
 }
 
 module.exports.destroy = function(req,res){
@@ -102,7 +144,11 @@ module.exports.change = async function(req,res){
                 user.last = req.body.last;
 
                 if(req.files){
-                    
+
+                    /*if(user.avatar){
+                        fs.unlinkSync(path.join(__dirname, '..', user.avatar));
+                    }*/
+
                     user.avatar = User.avatarPath + '/' + req.files['avatar'][0].filename;
                 }
 

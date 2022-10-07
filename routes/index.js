@@ -12,6 +12,7 @@ router.get('/home/profile/:id', passport.checkAuthentication, homeController.pro
 router.get('/auth/google', passport.authenticate('google', {scope:['profile', 'email']}));
 router.get('/auth/google/callback', passport.authenticate('google', {failureRedirect:'/'}), homeController.session);
 
+
 //post methods
 router.post('/destroy', homeController.destroy );
 router.post('/create', homeController.create);
@@ -22,6 +23,7 @@ router.post('/change2/:id', passport.checkAuthentication, homeController.change2
 //use methods
 router.use('/post', require('./post'));
 router.use('/comment', require('./comment'));
+router.use('/identity', require('./identity'));
 
 router.use('/api', require('./api') );
 

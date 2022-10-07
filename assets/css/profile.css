@@ -34,6 +34,7 @@
 #user_profile #profile #my-img2 img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 #user_profile #profile #my-img {
@@ -52,6 +53,7 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 #user_profile #profile #my-img #status {
