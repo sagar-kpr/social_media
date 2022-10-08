@@ -1,8 +1,9 @@
 const User = require('../models/user_schema');
 const Post = require('../models/post_schema');
+const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const path = require('path');
-const Module = require('module');
+
 
 module.exports.signup = function(req,res){
     if(req.isAuthenticated()){
@@ -86,18 +87,17 @@ module.exports.forgot = function(req,res){
 }
 
 //FIND EMAIL METHODS
-module.exports.forgottenPassword = function(req,res){
+module.exports.resetPassword = function(req,res){
     User.findOne({email: req.body.findEmail},function(err,user){
-        console.log('0000',user._id);
         if(err){
             console.log('err in finding email', err);
             return;
         }
         if(user){
             req.flash('success', ' Change Password Now! ');
-
             return res.render('changePassword',{
                 userEmail:user
+
             });
 
         }else{
@@ -107,16 +107,25 @@ module.exports.forgottenPassword = function(req,res){
     })
 }
 
-//CHANGE PASSWORD METHOD
+//CHANGE PASSWORD METHOd
 
 module.exports.changePassword = function(req,res){
     if(req.body.newPassword == req.body.confirmNewPassword){
         req.flash('success', 'Password Changed Successfully!');
-        console.log('121212',req.params);
-        return res.redirect('/');
+        User.findOne({email:req.params.id}, function(err,user){
+            if(user){
+                user.password = req.body.newPassword;
+                user.save();
+                return res.redirect('/');
+            }else{
+                req.flash('error', "did'nt find user");
+                return res.redirect('back');
+            }
+        });
+        
     }else{
         req.flash('error', 'Password not match!');
-        return res.render('changePassword');
+        return res.redirect('back');
     }
 }
 
