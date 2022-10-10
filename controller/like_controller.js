@@ -8,7 +8,7 @@ module.exports.toggleLike = async function(req,res){
         let liked;
         let deleted = false;
     
-        if(req.query.type == 'post'){
+        if(req.query.type == 'Post'){
             liked = await Post.findById(req.query.id).populate('likes');
         }else{
             liked = await Comment.findById(req.query.id).populate('likes');   
@@ -32,7 +32,7 @@ module.exports.toggleLike = async function(req,res){
                 onModel: req.query.type
             });
     
-            liked.push(newLike._id);
+            liked.likes.push(newLike._id);
             liked.save();
         }
     

@@ -26,6 +26,7 @@ class postComments{
                     let newComment= postSelf.newCommentDom(data.data.comment, data.data.user);
                     $(`#comment-scroller-${data.data.comment.post}`,this.postContainer).prepend(newComment);
                     postSelf.deleteComment($(' .del-cmnt',newComment));
+                    new ToggleLike($(' .toggle-like', newComment));
                     $(`#comment-form-${postId} > #cmntArea`).val('');
                     
                 },error : function(err){
@@ -54,8 +55,11 @@ class postComments{
                 </div>
             </div>
             <div class="cmnt-like">
-                <span ><a href="#" ><i class="fa-regular fa-thumbs-up"></i></a></span>
-                <span id="count"> 0 </span>
+                <span >
+                    <a class="toggle-like" href="likes/toggle/?id=${comment._id}&type=Comment"  id="like" data-likes= "0" >
+                        ${comment.likes.length} Likes
+                    </a>
+                </span>
             </div>    
         </div> `);
     }

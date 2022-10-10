@@ -15,7 +15,8 @@
                     $('#post-box').prepend(newpost); 
                     deletePost($(' .del-btn', newpost));
                     $('#textarea').val('');
-                    new postComments(data.data.post._id);                   
+                    new postComments(data.data.post._id);       
+                    new ToggleLike($(' .toggle-like', newpost));            
                 },
                 error : function(error){
                     console.log(error.responseText);
@@ -85,8 +86,11 @@
         </div>
         <hr>
         <div id="like-box">
-            <span ><a href="/post/like/${post._id}" id="like"><i class="fa-regular fa-thumbs-up"></i></a></span>
-            <span id="count"></span>
+            <span >
+                <a class="toggle-like" href="likes/toggle/?id=${post._id}&type=Post"  id="like" data-likes= "0">
+                    ${post.likes.length} Likes
+                </a>
+            </span>
         </div>
     </div>`);
     }
