@@ -111,11 +111,12 @@ module.exports.resetPassword = function(req,res){
 
 module.exports.changePassword = function(req,res){
     if(req.body.newPassword == req.body.confirmNewPassword){
-        req.flash('success', 'Password Changed Successfully!');
+       
         User.findOne({email:req.params.id}, function(err,user){
             if(user){
                 user.password = req.body.newPassword;
                 user.save();
+                req.flash('success', 'Password Changed Successfully!');
                 return res.redirect('/');
             }else{
                 req.flash('error', "did'nt find user");
@@ -124,8 +125,8 @@ module.exports.changePassword = function(req,res){
         });
         
     }else{
-        req.flash('error', 'Password not match!');
-        return res.redirect('back');
+        req.flash('error', "did'nt match");
+        return res.redirect('/identity');
     }
 }
 

@@ -411,11 +411,19 @@ main #my-feeds #post-box .posts #comment-box .comment-scroller .comment {
   margin: 20px 20px 20px 0px;
   height: auto;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAndImg {
+  width: 100%;
+  height: auto;
+  display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmnt-img {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAndImg #cmnt-img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -424,7 +432,7 @@ main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmnt-im
   margin: 5px 10px 5px 7px;
 }
 
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmnt-img img {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAndImg #cmnt-img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -432,7 +440,7 @@ main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmnt-im
   object-fit: cover;
 }
 
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAndImg #inner-comment {
   min-width: 150px;
   max-width: 70%;
   min-height: 25px;
@@ -444,31 +452,48 @@ main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-c
   word-wrap: break-word;
 }
 
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment #comment-and-del-box {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAndImg #inner-comment #comment-and-del-box {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
 
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment #comment-and-del-box div h3 {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAndImg #inner-comment #comment-and-del-box div h3 {
   margin: 0 0 0 -5px;
   font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
   color: #050505;
   font-size: 13px;
 }
 
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment #comment-and-del-box div {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAndImg #inner-comment #comment-and-del-box div {
   margin: 2px 2px 2px 10px;
 }
 
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment #comment-and-del-box div span a {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAndImg #inner-comment #comment-and-del-box div span a {
   text-decoration: none;
   color: dimgray;
 }
 
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #inner-comment p {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAndImg #inner-comment p {
   margin: 2px 0 2px 5px;
   font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like {
+  width: 100px;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 10px;
+  margin: 10px;
+}
+
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like span a {
+  color: black;
+}
+
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like span a:hover {
+  color: #4267B2;
+  border-radius: 50%;
 }
 
 main #my-feeds #post-box .posts #comment-box #form-controller {
@@ -541,16 +566,16 @@ main #my-feeds #post-box .posts #comment-box #form-controller #form-text form #c
   margin: 20px;
 }
 
-main #my-feeds #post-box .posts #like-box {
+main #my-feeds #post-box .posts .post-like {
   width: auto;
   margin: 5px 5px 10px 2rem;
 }
 
-main #my-feeds #post-box .posts #like-box span a {
+main #my-feeds #post-box .posts .post-like span a {
   color: black;
 }
 
-main #my-feeds #post-box .posts #like-box span a:hover {
+main #my-feeds #post-box .posts .post-like span a:hover {
   color: #4267B2;
   box-shadow: 0px 5px 20px 10px rgba(0, 0, 255, 0.2);
   border-radius: 50%;
