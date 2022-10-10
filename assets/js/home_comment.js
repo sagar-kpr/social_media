@@ -37,20 +37,26 @@ class postComments{
 
     newCommentDom(comment,user){
         return $(`<div class="comment" id="comment-${comment._id}">
-            <div id="cmnt-img">
-                <img src="${user.avatar}" alt="${user.first}">
-            </div>
-            <div id="inner-comment">
-                <div id="comment-and-del-box">
-                    <div>
-                        <h3> ${user.first} ${user.last }</h3>
-                    </div>
-                
-                        <div><span><a class="del-cmnt" href="/comment/destroy/${comment._id}">x</a></span></div>
-                
+            <div id="cmntAndImg">
+                <div id="cmnt-img">
+                    <img src="${user.avatar}" alt="${user.first}">
                 </div>
-                <p>${comment.content } </p>
+                <div id="inner-comment">
+                    <div id="comment-and-del-box">
+                        <div>
+                            <h3> ${user.first} ${user.last }</h3>
+                        </div>
+                    
+                            <div><span><a class="del-cmnt" href="/comment/destroy/${comment._id}">x</a></span></div>
+                    
+                    </div>
+                    <p>${comment.content } </p>
+                </div>
             </div>
+            <div class="cmnt-like">
+                <span ><a href="#" ><i class="fa-regular fa-thumbs-up"></i></a></span>
+                <span id="count"> 0 </span>
+            </div>    
         </div> `);
     }
 

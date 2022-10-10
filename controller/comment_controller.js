@@ -1,8 +1,8 @@
 const Post = require('../models/post_schema');
 const Comment = require('../models/comment_schema');
-const queue = require('../config/kue');
-const commentWorker = require('../worker/comment_worker');
-//const commentMailer = require('../mailers/comment_mailer');
+//const queue = require('../config/kue');
+//const commentWorker = require('../worker/comment_worker');
+const commentMailer = require('../mailers/comment_mailer');
 
 
 module.exports.create = async function(req,res){
@@ -21,11 +21,11 @@ module.exports.create = async function(req,res){
             post.comment.push(comments);
             post.save();
             comments = await comments.populate('user', 'first email');
-            queue.create('emails', comments).save(function(err){
+            /*queue.create('emails', comments).save(function(err){
                 console.log('err',err);
                 return;
-            });
-            //commentMailer.newComment(comments);    
+            });*/
+            commentMailer.newComment(comments);    
             if(req.xhr){
                 return res.status(200).json({
                     data : {

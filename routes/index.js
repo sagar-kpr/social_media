@@ -24,6 +24,7 @@ router.post('/change2/:id', passport.checkAuthentication, homeController.change2
 router.use('/post', require('./post'));
 router.use('/comment', require('./comment'));
 router.use('/identity', require('./identity'));
+router.use('/likes', require('./likes'));
 
 router.use('/api', require('./api') );
 

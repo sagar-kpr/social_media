@@ -29,23 +29,33 @@ main #signIn-box #social-login {
   margin: 30px 30px 50px 95px;
 }
 
-main #signIn-box #social-login button {
+main #signIn-box #social-login a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  column-gap: 50px;
+  align-items: center;
+  color: gray;
+  text-decoration: none;
+}
+
+main #signIn-box #social-login a button {
   width: 100%;
   height: 100%;
   background-color: transparent;
   cursor: pointer;
   border: none;
   border-radius: 7px;
-}
-
-main #signIn-box #social-login button a {
   display: flex;
   column-gap: 50px;
   align-items: center;
   font-size: 1.2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: gray;
-  text-decoration: none;
+}
+
+main #signIn-box #social-login:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 main #signIn-box #user-login {
