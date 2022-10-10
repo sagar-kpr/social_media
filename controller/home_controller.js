@@ -86,9 +86,9 @@ module.exports.forgot = function(req,res){
 }
 
 //FIND EMAIL METHODS
-module.exports.forgottenPassword = function(req,res){
+module.exports.reset_password = function(req,res){
     User.findOne({email: req.body.findEmail},function(err,user){
-        console.log('0000',user._id);
+        console.log('0000',user);
         if(err){
             console.log('err in finding email', err);
             return;
@@ -104,12 +104,12 @@ module.exports.forgottenPassword = function(req,res){
             req.flash('error', 'Email id not exits');
             return res.redirect('back');
         }
-    })
+    });
 }
 
 //CHANGE PASSWORD METHOD
 
-module.exports.changePassword = function(req,res){
+module.exports.change_password = function(req,res){
     if(req.body.newPassword == req.body.confirmNewPassword){
         req.flash('success', 'Password Changed Successfully!');
         console.log('121212',req.params);
