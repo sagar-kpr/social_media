@@ -116,7 +116,8 @@ module.exports.change_password = function(req,res){
         return res.redirect('/');
     }else{
         req.flash('error', 'Password not match!');
-        return res.render('changePassword');
+
+        return res.redirect('/identity/resetPassword');
     }
 }
 
