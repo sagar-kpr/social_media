@@ -56,8 +56,8 @@ class postComments{
             </div>
             <div class="cmnt-like">
                 <span >
-                    <a class="toggle-like" href="likes/toggle/?id=${comment._id}&type=Comment"  id="like" data-likes= "0" >
-                        ${comment.likes.length} Likes
+                    <a class="toggle-like" id="like" href="likes/toggle/?id=${comment._id}&type=Comment"   data-likes= "0" >
+                        0 Likes
                     </a>
                 </span>
             </div>    

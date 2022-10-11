@@ -36,7 +36,7 @@ module.exports.toggleLike = async function(req,res){
             liked.likes.push(newLike._id);
             liked.save();
         }
-    
+        
         return res.status(200).json({
             message : 'success',
             data: {
@@ -53,4 +53,3 @@ module.exports.toggleLike = async function(req,res){
     
     
 }
->>>>>>> 0e397e8e4a2ea1710c35938499e3cea788b66f50

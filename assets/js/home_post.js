@@ -10,7 +10,7 @@
                 data : postForm.serialize(),
                 success : function(data){  
                     let newpost = createPostDom(data.data.post, data.data.user);
-                    console.log('ppp',);
+                    console.log('ppp',newpost);
                     notySuccess('Status Posted Successfully.');
                     $('#post-box').prepend(newpost); 
                     deletePost($(' .del-btn', newpost));
@@ -85,10 +85,10 @@
             </div>
         </div>
         <hr>
-        <div id="like-box">
+        <div id="post-like">
             <span >
-                <a class="toggle-like" href="likes/toggle/?id=${post._id}&type=Post"  id="like" data-likes= "0">
-                    ${post.likes.length} Likes
+                <a class="toggle-like" id="like" href="likes/toggle/?id=${post._id}&type=Post"   data-likes= "0">
+                    0 Likes
                 </a>
             </span>
         </div>
@@ -115,11 +115,14 @@
     }
     
     let convertPostToAjax = function(){
+        
         $('#post-box > div').each(function(){
             deletePost($(' .del-btn', $(this)));
             let postID = $(this).prop('id').split('-')[1];
-            new postComments(postID);
+            new ToggleLike($('#like',$(this)));
+            new postComments(postID);  
         });
+        
     }
 
 

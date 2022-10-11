@@ -567,19 +567,18 @@ main #my-feeds #post-box .posts #comment-box #form-controller #form-text form #c
   margin: 20px;
 }
 
-main #my-feeds #post-box .posts .post-like {
+main #my-feeds #post-box .posts #post-like {
   width: auto;
   margin: 5px 5px 10px 2rem;
 }
 
-main #my-feeds #post-box .posts .post-like span a {
+main #my-feeds #post-box .posts #post-like span a {
   color: black;
   text-decoration: none;
 }
 
-main #my-feeds #post-box .posts .post-like span a:hover {
+main #my-feeds #post-box .posts #post-like span a:hover {
   color: #4267B2;
-  box-shadow: 0px 5px 20px 10px rgba(0, 0, 255, 0.2);
   border-radius: 50%;
 }
 
