@@ -6,29 +6,29 @@
                 <img src="<%=post.user.avatar %>" alt="<%= post.user.first %>">
                 <!-- <% if(post.user.avatar) { %>
                     <img src="<%=post.user.avatar %>" alt="<%= post.user.first %>">
-                <% } else { %> 
+                <% } else { %>
                     <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= post.user.first %>">
                 <% } %>    -->
             </div>
             <div id="name">
                 <strong><%= post.user.first + ' ' + post.user.last %></strong>
             </div>
-            
+
         </div>
         <% if(locals.user.id == post.user.id) { %>
             <div id="cross"><span><a class="del-btn" href="/post/destroy/<%=post.id %>">x</a></span></div>
         <% } %>
-        
+
     </div>
     <div id="post-content">
         <p><%= post.content %></p>
-        
+
     </div>
     <div id="comment-box">
         <div class="comment-scroller" id="comment-scroller-<%= post._id %>">
             <% for(comment of post.comment) { %>
-                <%- include('_comment') -%>      
-            <% } %> 
+                <%- include('_comment') -%>
+            <% } %>
         </div>
         <div id="form-controller">
             <div id="form-img">
@@ -37,19 +37,21 @@
             <div id="form-text">
                 <form action="/comment/create" id="comment-form-<%= post._id %>" method="post">
                     <textarea type="text" id="cmntArea" name="content" placeholder="Write a comment..." required cols="45" rows="1"></textarea>
-                    <input type="hidden" name="post" id="hide" value="<%=post._id %>"> 
+                    <input type="hidden" name="post" id="hide" value="<%=post._id %>">
                     <input type="submit" value="Comment" id="comment-btn">
                 </form>
             </div>
-            
+
         </div>
     </div>
     <hr>
     <div class="post-like">
-        <span ><a href="/likes/toggle/?id=<%=post._id%>&type='post'" ><i class="fa-regular fa-thumbs-up"></i></a></span>
-        <span id="count"> 0 </span>
+        <span >
+            <a class="toggle-like" href="/likes/toggle/?id=<%=post._id%>&type='Post'" data-likes ="<%=post.likes.length %>" >
+                <%= post.likes.length %> Likes
+            </a>
+        </span>
     </div>
 </div>
 
-<script src="/js/post_like.js"></script>
 <script src="/js/home_comment.js"></script>

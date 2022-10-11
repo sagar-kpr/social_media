@@ -21,7 +21,10 @@
         </div>
     </div>
     <div class="cmnt-like">
-        <span ><a href="/likes/toggle/?id=<%=comment._id%>&type='comment'" ><i class="fa-regular fa-thumbs-up"></i></a></span>
-        <span id="count"> 0 </span>
+        <span >
+            <a class="toggle-like" href="/likes/toggle/?id=<%=comment._id%>&type='Comment'" data-likes="<%= comment.likes.length %>">
+                <%= comment.likes.length %> Likes
+            </a>
+        </span>
     </div>
 </div>     
