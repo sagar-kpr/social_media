@@ -16,8 +16,9 @@ class ToggleLike{
                 url: $(self).attr('href'),
             })
             .done(function(data){
-                console.log('data:', data);
-                let likesCount = parseInt($(self).attr('data-likes'));
+                let div = $(self)[0].nextElementSibling;
+                console.log('div',$(div).attr('data-likes'));
+                let likesCount = parseInt($(div).attr('data-likes'));
                 console.log('likes count', likesCount);
                 if(data.data.deleted == true){
                     likesCount -=1;
@@ -25,10 +26,11 @@ class ToggleLike{
                     likesCount +=1;
                 }
 
-                $(self).attr('data-likes', likesCount);
-                $(self).html(`${likesCount} Likes`);
+                $(div).attr('data-likes', likesCount);
+                $(self).html(`<i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png'); background-position: 0px -251px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>  `);
+                $(div).html(`&nbsp; ${likesCount}`)
             })
-            .fail(function(err){
+            .fail(function(err){ 
                 console.log('errrrrr in ajax req',err);
             })
         })

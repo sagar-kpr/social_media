@@ -568,18 +568,32 @@ main #my-feeds #post-box .posts #comment-box #form-controller #form-text form #c
 }
 
 main #my-feeds #post-box .posts #post-like {
-  width: auto;
+  width: 90%;
+  height: auto;
   margin: 5px 5px 10px 2rem;
 }
 
-main #my-feeds #post-box .posts #post-like span a {
+main #my-feeds #post-box .posts #post-like #like-logo-count {
+  width: 41px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+main #my-feeds #post-box .posts #post-like #like-logo-count a {
   color: black;
   text-decoration: none;
 }
 
-main #my-feeds #post-box .posts #post-like span a:hover {
+main #my-feeds #post-box .posts #post-like #like-logo-count a:hover {
   color: #4267B2;
   border-radius: 50%;
+}
+
+main #my-feeds #post-box .posts #post-like #like-logo-count #count {
+  width: auto;
+  height: auto;
+  text-align: right;
 }
 
 @media screen and (max-width: 650px) {

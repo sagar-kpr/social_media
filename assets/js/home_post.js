@@ -86,11 +86,14 @@
         </div>
         <hr>
         <div id="post-like">
-            <span >
-                <a class="toggle-like" id="like" href="likes/toggle/?id=${post._id}&type=Post"   data-likes= "0">
-                    0 Likes
+            <div id="like-logo-count">
+                <a class="toggle-like" id="like" href="likes/toggle/?id=${post._id}&type=Post" >
+                    <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png'); background-position: 0px -251px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>
                 </a>
-            </span>
+                <div id="count" data-likes= "0">
+                    <span >&nbsp; 0</span>
+                </div>
+            </div>
         </div>
     </div>`);
     }

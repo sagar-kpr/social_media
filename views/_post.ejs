@@ -46,16 +46,22 @@
     </div>
     <hr>
     <div id="post-like">
-        <span >
+        <div id="like-logo-count">
             <% if(locals.user) { %>
-                <a class="toggle-like" id="like" href="/likes/toggle/?id=<%=post._id%>&type=Post" data-likes ="<%=post.likes.length %>" >
-                    <%= post.likes.length %> Likes
+                <a class="toggle-like" id="like" href="/likes/toggle/?id=<%=post._id%>&type=Post" >
+                  <i style=" background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png'); background-position: 0px -251px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>  
                 </a>
+                <div id="count" data-likes ="<%=post.likes.length %>" >
+                    <span>&nbsp; <%= post.likes.length %></span>
+                </div>
             <% } else { %> 
-                <%= post.likes.length %> Likes
+                <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png'); background-position: 0px -251px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>
+                <div id="count" data-likes ="<%=post.likes.length %>">
+                    <span >&nbsp; <%= post.likes.length %></span>
+                </div>
             <% } %>
             
-        </span>
+            </div>
     </div>
 </div>
 <script src="/js/home_comment.js"></script>
