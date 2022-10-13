@@ -22,13 +22,19 @@ class ToggleLike{
                 console.log('likes count', likesCount);
                 if(data.data.deleted == true){
                     likesCount -=1;
+                    $(div).attr('data-likes', likesCount);
+                    $(self).html(`<i class="like-color" style="background-position: 0px -251px;"></i>  `);
+                    $(div).html(`&nbsp; ${likesCount}`)
                 }else{
                     likesCount +=1;
+                    $(div).attr('data-likes', likesCount);
+                    $(self).html(`<i class="blu-color " style="background-position: 0px -232px;" ></i>  `);
+                    $(div).html(`&nbsp; ${likesCount}`)
                 }
 
-                $(div).attr('data-likes', likesCount);
-                $(self).html(`<i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png'); background-position: 0px -251px; background-size: auto; width: 18px; height: 18px; background-repeat: no-repeat; display: inline-block;"></i>  `);
-                $(div).html(`&nbsp; ${likesCount}`)
+                // $(div).attr('data-likes', likesCount);
+                // $(self).html(`<i class="like-color"></i>  `);
+                // $(div).html(`&nbsp; ${likesCount}`)
             })
             .fail(function(err){ 
                 console.log('errrrrr in ajax req',err);

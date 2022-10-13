@@ -55,11 +55,14 @@ class postComments{
                 </div>
             </div>
             <div class="cmnt-like">
-                <span >
-                    <a class="toggle-like" id="like" href="likes/toggle/?id=${comment._id}&type=Comment"   data-likes= "0" >
-                        0 Likes
+                <div id="like-logo-count">
+                    <a class="toggle-like" id="like" href="likes/toggle/?id=${comment._id}&type=Comment"  >
+                        <i class="like-color"></i>
                     </a>
-                </span>
+                    <div id="count" data-likes= "0">
+                        <span >&nbsp; 0</span>
+                    </div>
+                </div>
             </div>    
         </div> `);
     }
