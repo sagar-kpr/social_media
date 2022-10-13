@@ -23,7 +23,7 @@
     <div class="cmnt-like">
         <span >
             <% if(locals.user) { %>
-                <a class="toggle-like" id="like" href="/likes/toggle/?id=<%=comment._id%>&type='Comment'" data-likes="<%= comment.likes.length %>">
+                <a class="toggle-like" id="like" href="/likes/toggle/?id=<%=comment._id%>&type=Comment" data-likes="<%= comment.likes.length %>">
                     <%= comment.likes.length %> Likes
                 </a>
             <% } else { %>  

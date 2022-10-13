@@ -10,7 +10,7 @@ class ToggleLike{
 
             e.preventDefault();
             let self = this;
-            console.log('*//////', $(this.toggler));
+            console.log('*//////', $(self).attr('href'));
             $.ajax({
                 type: 'post',
                 url: $(self).attr('href'),

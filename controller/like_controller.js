@@ -46,7 +46,8 @@ module.exports.toggleLike = async function(req,res){
     
     }catch(err){
         return res.status(500).json({
-            message: 'internal error'
+            message: err
+            
         });
     }
     

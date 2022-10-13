@@ -48,7 +48,7 @@
     <div id="post-like">
         <span >
             <% if(locals.user) { %>
-                <a class="toggle-like" id="like" href="/likes/toggle/?id=<%=post._id%>&type='Post'" data-likes ="<%=post.likes.length %>" >
+                <a class="toggle-like" id="like" href="/likes/toggle/?id=<%=post._id%>&type=Post" data-likes ="<%=post.likes.length %>" >
                     <%= post.likes.length %> Likes
                 </a>
             <% } else { %> 
