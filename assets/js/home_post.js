@@ -119,7 +119,7 @@
         $('#post-box > div').each(function(){
             deletePost($(' .del-btn', $(this)));
             let postID = $(this).prop('id').split('-')[1];
-            new ToggleLike($('#like',$(this)));
+            //new ToggleLike($('#like',$(this)));
             new postComments(postID);  
         });
         

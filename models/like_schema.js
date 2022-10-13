@@ -5,14 +5,13 @@ const likeSchema = new mongoose.Schema({
         type: mongoose.Schema.ObjectId,
     },
     likeable : {
-        type: String,
+        type: mongoose.Schema.ObjectId,
         required : true,
         refPath : 'onModel'
     },
     onModel : {
         type: String,
-        required: true,
-        enum:['Post', 'Comment']
+        required: true
     }
 
 },{

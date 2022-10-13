@@ -38,7 +38,7 @@ module.exports.home = async function(req,res){
             path: 'comment',
             populate : {
                 path: 'user'
-            },
+            }
             
         })
         .populate('likes')
@@ -109,6 +109,10 @@ module.exports.resetPassword = function(req,res){
     })
 }
 
+module.exports.getPassword = function(req,res){
+    return res.render('changePassword');
+}
+
 //CHANGE PASSWORD METHOd
 
 module.exports.changePassword = function(req,res){
@@ -128,7 +132,7 @@ module.exports.changePassword = function(req,res){
         
     }else{
         req.flash('error', "did'nt match");
-        return res.redirect('/identity');
+        return res.redirect('/identity')
     }
 }
 
