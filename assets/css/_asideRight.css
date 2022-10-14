@@ -18,7 +18,7 @@
   font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
-#friends-list #friends {
+#friends-list .friends {
   width: 95%;
   height: 45px;
   margin: 12px;
@@ -32,7 +32,15 @@
   font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
-#friends-list #friends #friends-img {
+#friends-list .friends #friends-img-box {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#friends-list .friends #friends-img-box #friends-img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -40,7 +48,7 @@
   margin: 5px;
 }
 
-#friends-list #friends #friends-img img {
+#friends-list .friends #friends-img-box #friends-img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -48,7 +56,7 @@
   object-fit: cover;
 }
 
-#friends-list #friends #friends-img #status {
+#friends-list .friends #friends-img-box #friends-img #status {
   bottom: 0;
   right: 0;
   position: absolute;
@@ -59,7 +67,7 @@
   border: 1px solid white;
 }
 
-#friends-list #friends p a {
+#friends-list .friends #friends-img-box p a {
   color: black;
   text-decoration: none;
   width: 90%;
@@ -69,6 +77,32 @@
   margin-left: 2px;
 }
 
-#friends-list #friends:hover {
+#friends-list .friends #add-box {
+  width: 50px;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#friends-list .friends #add-box a {
+  text-decoration: none;
+  padding: 5px;
+  background-color: #149d14;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+#friends-list .friends:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  #friends-list {
+    display: none;
+  }
 }

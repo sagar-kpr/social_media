@@ -20,7 +20,7 @@
 }
 
 main {
-  width: 60%;
+  width: 790px;
   display: inline-block;
   vertical-align: top;
   margin-left: 20%;
@@ -193,14 +193,14 @@ main #my-feeds #form-box {
 }
 
 main #my-feeds #form-box #form-inner {
-  width: 90%;
+  width: 95%;
   margin: 5px;
   display: flex;
   background-color: white;
   flex-direction: row;
   align-items: center;
   border-radius: 5px;
-  column-gap: 10px;
+  justify-content: space-around;
 }
 
 main #my-feeds #form-box #form-inner #my-img {
@@ -233,6 +233,7 @@ main #my-feeds #form-box #form-inner #main-form form textarea {
   font-size: 1.2rem;
   border-radius: 25px;
   padding: 10px;
+  overflow-y: hidden;
 }
 
 main #my-feeds #form-box #form-inner #main-form form #post-btn {
@@ -354,7 +355,7 @@ main #my-feeds #post-box .posts #name-and-del-box #profile-name #profile img {
 }
 
 main #my-feeds #post-box .posts #name-and-del-box #profile-name #name {
-  width: 100%;
+  width: 90%;
 }
 
 main #my-feeds #post-box .posts #name-and-del-box #profile-name #name strong {
@@ -503,18 +504,8 @@ main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-li
   background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png");
   background-position: 0px -251px;
   background-size: auto;
-  width: 18px;
-  height: 18px;
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like #like-logo-count a .blu-color {
-  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png");
-  background-position: 0px -232px;
-  background-size: auto;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   background-repeat: no-repeat;
   display: inline-block;
 }
@@ -528,6 +519,7 @@ main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-li
   width: auto;
   height: auto;
   text-align: right;
+  margin-top: 2px;
 }
 
 main #my-feeds #post-box .posts #comment-box #form-controller {
@@ -536,7 +528,7 @@ main #my-feeds #post-box .posts #comment-box #form-controller {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: 5px;
+  margin: 5px 5px 5px 1px;
 }
 
 main #my-feeds #post-box .posts #comment-box #form-controller #form-img {
@@ -622,18 +614,8 @@ main #my-feeds #post-box .posts #post-like #like-logo-count a .like-color {
   background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png");
   background-position: 0px -251px;
   background-size: auto;
-  width: 18px;
-  height: 18px;
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-main #my-feeds #post-box .posts #post-like #like-logo-count a .blu-color {
-  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png");
-  background-position: 0px -232px;
-  background-size: auto;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   background-repeat: no-repeat;
   display: inline-block;
 }
@@ -647,24 +629,62 @@ main #my-feeds #post-box .posts #post-like #like-logo-count #count {
   width: auto;
   height: auto;
   text-align: right;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 1000px) {
+  #main {
+    margin-left: 10%;
+  }
+  #main #my-feeds #story-box, #main #my-feeds #form-box, #main #my-feeds #post-box {
+    min-width: 550px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #main {
+    margin-left: 10%;
+    width: 590px;
+  }
+  #main #my-feeds #story-box, #main #my-feeds #form-box, #main #my-feeds #post-box {
+    min-width: 550px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #main {
+    margin-left: 10%;
+    width: 490px;
+  }
+  #main #my-feeds #story-box, #main #my-feeds #form-box, #main #my-feeds #post-box {
+    min-width: 450px;
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 650px) {
-  main #my-links {
-    display: none;
-  }
-  main #my-feeds {
+  #main {
     width: 100%;
+    margin-left: 0;
   }
-  main #my-feeds #form-box {
-    width: 100% !important;
-    margin: 0;
+  #main #my-feeds #story-box {
+    min-width: 98%;
+    margin: 5px;
   }
-  main #my-feeds #post-box {
-    width: 100% !important;
-    margin: 0;
+  #main #my-feeds #form-box {
+    min-width: 98%;
+    margin: 5px;
   }
-  main #friends-list {
-    display: none;
+  #main #my-feeds #form-box #form-inner #main-form {
+    width: 87%;
+  }
+  #main #my-feeds #post-box {
+    min-width: 98%;
+    margin: 5px;
+  }
+  #main #my-feeds #post-box .posts #comment-box #form-controller #form-text {
+    width: 87%;
   }
 }

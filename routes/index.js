@@ -25,6 +25,8 @@ router.use('/post', require('./post'));
 router.use('/comment', require('./comment'));
 router.use('/identity', require('./identity'));
 router.use('/likes', require('./likes'));
+router.use('/add', require('./add'));
+
 
 router.use('/api', require('./api') );
 

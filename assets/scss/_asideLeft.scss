@@ -90,3 +90,10 @@
 #my-links:hover{
     overflow-y: visible;
 }
+
+@media screen and (max-width:1000px) {
+    #my-links{
+        display: none;
+    } 
+    
+}

@@ -32,7 +32,13 @@ const schema = new mongoose.Schema({
     avatar2 : {
         type: String
 
-    }
+    },
+    friends :[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Friendship'
+        }
+    ]
 },{
     timestamps: true
 });

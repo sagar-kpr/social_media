@@ -22,12 +22,11 @@
     
     }
 main{
-    width: 60%;
+    width: 790px;
     display: inline-block;
     vertical-align:top;
     margin-left: 20%;
-    margin-top: 60px;
-    
+    margin-top: 60px; 
     #my-feeds{
         width: 100%;
         height:auto;
@@ -182,15 +181,15 @@ main{
             border-radius: 5px;
             box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.1);
             #form-inner{
-                width:90%;
+                width:95%;
                 margin: 5px;
                 display: flex;
                 background-color: white;
                 flex-direction: row;
                 align-items: center;
                 border-radius: 5px;
-                column-gap: 10px;
-                
+                justify-content: space-around;
+               
                 #my-img {
                     width: 40px;
                     height: 40px;
@@ -198,6 +197,7 @@ main{
                     position: relative;
                     box-sizing: border-box;
                     margin:5px;
+                   
                     img{
                         width:100%;
                         height: 100%;
@@ -207,7 +207,7 @@ main{
                     }
                 }
                 #main-form{
-                    width: 90%;        
+                    width: 90%;    
                     form{
                         display: flex;
                         align-items: center;
@@ -215,6 +215,8 @@ main{
                             font-size: 1.2rem;
                             border-radius: 25px;
                             padding: 10px;
+                            overflow-y: hidden;
+                            
                         }
                         #post-btn{
                             width:80px;
@@ -284,7 +286,6 @@ main{
 
             }
         }
-        
         #post-box{
             height: auto;
             width: 75%;
@@ -328,8 +329,7 @@ main{
 
                         }
                         #name{
-                            width: 100%;
-                            
+                            width: 90%;
                             strong{
                                 margin:10px 5px 5px 5px;
                                 font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
@@ -393,7 +393,7 @@ main{
                                 display: flex;
                                 flex-direction: row;
                                 align-items:center;
-                              
+                                
                                 #cmnt-img{
                                     width: 32px;
                                     height: 32px;
@@ -472,17 +472,8 @@ main{
                                             background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png');
                                             background-position: 0px -251px;
                                             background-size: auto;
-                                            width: 18px; 
-                                            height: 18px;
-                                            background-repeat: no-repeat;
-                                            display: inline-block;
-                                        }
-                                        .blu-color{
-                                            background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png');
-                                            background-position: 0px -232px;
-                                            background-size: auto;
-                                            width: 18px; 
-                                            height: 18px;
+                                            width: 20px; 
+                                            height: 20px;
                                             background-repeat: no-repeat;
                                             display: inline-block;
                                         }
@@ -497,7 +488,8 @@ main{
                                         width: auto;
                                         height: auto;
                                         text-align: right;
-                                        
+                                        margin-top: 2px;
+                                        //font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                                     }
                                 }
                                 
@@ -511,8 +503,7 @@ main{
                         flex-direction: row;
                         justify-content: flex-start;
                         align-items: center;
-                        
-                        margin: 5px;
+                        margin: 5px 5px 5px 1px;
                         #form-img{
                             width:40px;
                             height: 40px;
@@ -591,17 +582,8 @@ main{
                                 background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png');
                                 background-position: 0px -251px;
                                 background-size: auto;
-                                width: 18px; 
-                                height: 18px;
-                                background-repeat: no-repeat;
-                                display: inline-block;
-                            }
-                            .blu-color{
-                                background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png');
-                                background-position: 0px -232px;
-                                background-size: auto;
-                                width: 18px; 
-                                height: 18px;
+                                width: 20px; 
+                                height: 20px;
                                 background-repeat: no-repeat;
                                 display: inline-block;
                             }
@@ -616,37 +598,89 @@ main{
                             width: auto;
                             height: auto;
                             text-align: right;
-                            
+                            margin-top: 2px;
                         }
                     }
                 }
             }  
-        }    
+        }
+           
     }   
     
+}  
+
+@media screen and (max-width: 1000px){
+    #main{
+        margin-left: 10%;
+        #my-feeds{
+            #story-box , #form-box , #post-box {
+                min-width: 550px;
+                margin-left: 0;
+            }
+        }
+    }
+}    
+@media screen and (max-width: 800px){
+    #main{
+        margin-left: 10%;
+        width: 590px;
+        #my-feeds{
+            #story-box, #form-box,#post-box {
+                min-width: 550px;
+                margin-left: 0;
+            }  
+        }
+    }
+}    
+
+@media screen and (max-width: 700px){
+    #main{
+        margin-left: 10%;
+        width: 490px;
+        #my-feeds{   
+            #story-box, #form-box, #post-box {
+                min-width: 450px;
+                margin-left: 0;
+            } 
+        }
+    }
 }    
 
 @media screen and (max-width: 650px){
-    main{
-        #my-links{
-            display: none;
-        }
+    #main{
+        width: 100%;
+        margin-left: 0;
         #my-feeds{
-            width:100%;
+            #story-box{
+                min-width: 98%;
+                margin: 5px;
+            }
             #form-box{
-                width:100% !important;
-                margin: 0;
-            } 
-            #post-box {
-                width:100% !important;
-                margin: 0;
-            }  
-        }
-        #friends-list{
-            display: none;
-        }
+                min-width: 98%;
+                margin: 5px;
+                #form-inner{
+                    #main-form{
+                        width:87%;
+                    }
+                }
+            }
+            #post-box{
+                min-width: 98%;
+                margin: 5px;
+                .posts{
+                    #comment-box{
+                        #form-controller{
+                            #form-text{
+                                width:87%;
+                            }
+                        }
+                    }
 
-    }
- 
+                }
+            }
+                
     
+            
+        }
+    }
 }    
