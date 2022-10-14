@@ -83,7 +83,7 @@ main{
                     width: 120px;
                     height: 90%;
                     border-radius: 10px;
-                    margin: 0;
+                    margin:0;
                     background-color: white;
                     box-sizing: border-box;
                     border: 1px solid lightgray;
@@ -96,6 +96,7 @@ main{
                         border-radius: 10px;
                         overflow: hidden;
                         border-radius: 10px 10px 0 0;
+                       
                         img{
                             width: 100%;
                             height: 100%;
@@ -455,20 +456,47 @@ main{
                             }
                             .cmnt-like{
                                 width: 100px;
-                                
                                 display: flex;
                                 justify-content: flex-end;
                                 column-gap: 10px;
                                 margin: 10px;
-                                span{
+                                #like-logo-count{
+                                    width:41px;
+                                    height: auto;
+                                    display: flex;
+                                    flex-direction: row;
                                     a{
                                         color:black;
                                         text-decoration: none;
+                                        .like-color{
+                                            background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png');
+                                            background-position: 0px -251px;
+                                            background-size: auto;
+                                            width: 18px; 
+                                            height: 18px;
+                                            background-repeat: no-repeat;
+                                            display: inline-block;
+                                        }
+                                        .blu-color{
+                                            background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png');
+                                            background-position: 0px -232px;
+                                            background-size: auto;
+                                            width: 18px; 
+                                            height: 18px;
+                                            background-repeat: no-repeat;
+                                            display: inline-block;
+                                        }
                                     }
                                     a:hover{
                                         color: #4267B2;
                                         //box-shadow: 0px 5px 20px 10px rgba(0,0,255,0.2);
                                         border-radius: 50%;
+                                        
+                                    }
+                                    #count{
+                                        width: auto;
+                                        height: auto;
+                                        text-align: right;
                                         
                                     }
                                 }
@@ -548,17 +576,46 @@ main{
                     }    
                 }
                 #post-like{
-                    width: auto;
+                    width: 90%;
+                    height: auto;
                     margin:5px 5px 10px 2rem;  
-                    span{
+                    #like-logo-count{
+                        width:41px;
+                        height: auto;
+                        display: flex;
+                        flex-direction: row;
                         a{
                             color:black;
                             text-decoration: none;
+                            .like-color{
+                                background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png');
+                                background-position: 0px -251px;
+                                background-size: auto;
+                                width: 18px; 
+                                height: 18px;
+                                background-repeat: no-repeat;
+                                display: inline-block;
+                            }
+                            .blu-color{
+                                background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png');
+                                background-position: 0px -232px;
+                                background-size: auto;
+                                width: 18px; 
+                                height: 18px;
+                                background-repeat: no-repeat;
+                                display: inline-block;
+                            }
                         }
                         a:hover{
                             color: #4267B2;
                             //box-shadow: 0px 5px 20px 10px rgba(0,0,255,0.2);
                             border-radius: 50%;
+                            
+                        }
+                        #count{
+                            width: auto;
+                            height: auto;
+                            text-align: right;
                             
                         }
                     }

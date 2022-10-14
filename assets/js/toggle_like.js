@@ -10,25 +10,33 @@ class ToggleLike{
 
             e.preventDefault();
             let self = this;
-            console.log('*//////', $(this.toggler));
+            console.log('*//////', $(self).attr('href'));
             $.ajax({
                 type: 'post',
                 url: $(self).attr('href'),
             })
             .done(function(data){
-                console.log('data:', data);
-                let likesCount = parseInt($(self).attr('data-likes'));
+                let div = $(self)[0].nextElementSibling;
+                console.log('div',$(div).attr('data-likes'));
+                let likesCount = parseInt($(div).attr('data-likes'));
                 console.log('likes count', likesCount);
                 if(data.data.deleted == true){
                     likesCount -=1;
+                    $(div).attr('data-likes', likesCount);
+                    $(self).html(`<i class="like-color" style="background-position: 0px -251px;"></i>  `);
+                    $(div).html(`&nbsp; ${likesCount}`)
                 }else{
                     likesCount +=1;
+                    $(div).attr('data-likes', likesCount);
+                    $(self).html(`<i class="blu-color " style="background-position: 0px -232px;" ></i>  `);
+                    $(div).html(`&nbsp; ${likesCount}`)
                 }
 
-                $(self).attr('data-likes', likesCount);
-                $(self).html(`${likesCount} Likes`);
+                // $(div).attr('data-likes', likesCount);
+                // $(self).html(`<i class="like-color"></i>  `);
+                // $(div).html(`&nbsp; ${likesCount}`)
             })
-            .fail(function(err){
+            .fail(function(err){ 
                 console.log('errrrrr in ajax req',err);
             })
         })

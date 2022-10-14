@@ -5,6 +5,7 @@
   vertical-align: top;
   position: fixed;
   margin-top: 60px;
+  overflow: scroll;
 }
 
 #friends-list #friends-logo {

@@ -1,11 +1,11 @@
 #friends-list{
     width: 20%;
     height: 650px;
-    //border-left: 1px solid lightgray;
     display: inline-block;
     vertical-align: top;
     position:fixed;
     margin-top: 60px; 
+    overflow: scroll;
     #friends-logo{
         text-align: center;
         margin-top: 5px;

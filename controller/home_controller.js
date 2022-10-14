@@ -35,13 +35,21 @@ module.exports.home = async function(req,res){
         .sort('createdAt')
         .populate('user')
         .populate({
-            path: 'comment',
+            path : 'comment',
             populate : {
-                path: 'user'
+                path :'user'
             }
-            
         })
         .populate('likes')
+        
+        /*.populate({
+             path: 'comment',
+             populate : {
+                 path: 'user'
+            },
+            
+        })*/
+        //.populate('likes')
 
         let user = await User.find({});
         

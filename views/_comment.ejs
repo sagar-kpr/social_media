@@ -21,14 +21,20 @@
         </div>
     </div>
     <div class="cmnt-like">
-        <span >
+        <div id="like-logo-count">
             <% if(locals.user) { %>
-                <a class="toggle-like" id="like" href="/likes/toggle/?id=<%=comment._id%>&type='Comment'" data-likes="<%= comment.likes.length %>">
-                    <%= comment.likes.length %> Likes
+                <a class="toggle-like" id="like" href="/likes/toggle/?id=<%=comment._id%>&type=Comment" >
+                    <i class="like-color" ></i>
                 </a>
-            <% } else { %>  
-                <%= comment.likes.length %> Likes
+                <div id="count" data-likes="<%= comment.likes.length %>">
+                    <span>&nbsp; <%= comment.likes.length %></span>
+                </div>
+            <% } else { %> 
+                <i class="like-color "></i> 
+                <div id="count" data-likes="<%= comment.likes.length %>">
+                    <span>&nbsp; <%= comment.likes.length %></span>
+                </div>
             <% } %>     
-        </span>
+            </div>
     </div>
 </div>     

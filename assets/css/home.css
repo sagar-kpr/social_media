@@ -487,14 +487,47 @@ main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-li
   margin: 10px;
 }
 
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like span a {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like #like-logo-count {
+  width: 41px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like #like-logo-count a {
   color: black;
   text-decoration: none;
 }
 
-main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like span a:hover {
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like #like-logo-count a .like-color {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png");
+  background-position: 0px -251px;
+  background-size: auto;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like #like-logo-count a .blu-color {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png");
+  background-position: 0px -232px;
+  background-size: auto;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like #like-logo-count a:hover {
   color: #4267B2;
   border-radius: 50%;
+}
+
+main #my-feeds #post-box .posts #comment-box .comment-scroller .comment .cmnt-like #like-logo-count #count {
+  width: auto;
+  height: auto;
+  text-align: right;
 }
 
 main #my-feeds #post-box .posts #comment-box #form-controller {
@@ -568,18 +601,52 @@ main #my-feeds #post-box .posts #comment-box #form-controller #form-text form #c
 }
 
 main #my-feeds #post-box .posts #post-like {
-  width: auto;
+  width: 90%;
+  height: auto;
   margin: 5px 5px 10px 2rem;
 }
 
-main #my-feeds #post-box .posts #post-like span a {
+main #my-feeds #post-box .posts #post-like #like-logo-count {
+  width: 41px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+main #my-feeds #post-box .posts #post-like #like-logo-count a {
   color: black;
   text-decoration: none;
 }
 
-main #my-feeds #post-box .posts #post-like span a:hover {
+main #my-feeds #post-box .posts #post-like #like-logo-count a .like-color {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png");
+  background-position: 0px -251px;
+  background-size: auto;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+main #my-feeds #post-box .posts #post-like #like-logo-count a .blu-color {
+  background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/y_/r/t43elCio3g1.png");
+  background-position: 0px -232px;
+  background-size: auto;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+main #my-feeds #post-box .posts #post-like #like-logo-count a:hover {
   color: #4267B2;
   border-radius: 50%;
+}
+
+main #my-feeds #post-box .posts #post-like #like-logo-count #count {
+  width: auto;
+  height: auto;
+  text-align: right;
 }
 
 @media screen and (max-width: 650px) {

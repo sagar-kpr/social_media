@@ -1,6 +1,29 @@
+
 <section id="friends-list">
     <div id="friends-logo">
-        <h3>Friends</h3>
+        <h3>My Friends</h3>
+    </div>
+    <!-- <% for(list of users) { %>
+        <% if(locals.user.id != list.id) { %>
+            <div id="friends">
+                <div id="friends-img">
+                    <img src="<%= list.avatar %>"  alt="<%= list.first %>">
+                        <% if(list.avatar) { %>
+                        <img src="<%= list.avatar %>"  alt="<%= list.first %>">
+                    <% } else { %> 
+                        <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= list.first %>">
+                    <% } %>   
+                    <div id="status"></div>
+                </div>
+                
+                <p><a href="/home/profile/<%= list.id %>"><%= list.first + ' ' + list.last %></a></p>
+            </div>
+        <% } %>
+
+    <% } %> -->
+    <hr>
+    <div id="friends-logo">
+        <h3>Users</h3>
     </div>
     <% for(list of users) { %>
         <% if(locals.user.id != list.id) { %>
@@ -21,3 +44,4 @@
 
     <% } %>
 </section>
+
