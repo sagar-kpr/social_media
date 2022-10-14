@@ -72,3 +72,9 @@
 #friends-list #friends:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (max-width: 1000px) {
+  #friends-list {
+    display: none;
+  }
+}
