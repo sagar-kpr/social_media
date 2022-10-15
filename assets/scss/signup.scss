@@ -1,68 +1,128 @@
 main{
     width: 100%;
-    height:600px;
+    height: 700px;
     margin-top: 1px;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     background-color:#F0F2F5; 
-    background-image: url("https://content-tooling.spotifycdn.com/images/af63e367-ad10-4063-a8e2-5a50ae2a4b28_lie_circles-mobile.svg");
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    color:white;;
+    //background-image: url("https://content-tooling.spotifycdn.com/images/af63e367-ad10-4063-a8e2-5a50ae2a4b28_lie_circles-mobile.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    #box{
-        width:500px;
-        height:100%;
-        border: 1px solid white;
-        background-color: white;
-        text-align: center;
-        box-sizing: border-box;
-        margin: 5px;
-        /*box-shadow: 1px 1px 15px 5px rgba(0, 0, 0,0.2);*/
+    #page{
+        width:100%;
+        height: 550px;
+        background-color: transparent;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         margin-top: 60px;
-        #user-signup{
-            width: 300px;;
-            height: auto;
-            margin:5px 30px 30px 55px;
-            form{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                margin-top: 50px;
-                input{
-                    width:95%;
-                    line-height: 2;
-                    margin: 3px;
-                    padding: 6px ;
-                    font-size: 1.2rem;
-                    border-radius: 7px;
-                    border: 1px solid lightgray;
+        margin-bottom: 15px;
+        justify-content: flex-end;
+        #box{
+            width:500px;
+            height:100%;
+            border: 1px solid white;
+            background-color: white;
+            text-align: center;
+            box-sizing: border-box;
+            margin: 5px;
+            /*box-shadow: 1px 1px 15px 5px rgba(0, 0, 0,0.2);*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #user-signup{
+                width: 300px;;
+                height: auto;
+                margin:5px 30px 30px 55px;
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    margin-top: 50px;
+                    input{
+                        width:95%;
+                        line-height: 2;
+                        margin: 3px;
+                        padding: 6px ;
+                        font-size: 1.2rem;
+                        border-radius: 7px;
+                        border: 1px solid lightgray;
+                    }
+                    
+                    button{
+                        width:100%;
+                        height: 45px;
+                        background-color: #4267B2;
+                        color: white;
+                        font-family: sans-serif;
+                        text-align: center;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        border: none;
+                        margin-top: 30px;
+                        font-size: 1rem;
+        
+                    }
+                    
                 }
-                
-                button{
-                    width:100%;
-                    height: 45px;
-                    background-color: #4267B2;
-                    color: white;
-                    font-family: sans-serif;
-                    text-align: center;
-                    border-radius: 8px;
-                    cursor: pointer;
-                    border: none;
-                    margin-top: 30px;
-                    font-size: 1rem;
     
-                }
-                
             }
+            
+        }
+    }   
+    #temp{
+        .waves {
+            position:relative;
+            width: 100%;
+            height:150px;
+            margin-bottom:-7px; /*Fix for safari gap*/
+            min-height:100px;
+            max-height:150px;
+            .parallax > use {
+                animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+              }
+              .parallax > use:nth-child(1) {
+                animation-delay: -2s;
+                animation-duration: 7s;
+              }
+              .parallax > use:nth-child(2) {
+                animation-delay: -3s;
+                animation-duration: 10s;
+              }
+              .parallax > use:nth-child(3) {
+                animation-delay: -4s;
+                animation-duration: 13s;
+              }
+              .parallax > use:nth-child(4) {
+                animation-delay: -5s;
+                animation-duration: 20s;
+              }
+              @keyframes move-forever {
+                0% {
+                 transform: translate3d(-90px,0,0);
+                }
+                100% { 
+                  transform: translate3d(85px,0,0);
+                }
+              }
+              /*Shrinking for mobile*/
+              @media (max-width: 768px) {
+                .waves {
+                  height:40px;
+                  min-height:40px;
+                }
+                .content {
+                  height:30vh;
+                }
+                h1 {
+                  font-size:24px;
+                }
+              }
 
         }
-        
 
-    }
-    
-    
+    } 
+  
 }
