@@ -251,22 +251,23 @@ main #my-feeds #form-box #form-inner #main-form form #post-btn {
 }
 
 main #my-feeds #form-box #add-status {
-  width: 90%;
+  width: 95%;
   height: 45px;
   margin: 0 5px 5px 5px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 main #my-feeds #form-box #add-status #inner-status {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;
+  margin-left: 10px;
 }
 
 main #my-feeds #form-box #add-status #inner-status .status-box {
-  width: 180px;
+  width: 175px;
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -274,6 +275,7 @@ main #my-feeds #form-box #add-status #inner-status .status-box {
   align-items: center;
   border-radius: 5px;
   cursor: pointer;
+  justify-content: center;
 }
 
 main #my-feeds #form-box #add-status #inner-status .status-box .status-logo {

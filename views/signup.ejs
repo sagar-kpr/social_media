@@ -1,26 +1,43 @@
 <link rel="stylesheet" type="text/css" href="/css/signup.css">
 
 <main>
-    <div id="box">
-        <div id="user-signup">
-            <form action="/create" method="post">
-                <% if(flash.error && flash.error.length > 0) { %>
-                    <div style="width: 100%; background-color: beige ; color:red; font-family:Verdana, Geneva, Tahoma, sans-serif;">
-                    <p ><%= flash.error %></p>
-                     </div>   
-                <% } %> 
-                <input type="text" name="first" placeholder="First name" required>
-                <input type="text" name="last" placeholder="Last name" required>
-                <input type="text" name="age" placeholder="Age" required>
-                <input type="email" name="email" placeholder="abc@Example.com" required>
-                <input type="password" name="password" placeholder="Create password" required>
-                <input type="password" name="confirm" placeholder="Confirm password" required>
-                <input type="hidden" name="avatar" value="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png">
-                <button type="submit">Sign up</button>
-            </form>
-
+    <div id="page">
+        <div id="box">
+            <div id="user-signup">
+                <form action="/create" method="post">
+                    <% if(flash.error && flash.error.length > 0) { %>
+                        <div style="width: 100%; background-color: beige ; color:red; font-family:Verdana, Geneva, Tahoma, sans-serif;">
+                        <p ><%= flash.error %></p>
+                         </div>   
+                    <% } %> 
+                    <input type="text" name="first" placeholder="First name" required>
+                    <input type="text" name="last" placeholder="Last name" required>
+                    <input type="text" name="age" placeholder="Age" required>
+                    <input type="email" name="email" placeholder="abc@Example.com" required>
+                    <input type="password" name="password" placeholder="Create password" required>
+                    <input type="password" name="confirm" placeholder="Confirm password" required>
+                    <input type="hidden" name="avatar" value="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png">
+                    <button type="submit">Sign up</button>
+                </form>
+    
+            </div>
+            
         </div>
-        
     </div>
+    <div id="temp">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+    </div>
+    
 </main>    
 
