@@ -13,6 +13,11 @@ const session = require('express-session');
 const mongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 const customMiddlware = require('./config/middleware');
+const chatServer = require('http').Server(app)
+const chatSocket = require('./config/chat_socket').chat_socket(chatServer)
+
+chatServer.listen(5000);
+console.log('chat server is running')
 
 //for node-sass-middleware
 app.use(sassMiddlware({
