@@ -33,12 +33,10 @@ const schema = new mongoose.Schema({
         type: String
 
     },
-    friends :[
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Friendship'
-        }
-    ]
+    friends : [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref : 'Friendship'
+    }]
 },{
     timestamps: true
 });

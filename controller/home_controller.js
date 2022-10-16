@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 
+
 module.exports.signup = function(req,res){
     if(req.isAuthenticated()){
         return res.redirect('/home');
@@ -41,18 +42,7 @@ module.exports.home = async function(req,res){
             }
         })
         .populate('likes')
-        
-        /*.populate({
-             path: 'comment',
-             populate : {
-                 path: 'user'
-            },
-            
-        })*/
-        //.populate('likes')
-
-        let user = await User.find({});
-        
+        let user = await User.find({})
         return res.render('home', {
             posts:post,
             users: user
