@@ -17,7 +17,8 @@ class ToggleLike{
             })
             .done(function(data){
                 let div = $(self)[0].nextElementSibling;
-                console.log('div',$(div).attr('data-likes'));
+                console.log('test', div)
+               // console.log('div',$(div).attr('data-likes'));
                 let likesCount = parseInt($(div).attr('data-likes'));
                 console.log('likes count',data.data.deleted );
                 if(data.data.deleted == true){
