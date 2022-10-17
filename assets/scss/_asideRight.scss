@@ -11,7 +11,6 @@
         margin-top: 5px;
         border-bottom: 2px solid lightgrey;
         h3{
-           
             font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
         }
     }
@@ -95,6 +94,14 @@
     .friends:hover{
         background-color: rgba(0,0,0,0.1);
         border-radius: 5px;
+    }
+    #user-logo{
+        text-align: center;
+        margin-top: 5px;
+        border-bottom: 2px solid lightgrey;
+        h3{
+            font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+        }
     }
 } 
 

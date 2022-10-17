@@ -123,7 +123,8 @@
 
 </main>
 <%- include('_asideRight') %>
-<%- include('chat_box') %>
+
+<%- include('chat_box') -%>
 
 <script src="/js/home_post.js"></script>
 <script src="/js/index.js"></script>
@@ -135,11 +136,13 @@
         let toggleLike = new ToggleLike(self);
     })
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script>
 <script src="/js/chat_engine.js"></script>
+
 <% if(locals.user) { %>
     <script>
-        new ChatEngine('user-chat-box', '<%= locals.user._id%>')
+        new ChatEngine('chat-box', '<%= locals.user._id %>');
     </script>
 
 <% } %>
+

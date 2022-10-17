@@ -9,7 +9,6 @@ const commentMailer = require('../mailers/comment_mailer');
 module.exports.create = async function(req,res){
     try{
         let post = await Post.findById(req.body.post);
-        
         if(post){
             let comments = await Comment.create(
                 {

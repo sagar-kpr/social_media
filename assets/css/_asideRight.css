@@ -101,6 +101,16 @@
   border-radius: 5px;
 }
 
+#friends-list #user-logo {
+  text-align: center;
+  margin-top: 5px;
+  border-bottom: 2px solid lightgrey;
+}
+
+#friends-list #user-logo h3 {
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
 @media screen and (max-width: 1000px) {
   #friends-list {
     display: none;
