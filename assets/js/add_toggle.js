@@ -1,3 +1,4 @@
+
 class ToggleAdd{
     constructor(ele){
         this.frnds = ele
@@ -13,8 +14,25 @@ class ToggleAdd{
             $.ajax({
                 type:'post',
                 url: $(self).attr('href'),
-                success(data){
-                    console.log(data);
+                success: function(data){
+                let otherUser = data.data.otherUser
+                let localUser = data.data.localUser
+                $('#friends-logo').prepend($(`<div class="friends" id="user-${otherUser._id}">
+                    <div id="friends-img-box">
+                        <div id="friends-img">
+                            <img src="${otherUser.avatar}"  alt="">
+                            <div id="status"></div>
+                        </div>
+                        <p><a href="/home/profile/${otherUser._id}">${otherUser.first}  ${otherUser.last}</a></p>
+                    </div>
+                    <div id="add-box">
+                        <a class="toggle-add" style="background-color:rgb(185, 36, 36) ;" href="#">
+                            <span>Remove</span>
+                        </a>
+                    </div>
+                </div>
+                `))
+                 
                 },
                 error(err){
                     console.log('err:::',err);
@@ -22,5 +40,10 @@ class ToggleAdd{
             });
         });
     }
+
+    /*createDom(localUser,otherUser){
+        console.log('/*//*',localUser,otherUser)
+        
+    }*/
 
 }

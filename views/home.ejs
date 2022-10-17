@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/css/home.css">
 <link rel="stylesheet" type="text/css" href="/css/_asideLeft.css">
 <link rel="stylesheet" type="text/css" href="/css/_asideRight.css">
+<link rel="stylesheet" type="text/css" href="/css/chat_box.css">
 
 <%- include('_asideLeft') %>
 <main id="main">
@@ -122,7 +123,7 @@
 
 </main>
 <%- include('_asideRight') %>
-
+<%- include('chat_box') -%>
 
 <script src="/js/home_post.js"></script>
 <script src="/js/index.js"></script>
@@ -134,3 +135,12 @@
         let toggleLike = new ToggleLike(self);
     })
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+
+<% if(locals.user) { %>
+    <script>
+        new ChatEngine('chat-box', '<%= locals.user._id %>');
+    </script>
+
+<% } %>

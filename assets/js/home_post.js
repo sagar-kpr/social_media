@@ -10,7 +10,6 @@
                 data : postForm.serialize(),
                 success : function(data){  
                     let newpost = createPostDom(data.data.post, data.data.user);
-                    console.log('ppp',newpost);
                     notySuccess('Status Posted Successfully.');
                     $('#post-box').prepend(newpost); 
                     deletePost($(' .del-btn', newpost));
