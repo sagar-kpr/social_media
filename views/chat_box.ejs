@@ -1,14 +1,17 @@
-<div id="chat-box">
-    <ul id="chat-container">
-        <li class="other-msg">
-            <span>other ewe ewqq</span>
-        </li>
-        <li class="self-msg">
-            <span>selfewe eweewq </span>
-        </li>
-    </ul>
-    <div id="inp-container">
-        <input placeholder="Type here..." id="inp">
-        <button type="submit" id="btn">Send</button>
+<% if(locals.user){ %>
+    <div id="chat-box">
+        <ul id="chat-container">
+            <li class="other-msg">
+                <span>other ewe ewqq</span>
+            </li>
+            <li class="self-msg">
+                <span>selfewe eweewq </span>
+            </li>
+        </ul>
+        <div id="inp-container">
+            <input placeholder="Type here..." id="inp">
+            <button  id="btn">Send</button>
+        </div>
     </div>
-</div>
+
+<% } %>

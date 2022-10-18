@@ -119,12 +119,12 @@
             <% } %>    
         </div>
     </section>
-        
+     
 
 </main>
 <%- include('_asideRight') %>
+<%- include('chat_box') -%>   
 
-<%- include('chat_box') -%>
 
 <script src="/js/home_post.js"></script>
 <script src="/js/index.js"></script>
@@ -141,7 +141,7 @@
 
 <% if(locals.user) { %>
     <script>
-        new ChatEngine('chat-box', '<%= locals.user._id %>');
+        new ChatEngine('chat-box', '<%= locals.user.email %>');
     </script>
 
 <% } %>
