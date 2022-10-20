@@ -11,5 +11,15 @@ module.exports.chatserver = function(chatServer){
         socket.on('disconnect', function(){
             console.log('connection disconnect')
         })
+
+        socket.on('join_room',function(data){
+            socket.join(data.chatRoom)
+            io.in(data.chatRoom).emit('user_join', data)
+        });
+
+        socket.on('send_msg', function(data){
+            io.in(data.chatRoom).emit('recived_msg', data);
+        })
     })
+
 }

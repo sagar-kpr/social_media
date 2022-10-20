@@ -8,14 +8,13 @@ module.exports.addToggle = async function(req,res){
     let user = await User.find({});
     localUser.friends.push(otherUser);
     otherUser.friends.push(localUser);
-    console.log('user',user)
     console.log('other',otherUser)
-   //otherUser.save()
+    console.log('local',localUser)
+    //otherUser.save()
     //localUser.save()
     if(req.xhr){
         return res.status(200).json({
             data:{
-                localUser :user,
                 otherUser: otherUser
             },
             message : 'users added'
