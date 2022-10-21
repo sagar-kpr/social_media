@@ -1,24 +1,24 @@
 const User = require('../models/user_schema');
 
 module.exports.removeToggle = async function(req,res){
-    console.log('okkkk**',req.query.id)
-    /*let otherUser = await User.findById(req.query.id);
+    let otherUser = await User.findById(req.query.id);
     let localUser = await User.findById(req.user.id)
-    let user = await User.find({});
-    
-    localUser.friends.filter(check)
-    otherUser.friends.filter(check2);
+    localUser.friends =  localUser.friends.filter(check)
+    otherUser.friends =  otherUser.friends.filter(check2);
     function check(person){
-        return person != otherUser.id
+        if(String(person) != String(otherUser._id)){
+            console.log('qqqqqqq',person)
+            return person
+        }
     }
 
     function check2(person){
-        return person != localUser.id
+        if(String(person) != String(localUser._id)){
+            return person
+        }
     }
-    console.log('other',otherUser)
-    console.log('local',localUser)
-    //otherUser.save()
-    //localUser.save()
+    otherUser.save()
+    localUser.save()
     if(req.xhr){
         return res.status(200).json({
             data:{
@@ -28,7 +28,7 @@ module.exports.removeToggle = async function(req,res){
         })
         
     }
-    return res.redirect('back');*/
+    return res.redirect('back');
 
     
 }

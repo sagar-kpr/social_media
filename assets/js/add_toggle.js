@@ -1,5 +1,5 @@
 
-/*class ToggleAdd{
+class ToggleAdd{
     constructor(ele){
         this.users = ele
         this.toggler = $(this.users)[0].lastElementChild.children
@@ -40,4 +40,4 @@
         });
     }
 
-}*/
+}

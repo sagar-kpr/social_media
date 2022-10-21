@@ -12,15 +12,15 @@
                     <p><a href="/home/profile/<%= list %>"><%=list %></a></p>
                 </div>
                 <div id="add-box">
-                    <a class="toggle-remove" data-value="remove" style="background-color:rgb(185, 36, 36) ;" href="/remove/remove_toggle/?id=<%=list%>">
-                        <span>Remove</span>
+                   <a class="toggle-remove" data-value="remove" href="/remove/remove_toggle/?id=<%=list%>">
+                            <span>Remove</span>
                     </a>
+                
                 </div>
             </div>
 
         <% } %>
     </div>
-    <hr>
     <h3>Users</h3>
     <div id="totalusers">
         <% if(locals.user.friends.length == 0 ) { %>
@@ -32,7 +32,7 @@
                                 <img src="<%= list.avatar %>"  alt="<%= list.first %>">
                                 <div id="status"></div>
                             </div>
-                            <p><a href="/home/profile/<%= list.id %>"><%=list %></a></p>
+                            <p><a href="/home/profile/<%= list.id %>"><%=list.first + ' ' + list.last %></a></p>
                         </div>
                         <div id="add-box">
                             <a class="toggle-add" href="/add/add_toggle/?id=<%=list.id%>">
@@ -65,9 +65,11 @@
                                 <p><a href="/home/profile/<%= list.id %>"><%=list.first + ' ' + list.last %></a></p>
                             </div>
                             <div id="add-box">
-                                <a class="toggle-add" data-value="add" href="/add/add_toggle/?id=<%=list.id%>">
-                                    <span>Add</span>
-                                </a>
+                                
+                                    <a class="toggle-add" data-value="add" href="/add/add_toggle/?id=<%=list.id%>">
+                                        <span>Add</span>
+                                    </a>
+                                
                             </div>
                         </div>
 
@@ -78,19 +80,19 @@
         <% } %>
     </div>
 </section>
-<!-- <script src="/js/add_toggle.js"></script> -->
+<script src="/js/add_toggle.js"></script>
 <script src="/js/remove_toggle.js"></script>
 <script>
     $(' .friends').each(function(){
         let self = this;
         let toggleRemove = new ToggleRemove(self);
     })
-</script>
-<!-- <script>
+
     $(' .users').each(function(){
         let self = this;
         let toggleAdd = new ToggleAdd(self);
     })
-</script> -->
+</script>
+
 
 

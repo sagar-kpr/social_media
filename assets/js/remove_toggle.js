@@ -1,7 +1,9 @@
+console.log('hii')
+
 class ToggleRemove{
     constructor(ele){
         this.friends = ele
-        this.toggler = $(this.users)[0].lastElementChild.children
+        this.toggler = $(this.friends)[0].lastElementChild.children
         console.log('2323',this.toggler)
         this.add(this.friends)
     }
@@ -9,8 +11,7 @@ class ToggleRemove{
     add(friends){
         $(this.toggler).click(function(e){
             e.preventDefault();
-            console.log('000',this.toggler);
-            /*let self = this;
+            let self = this;
             console.log(self);
             $.ajax({
                 type:'post',
@@ -27,7 +28,7 @@ class ToggleRemove{
                         <p><a href="/home/profile/${otherUser._id}">${otherUser.first}  ${otherUser.last}</a></p>
                     </div>
                     <div id="add-box">
-                        <a class="toggle-add" style="background-color:rgb(185, 36, 36) ;" href="#">
+                        <a class="toggle-add"  href="#">
                             <span>Add</span>
                         </a>
                     </div>
@@ -38,7 +39,7 @@ class ToggleRemove{
                 error(err){
                     console.log('err:::',err);
                 }
-            });*/
+            });
         });
     }
 
