@@ -1,5 +1,6 @@
 const User = require('../../../models/user_schema');
 const jwt = require('jsonwebtoken'); 
+const env = require('../../../config/environment');
 
 module.exports.session = async function(req,res){
     try{
@@ -16,7 +17,7 @@ module.exports.session = async function(req,res){
 
             message:'token created',
             data:{
-                token : jwt.sign(user.toJSON(), 'social', {expiresIn:'1000000'} )
+                token : jwt.sign(user.toJSON(), env.jwt_secret , {expiresIn:'1000000'} )
             }
 
         });

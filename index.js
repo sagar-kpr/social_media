@@ -1,4 +1,5 @@
 const express = require('express');
+const env = require('./config/environment');
 const app = express();
 const db = require('./config/mongoose');
 const port = 8000;
@@ -13,7 +14,7 @@ const session = require('express-session');
 const mongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 const customMiddlware = require('./config/middleware');
-
+const path = require('path');
 const chatServer = require('http').Server(app);
 const chatSocket = require('./config/chat_server').chatserver(chatServer);
 chatServer.listen(5000);
@@ -22,8 +23,8 @@ console.log('chat server is running on port 5000');
 
 //for node-sass-middleware
 app.use(sassMiddlware({
-    src: './assets/scss',
-    dest: './assets/css',
+    src: path.join(__dirname, env.assets_path, 'scss'),
+    dest:  path.join(__dirname, env.assets_path, 'css'),
     outputStyle: 'expanded',
     prefix: '/css'
 }));
@@ -32,7 +33,7 @@ app.use(sassMiddlware({
 app.use(parser.urlencoded({extended:false}));
 
 //for file uploading
-app.use(express.static('./assets'));
+app.use(express.static(env.assets_path));
 app.use('/upload', express.static(__dirname + '/upload'));
 
 //for using layouts
@@ -51,7 +52,7 @@ app.set('layout extractScripts', true);
 //for session and passport and connect-mongo
 app.use(session({
     name:'social_media',
-    secret: 'kwality',
+    secret: env.session_key,
     saveUninitialized: false,
     resave: false,
     outputStyle: 'expended',
@@ -59,7 +60,7 @@ app.use(session({
         maxAge: (1000*60*200)
     },
     store: mongoStore.create({
-        mongoUrl:'mongodb://localhost/social_development',
+        mongoUrl:`mongodb://localhost/${env.db}`,
         autoRemove:'disabled',
     })
 }));

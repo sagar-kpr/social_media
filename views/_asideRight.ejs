@@ -1,7 +1,7 @@
 
 <section id="friends-list">
+    <h3>My Friends</h3>
     <div id="friends-logo">
-        <h3>My Friends</h3>
         <% for(list of locals.user.friends){ %>
             <div class="friends" id="user-<%=list._id %>">
                 <div id="friends-img-box">
@@ -21,43 +21,12 @@
         <% } %>
     </div>
     <hr>
-
+    <h3>Users</h3>
     <div id="user-logo">
-        <h3>Users</h3>
-    </div>
-    <% if(locals.user.friends.length == 0 ) { %>
-        <% for(list of users) { %>
-            <% if(locals.user.id != list.id) { %>
-                <div class="friends" id="user-<%=list._id %>">
-                    <div id="friends-img-box">
-                        <div id="friends-img">
-                            <img src="<%= list.avatar %>"  alt="<%= list.first %>">
-                            <div id="status"></div>
-                        </div>
-                        <p><a href="/home/profile/<%= list.id %>"><%=list.first + ' ' + list.last %></a></p>
-                    </div>
-                    <div id="add-box">
-                        <a class="toggle-add" href="/add/add_toggle/?id=<%=list.id%>">
-                            <span>Add</span>
-                        </a>
-                    </div>
-                </div>
-            <% } %>
-                
-        <% } %>
-
-    <% } else { %>
-        <% let frnds = locals.user.friends %>
-        <% for(list of users){ %>
-            <% if(locals.user.id != list.id) { %>
-                <% let val = true %>
-                <% for(myfrnds of frnds){ %>
-                    <% if(myfrnds == list.id) { %>
-                        <% val = false %>
-                    <% } %>
-
-                <% } %> 
-                <% if(val) { %>
+        
+        <% if(locals.user.friends.length == 0 ) { %>
+            <% for(list of users) { %>
+                <% if(locals.user.id != list.id) { %>
                     <div class="friends" id="user-<%=list._id %>">
                         <div id="friends-img-box">
                             <div id="friends-img">
@@ -72,12 +41,43 @@
                             </a>
                         </div>
                     </div>
+                <% } %>
+                    
+            <% } %>
 
-                <% } %>   
-            <% } %>    
+        <% } else { %>
+            <% let frnds = locals.user.friends %>
+            <% for(list of users){ %>
+                <% if(locals.user.id != list.id) { %>
+                    <% let val = true %>
+                    <% for(myfrnds of frnds){ %>
+                        <% if(myfrnds == list.id) { %>
+                            <% val = false %>
+                        <% } %>
+
+                    <% } %> 
+                    <% if(val) { %>
+                        <div class="friends" id="user-<%=list._id %>">
+                            <div id="friends-img-box">
+                                <div id="friends-img">
+                                    <img src="<%= list.avatar %>"  alt="<%= list.first %>">
+                                    <div id="status"></div>
+                                </div>
+                                <p><a href="/home/profile/<%= list.id %>"><%=list.first + ' ' + list.last %></a></p>
+                            </div>
+                            <div id="add-box">
+                                <a class="toggle-add" href="/add/add_toggle/?id=<%=list.id%>">
+                                    <span>Add</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    <% } %>   
+                <% } %>    
+            <% } %>
+
         <% } %>
-
-    <% } %>
+    </div>    
 </section>
 <script src="/js/add_toggle.js"></script>
 <script>

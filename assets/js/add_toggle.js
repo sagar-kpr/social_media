@@ -3,10 +3,10 @@ class ToggleAdd{
     constructor(ele){
         this.frnds = ele
         this.toggler = $(this.frnds)[0].lastElementChild.children
-        this.add()
+        this.add(this.frnds)
     }
 
-    add(){
+    add(frnds){
         $(this.toggler).click(function(e){
             e.preventDefault();
             let self = this;
@@ -16,7 +16,7 @@ class ToggleAdd{
                 url: $(self).attr('href'),
                 success: function(data){
                 let otherUser = data.data.otherUser
-                let localUser = data.data.localUser
+                frnds.remove();
                 $('#friends-logo').prepend($(`<div class="friends" id="user-${otherUser._id}">
                     <div id="friends-img-box">
                         <div id="friends-img">
