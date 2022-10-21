@@ -1,7 +1,7 @@
 
 <section id="friends-list">
     <h3>My Friends</h3>
-    <div id="friends-logo">
+    <div id="myfriends">
         <% for(list of locals.user.friends){ %>
             <div class="friends" id="user-<%=list._id %>">
                 <div id="friends-img-box">
@@ -12,7 +12,7 @@
                     <p><a href="/home/profile/<%= list %>"><%=list %></a></p>
                 </div>
                 <div id="add-box">
-                    <a class="toggle-add" data-value="remove" style="background-color:rgb(185, 36, 36) ;" href="/remove/remove_toggle/?id=<%=list%>">
+                    <a class="toggle-remove" data-value="remove" style="background-color:rgb(185, 36, 36) ;" href="/remove/remove_toggle/?id=<%=list%>">
                         <span>Remove</span>
                     </a>
                 </div>
@@ -22,17 +22,17 @@
     </div>
     <hr>
     <h3>Users</h3>
-    <div id="user-logo">
+    <div id="totalusers">
         <% if(locals.user.friends.length == 0 ) { %>
             <% for(list of users) { %>
                 <% if(locals.user.id != list.id) { %>
-                    <div class="friends" id="user-<%=list._id %>">
-                        <div id="friends-img-box">
-                            <div id="friends-img">
+                    <div class="users" id="user-<%=list._id %>">
+                        <div id="users-img-box">
+                            <div id="users-img">
                                 <img src="<%= list.avatar %>"  alt="<%= list.first %>">
                                 <div id="status"></div>
                             </div>
-                            <p><a href="/home/profile/<%= list.id %>"><%=list.first + ' ' + list.last %></a></p>
+                            <p><a href="/home/profile/<%= list.id %>"><%=list %></a></p>
                         </div>
                         <div id="add-box">
                             <a class="toggle-add" href="/add/add_toggle/?id=<%=list.id%>">
@@ -56,9 +56,9 @@
 
                     <% } %> 
                     <% if(val) { %>
-                        <div class="friends" id="user-<%=list._id %>">
-                            <div id="friends-img-box">
-                                <div id="friends-img">
+                        <div class="users" id="user-<%=list._id %>">
+                            <div id="users-img-box">
+                                <div id="users-img">
                                     <img src="<%= list.avatar %>"  alt="<%= list.first %>">
                                     <div id="status"></div>
                                 </div>
@@ -78,11 +78,19 @@
         <% } %>
     </div>
 </section>
-<script src="/js/add_toggle.js"></script>
+<!-- <script src="/js/add_toggle.js"></script> -->
+<script src="/js/remove_toggle.js"></script>
 <script>
     $(' .friends').each(function(){
         let self = this;
-        let toggleAdd = new ToggleAdd(self);
+        let toggleRemove = new ToggleRemove(self);
     })
 </script>
+<!-- <script>
+    $(' .users').each(function(){
+        let self = this;
+        let toggleAdd = new ToggleAdd(self);
+    })
+</script> -->
+
 

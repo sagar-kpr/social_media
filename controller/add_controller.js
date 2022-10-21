@@ -9,7 +9,6 @@ module.exports.addToggle = async function(req,res){
     localUser.friends.push(otherUser);
     otherUser.friends.push(localUser);
     console.log('other',otherUser)
-    console.log('local',localUser)
     //otherUser.save()
     //localUser.save()
     if(req.xhr){

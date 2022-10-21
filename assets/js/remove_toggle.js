@@ -1,24 +1,26 @@
-
-/*class ToggleAdd{
+class ToggleRemove{
     constructor(ele){
-        this.users = ele
+        this.friends = ele
         this.toggler = $(this.users)[0].lastElementChild.children
-        this.add(this.users)
+        console.log('2323',this.toggler)
+        this.add(this.friends)
     }
 
-    add(users){
+    add(friends){
         $(this.toggler).click(function(e){
             e.preventDefault();
-            let self = this;
+            console.log('000',this.toggler);
+            /*let self = this;
+            console.log(self);
             $.ajax({
                 type:'post',
                 url: $(self).attr('href'),
                 success: function(data){
-                users.remove();
+                friends.remove();
                 let otherUser = data.data.otherUser
-                $('#myfriends').prepend($(`<div class="friends" id="user-${otherUser._id}">
-                    <div id="friends-img-box">
-                        <div id="friends-img">
+                $('#totalusers').prepend($(`<div class="users" id="user-${otherUser._id}">
+                    <div id="users-img-box">
+                        <div id="users-img">
                             <img src="${otherUser.avatar}"  alt="">
                             <div id="status"></div>
                         </div>
@@ -26,7 +28,7 @@
                     </div>
                     <div id="add-box">
                         <a class="toggle-add" style="background-color:rgb(185, 36, 36) ;" href="#">
-                            <span>Remove</span>
+                            <span>Add</span>
                         </a>
                     </div>
                 </div>
@@ -36,8 +38,8 @@
                 error(err){
                     console.log('err:::',err);
                 }
-            });
+            });*/
         });
     }
 
-}*/
+}
