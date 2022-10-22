@@ -1,5 +1,6 @@
 const express = require('express');
 const env = require('./config/environment');
+const logger = require('morgan');
 const app = express();
 const db = require('./config/mongoose');
 const port = 8000;
@@ -35,6 +36,8 @@ app.use(parser.urlencoded({extended:false}));
 //for file uploading
 app.use(express.static(env.assets_path));
 app.use('/upload', express.static(__dirname + '/upload'));
+app.use(logger(env.morgan.mode, env.morgan.options))
+
 
 //for using layouts
 app.use(layout);

@@ -1,3 +1,16 @@
+const fs = require('fs');
+const path = require('path');
+const rfs = require('rotating-file-stream');
+
+const logDirectory = path.join(__dirname, '../production_logs');
+fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
+
+const accessLogStream = rfs.createStream('access.log', {
+    interval : '1d',
+    path : logDirectory
+});
+
+
 const development = {
     name : 'development',
     assets_path : './assets',
@@ -17,6 +30,11 @@ const development = {
     google_client_secret : "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",
     google_call_back_url : "http://localhost:8000/auth/google/callback",
     jwt_secret : 'social',
+    morgan : {
+        mode : 'dev',
+        options : {stream : accessLogStream}
+
+    }
 
 
 
@@ -28,8 +46,8 @@ const production = {
     session_key : process.env.SESSION_KEY,
     db : process.env.DB,
     smtp : {
-        service: process.env.SERVICE,
-        host: process.env.HOST,
+        service: 'gmail',
+        host: 'smtp.gmail.com',
         port: 587,
         secure:false,
         auth: {
@@ -39,10 +57,18 @@ const production = {
     },
     google_client_id : process.env.GOOGLE_CLIENT_ID,
     google_client_secret : process.env.GOOGLE_CLIENT_SECRET,
-    google_call_back_url : process.env.GOOGLE_CALL_BACK,
+    google_call_back_url : "http://localhost:8000/auth/google/callback",
     jwt_secret : process.env.JWT_SECRET,
+    morgan : {
+        mode : 'combined',
+        options : {stream : accessLogStream}
+
+    }
+
 
     
 }
 
 module.exports = eval(process.env.CODIAL_ENV) == undefined ? development : eval(process.env.CODIAL_ENV)
+
+//module.exports = development
