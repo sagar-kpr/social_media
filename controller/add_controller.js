@@ -6,9 +6,10 @@ module.exports.addToggle = async function(req,res){
     let otherUser = await User.findById(req.query.id);
     let localUser = await User.findById(req.user.id)
     let user = await User.find({});
+    console.log('qq',otherUser)
     localUser.friends.push(otherUser);
     otherUser.friends.push(localUser);
-    console.log('other',otherUser)
+    //console.log('other',otherUser)
     otherUser.save()
     localUser.save()
     if(req.xhr){

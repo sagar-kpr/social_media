@@ -31,7 +31,6 @@ arrow2.addEventListener('click', function(){
 
 cross.addEventListener('click', function(){
     if(l % 2 == 0){
-        console.log('hi')
         document.getElementById('chat-box').style.display = 'none';
     }
     

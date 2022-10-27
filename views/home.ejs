@@ -37,14 +37,18 @@
                 </div>
                 <% for (list of users) { %>
                     <% if(locals.user.id != list.id) { %>
-                        <div class="user-story-box">
-                             <div class="user-story" >
-                                <img  src="/images/pic2.jpg">
-                            </div>
-                            <div class="user-img">
-                                <img src="<%= list.avatar %>" alt="<%= list.first %>">
-                            </div>
-                        </div>
+                        <% for(frnds of locals.user.friends){ %>
+                            <% if(frnds == list.id) { %>
+                                <div class="user-story-box">
+                                    <div class="user-story" >
+                                        <img  src="/images/pic2.jpg">
+                                    </div>
+                                    <div class="user-img">
+                                        <img src="<%= list.avatar %>" alt="<%= list.first %>">
+                                    </div>
+                                </div>
+                            <% } %>
+                        <% } %>
                     <% } %>   
                 <% } %>
 
@@ -98,7 +102,14 @@
         
         <div id="post-box">
             <% for(post of posts) { %>
-                <%- include('_post') -%>
+                <% if(locals.user.id == post.user.id) { %>
+                    <%- include('_post') -%>
+                <% } %>   
+                <% for(frnds of locals.user.friends){ %>
+                    <% if(frnds == post.user.id) { %>
+                        <%- include('_post') -%>
+                    <% } %>
+                <% } %>     
             <% } %>    
         </div>
     </section>

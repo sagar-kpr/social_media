@@ -1,7 +1,7 @@
 const messenger = document.getElementById('messenger');
 var j = 0 ;
 
-const frndsbox = document.getElementById('friends-img-box');
+const frndsbox = document.querySelectorAll(' .friends')
 
 
 messenger.addEventListener('click', function(){
@@ -14,7 +14,8 @@ messenger.addEventListener('click', function(){
 })
 
 
-frndsbox.addEventListener('click', function(){
+frndsbox[0].addEventListener('click', function(){
+    console.log('sdsdsds', frndsbox[0])
     document.getElementById('chat-box').style.display = 'block';
 })
 

@@ -55,6 +55,28 @@
                 <a id="messenger">
                     <i class="fa-brands fa-facebook-messenger"></i>
                 </a>
+                <div id="msg-box">
+                    <% if(locals.user.friends.length > 0) { %>
+                        <% for(frnds of locals.user.friends){ %>
+                            <% for(list of users){ %>
+                                <% if(frnds == list.id) { %>
+                                    <div class="friends" id="user-<%=list._id %>">
+                                        <div id="friends-img-box">
+                                            <div id="friends-img">
+                                                <img src="<%= list.avatar %>"  alt="">
+                                            </div>
+                                            <div id="friends-name">
+                                                <p><%=list.first + ' ' + list.last %></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% } %>   
+                            <% } %>
+                        <% } %>
+                    <% } else { %>
+                        <h3 style="text-align:center ; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">No Freinds...</h3>
+                    <% }  %>    
+                </div>
             </div>
             <div class="text">
                 <a href="#">
@@ -72,20 +94,13 @@
                 </form>
             </div>
         <% } else { %>
-
             <div id="info1">
-                
                 <p><a href="/">Log in </a></p>
             </div>
             <div id="info2">
                 <p><a href="/signup">Sign up </a></p>
             </div>
-
         <% } %>
-    </div>
-
-    <div id="msg-box">
-        
     </div>
 </header>
 <script src="/js/_header.js"></script>
