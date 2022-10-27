@@ -59,9 +59,10 @@
 
 #chat-box #chat-container {
   list-style: none;
-  height: 80%;
+  height: 85%;
+  margin: 0;
+  position: relative;
   padding: 10px;
-  margin-top: 15px;
   overflow: auto;
 }
 
@@ -83,9 +84,9 @@
 }
 
 #chat-box #chat-container .self-msg span {
-  display: inline-block;
   padding: 15px;
-  background-color: beige;
+  display: inline-block;
+  background: bisque;
   border-radius: 10px;
 }
 

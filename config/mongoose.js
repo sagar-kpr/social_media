@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/facebook2');
-//mongoose.connect('mongodb://localhost/facebook');
+const env = require('./environment');
+
+mongoose.connect(`mongodb://localhost/${env.db}`);
 //mongoose.connect('mongodb://localhost/social_development');
 const db = mongoose.connection;
 

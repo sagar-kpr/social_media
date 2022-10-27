@@ -12,6 +12,8 @@ module.exports.addToggle = async function(req,res){
     //console.log('other',otherUser)
     otherUser.save()
     localUser.save()
+
+
     if(req.xhr){
         return res.status(200).json({
             data:{

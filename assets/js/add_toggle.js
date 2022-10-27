@@ -6,8 +6,7 @@ class ToggleAdd{
         this.add(this.users)
 
     }
-
-    add(users){
+    add(frnds){
         $(this.toggler).click(function(e){
             e.preventDefault();
             console.log('***',$(users))
@@ -18,7 +17,8 @@ class ToggleAdd{
                 success: function(data){
                 users.remove();
                 let otherUser = data.data.otherUser
-                $('#myfriends').prepend($(`<div class="friends" id="user-${otherUser._id}">
+                frnds.remove();
+                $('#friends-logo').prepend($(`<div class="friends" id="user-${otherUser._id}")
                     <div id="friends-img-box">
                         <div id="friends-img">
                             <img src="${otherUser.avatar}"  alt="">

@@ -22,6 +22,7 @@
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "socket.io": "^4.5.3"
+
   },
   "name": "social_media",
   "version": "1.0.0",
@@ -29,7 +30,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod_start" : "nodemon index.js"
+
   },
   "author": "'sagar kapoor'",
   "license": "ISC"
