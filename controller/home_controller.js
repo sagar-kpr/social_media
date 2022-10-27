@@ -42,6 +42,7 @@ module.exports.home = async function(req,res){
             }
         })
         .populate('likes')
+       
         let user = await User.find({})
         return res.render('home', {
             posts:post,

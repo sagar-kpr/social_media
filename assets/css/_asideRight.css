@@ -1,5 +1,5 @@
 #friends-list {
-  width: 20%;
+  width: 25%;
   height: 650px;
   display: inline-block;
   vertical-align: top;
@@ -8,39 +8,41 @@
   overflow: scroll;
 }
 
-#friends-list #friends-logo {
+#friends-list h3 {
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+#friends-list #myfriends {
   text-align: center;
   margin-top: 5px;
   border-bottom: 2px solid lightgrey;
+  width: 100%;
 }
 
-#friends-list #friends-logo h3 {
-  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
-}
-
-#friends-list .friends {
-  width: 95%;
+#friends-list #myfriends .friends {
+  width: 100%;
   height: 45px;
-  margin: 12px;
+  margin: 5px;
   font-size: 1rem;
   text-align: center;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 5px;
   font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
-#friends-list .friends #friends-img-box {
-  width: 200px;
+#friends-list #myfriends .friends #friends-img-box {
+  width: 78%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  column-gap: 8px;
 }
 
-#friends-list .friends #friends-img-box #friends-img {
+#friends-list #myfriends .friends #friends-img-box #friends-img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -48,7 +50,7 @@
   margin: 5px;
 }
 
-#friends-list .friends #friends-img-box #friends-img img {
+#friends-list #myfriends .friends #friends-img-box #friends-img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -56,7 +58,7 @@
   object-fit: cover;
 }
 
-#friends-list .friends #friends-img-box #friends-img #status {
+#friends-list #myfriends .friends #friends-img-box #friends-img #status {
   bottom: 0;
   right: 0;
   position: absolute;
@@ -67,7 +69,7 @@
   border: 1px solid white;
 }
 
-#friends-list .friends #friends-img-box p a {
+#friends-list #myfriends .friends #friends-img-box p a {
   color: black;
   text-decoration: none;
   width: 90%;
@@ -77,17 +79,109 @@
   margin-left: 2px;
 }
 
-#friends-list .friends #add-box {
-  width: 50px;
+#friends-list #myfriends .friends #add-box {
+  width: 22%;
   height: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
-#friends-list .friends #add-box a {
+#friends-list #myfriends .friends #add-box a {
   text-decoration: none;
   padding: 5px;
+  width: 80%;
+  background-color: #b92424;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+#friends-list #myfriends .friends:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+#friends-list #totalusers {
+  text-align: center;
+  margin-top: 5px;
+  border-bottom: 2px solid lightgrey;
+  width: 100%;
+}
+
+#friends-list #totalusers .users {
+  width: 100%;
+  height: 45px;
+  margin: 5px;
+  font-size: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+#friends-list #totalusers .users #users-img-box {
+  width: 78%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 8px;
+}
+
+#friends-list #totalusers .users #users-img-box #users-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  margin: 5px;
+}
+
+#friends-list #totalusers .users #users-img-box #users-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  object-fit: cover;
+}
+
+#friends-list #totalusers .users #users-img-box #users-img #status {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FA383E;
+  border: 1px solid white;
+}
+
+#friends-list #totalusers .users #users-img-box p a {
+  color: black;
+  text-decoration: none;
+  width: 90%;
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+  font-weight: 0;
+  font-size: 15px;
+  margin-left: 2px;
+}
+
+#friends-list #totalusers .users #add-box {
+  width: 22%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#friends-list #totalusers .users #add-box a {
+  text-decoration: none;
+  padding: 5px;
+  width: 80%;
   background-color: #149d14;
   color: white;
   border: none;
@@ -96,19 +190,9 @@
   font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
-#friends-list .friends:hover {
+#friends-list #totalusers .users:hover {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-}
-
-#friends-list #user-logo {
-  text-align: center;
-  margin-top: 5px;
-  border-bottom: 2px solid lightgrey;
-}
-
-#friends-list #user-logo h3 {
-  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
 @media screen and (max-width: 1000px) {

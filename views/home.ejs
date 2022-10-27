@@ -3,6 +3,7 @@
 <link rel="stylesheet" type="text/css" href="/css/_asideRight.css">
 <link rel="stylesheet" type="text/css" href="/css/chat_box.css">
 
+
 <%- include('_asideLeft') %>
 <main id="main">
     <section id="my-feeds">
@@ -23,14 +24,7 @@
             <div id="all-stories">
                 <div class="user-story-box" >
                     <div class="user-story" style="height:75%; border-radius: 10px 10px 0 0; border-bottom: 1px solid lightgray;" >
-                        <!-- <img src="https://media.giphy.com/media/JVGLHEuzbVviw/giphy.gif" alt="funny GIF" width="100%"> -->
                         <img src="<%= user.avatar %>" style="border-radius: 10px 10px 0 0;" alt="<%= user.first %>">
-                        <!-- <% if(user.avatar) { %>
-                            <img src="<%= user.avatar %>" style="border-radius: 10px 10px 0 0;" alt="<%= user.first %>">
-
-                        <% } else { %> 
-                            <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
-                        <% } %>   -->
                     </div>
                     <div id="create-story">
                          <div id="story-text">
@@ -40,23 +34,21 @@
                             <i class="fa-solid fa-plus"></i>
                          </div>
                     </div> 
-
                 </div>
                 <% for (list of users) { %>
                     <% if(locals.user.id != list.id) { %>
-                        <div class="user-story-box">
-                             <div class="user-story" >
-                                <img  src="/images/pic2.jpg">
-                            </div>
-                            <div class="user-img">
-                                <img src="<%= list.avatar %>" alt="<%= list.first %>">
-                                <!-- <% if(list.avatar) { %>
-                                    <img src="<%= list.avatar %>" alt="<%= list.first %>">
-                                <% } else { %> 
-                                    <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
-                                <% } %>    -->
-                            </div>
-                        </div>
+                        <% for(frnds of locals.user.friends){ %>
+                            <% if(frnds == list.id) { %>
+                                <div class="user-story-box">
+                                    <div class="user-story" >
+                                        <img  src="/images/pic2.jpg">
+                                    </div>
+                                    <div class="user-img">
+                                        <img src="<%= list.avatar %>" alt="<%= list.first %>">
+                                    </div>
+                                </div>
+                            <% } %>
+                        <% } %>
                     <% } %>   
                 <% } %>
 
@@ -68,11 +60,6 @@
                 <div id="form-inner">
                     <div id="my-img">
                         <img src="<%=user.avatar %>" alt="<%= user.first %>">
-                        <!-- <% if(user.avatar) { %>
-                            <img src="<%=user.avatar %>" alt="<%= user.first %>">
-                        <% } else { %> 
-                            <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= user.first %>">
-                        <% } %>    -->
                     </div>
                     <div id="main-form">
                         <form action="/post/create" id="post-form" method="post">
@@ -115,7 +102,14 @@
         
         <div id="post-box">
             <% for(post of posts) { %>
-                <%- include('_post') -%>
+                <% if(locals.user.id == post.user.id) { %>
+                    <%- include('_post') -%>
+                <% } %>   
+                <% for(frnds of locals.user.friends){ %>
+                    <% if(frnds == post.user.id) { %>
+                        <%- include('_post') -%>
+                    <% } %>
+                <% } %>     
             <% } %>    
         </div>
     </section>
@@ -123,7 +117,8 @@
 
 </main>
 <%- include('_asideRight') %>
-<%- include('chat_box') -%>   
+
+<%- include('chat_box') %>
 
 
 <script src="/js/home_post.js"></script>
@@ -137,7 +132,7 @@
     })
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script>
-<script src="/js/chat_engine.js"></script>
+
 
 <% if(locals.user) { %>
     <script>

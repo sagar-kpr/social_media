@@ -1,34 +1,35 @@
+console.log('hii')
 
-class ToggleAdd{
+class ToggleRemove{
     constructor(ele){
-        this.users = ele
-        this.toggler = $(this.users)[0].lastElementChild.children
-        this.add(this.users)
-
+        this.friends = ele
+        this.toggler = $(this.friends)[0].lastElementChild.children
+        console.log('2323',this.toggler)
+        this.add(this.friends)
     }
-    add(frnds){
+
+    add(friends){
         $(this.toggler).click(function(e){
             e.preventDefault();
-            console.log('***',$(users))
             let self = this;
+            console.log(self);
             $.ajax({
                 type:'post',
                 url: $(self).attr('href'),
                 success: function(data){
-                users.remove();
+                friends.remove();
                 let otherUser = data.data.otherUser
-                frnds.remove();
-                $('#friends-logo').prepend($(`<div class="friends" id="user-${otherUser._id}")
-                    <div id="friends-img-box">
-                        <div id="friends-img">
+                $('#totalusers').prepend($(`<div class="users" id="user-${otherUser._id}">
+                    <div id="users-img-box">
+                        <div id="users-img">
                             <img src="${otherUser.avatar}"  alt="">
                             <div id="status"></div>
                         </div>
                         <p><a href="/home/profile/${otherUser._id}">${otherUser.first}  ${otherUser.last}</a></p>
                     </div>
                     <div id="add-box">
-                        <a class="toggle-remove" style="background-color:rgb(185, 36, 36) ;" href="/remove/remove_toggle/?id=${otherUser._id}>">
-                            <span>Remove</span>
+                        <a class="toggle-add"  href="#">
+                            <span>Add</span>
                         </a>
                     </div>
                 </div>

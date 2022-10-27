@@ -32,8 +32,10 @@ module.exports.toggleLike = async function(req,res){
                 likeable:req.query.id,
                 onModel: req.query.type
             });
-    
+            console.log('before', liked)
             liked.likes.push(newLike._id);
+            console.log('after', liked.likes[0])
+
             liked.save();
         }
         
