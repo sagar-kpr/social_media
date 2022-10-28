@@ -2,7 +2,7 @@ const development = {
     name : 'development',
     assets_path : './assets',
     session_key : 'kwality',
-    db : 'facebook',
+    db : 'facebook2',
     smtp : {
         service:'gmail',
         host: 'smtp.gmail.com',
@@ -45,4 +45,6 @@ const production = {
     
 }
 
-module.exports = eval(process.env.CODIAL_ENV) == undefined ? development : eval(process.env.CODIAL_ENV)
+//module.exports = eval(process.env.CODIAL_ENV) == undefined ? development : eval(process.env.CODIAL_ENV)
+
+module.exports = development;
