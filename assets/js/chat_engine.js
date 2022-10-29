@@ -31,6 +31,7 @@ class ChatEngine{
                     chatRoom : 'facebook'
                 })
             }
+            $('#inp').val('');
         });  
         
         self.socket.on('recived_msg', function(data){
@@ -51,38 +52,7 @@ class ChatEngine{
 
         })
 
-        /*$('#btn').click(function(){
-            let msg = $('#inp').val();
-            
-            if(msg != ''){
-                self.socket.emit('send_msg', {
-                    message : msg,
-                    user_email : self.userEmail,
-                    chat_room : 'facebook'
-                })
-            }
-        })
-
-        self.socket.on('recieved_msg', function(data){
-            let newMsg = $('<li>');
-            let msgType = 'other-msg'
-
-            if(data.user_email == self.userEmail){
-                msgType = 'self-msg'
-            }
-
-            newMsg.append($('<span>',{
-                'html' : data.message
-            }));
-
-            newMsg.append($('<small>', {
-                'html' : data.user_email
-            }));
-
-            newMsg.addClass(msgType)
-            $('#chat-container').append(newMsg)
-
-        })*/
+        
     }
 
 }
