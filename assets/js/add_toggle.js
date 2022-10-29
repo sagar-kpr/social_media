@@ -4,6 +4,7 @@ class ToggleAdd{
         this.users = ele
         this.toggler = $(this.users)[0].lastElementChild.children
         this.add(this.users)
+        
 
     }
     add(frnds){
@@ -15,9 +16,17 @@ class ToggleAdd{
                 type:'post',
                 url: $(self).attr('href'),
                 success: function(data){
-                
                 let otherUser = data.data.otherUser
                 frnds.remove();
+                let text = 'Friend added successfully';
+                new Noty({
+                    theme: 'semanticui',
+                    text : text,
+                    type: 'success',
+                    timeout : 400,
+                    layout : 'topRight'
+                }).show();
+                
                 $('#myfriends').prepend($(`<div class="friends" id="user-${otherUser._id}">
                     <div id="friends-img-box">
                         <div id="friends-img">
@@ -33,13 +42,18 @@ class ToggleAdd{
                     </div>
                 </div>
                 `))
+            
                 }
                 ,
                 error(err){
                     console.log('err:::',err);
                 }
             });
+            
         });
     }
+
+    //NOTY FOR SUCCESS
+    
 
 }

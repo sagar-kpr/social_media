@@ -37,6 +37,7 @@ class ChatEngine{
         
         self.socket.on('recived_msg', function(data){
             let newMsg = $('<li>');
+            
             let msgType = 'other-msg';
 
             if(data.id == self.userEmail){
