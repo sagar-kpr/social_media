@@ -20,10 +20,10 @@
 }
 
 main {
-  width: 750px;
+  width: 790px;
   display: inline-block;
   vertical-align: top;
-  margin-left: 20%;
+  margin-left: 24%;
   margin-top: 60px;
 }
 
@@ -38,7 +38,7 @@ main #my-feeds {
 }
 
 main #my-feeds #story-box {
-  width: 75%;
+  width: 80%;
   height: 300px;
   margin: 20px;
   background-color: white;
@@ -83,6 +83,7 @@ main #my-feeds #story-box #all-stories {
   position: relative;
   display: grid;
   grid-auto-flow: column;
+  grid-template-columns: 136px 136px;
   overflow-x: scroll;
   overflow-y: hidden;
 }
@@ -183,7 +184,7 @@ main #my-feeds #story-box #all-stories .user-story-box:hover .user-img img {
 }
 
 main #my-feeds #form-box {
-  width: 75%;
+  width: 80%;
   margin: 20px;
   display: block;
   background-color: white;
@@ -306,7 +307,7 @@ main #my-feeds #form-box #add-status #inner-status .status-box:hover {
 
 main #my-feeds #post-box {
   height: auto;
-  width: 75%;
+  width: 80%;
   margin-top: 1px;
   display: flex;
   flex-direction: column;

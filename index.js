@@ -36,7 +36,7 @@ app.use(parser.urlencoded({extended:false}));
 //for file uploading
 app.use(express.static(env.assets_path));
 app.use('/upload', express.static(__dirname + '/upload'));
-app.use(logger(env.morgan.mode, env.morgan.options))
+
 
 
 //for using layouts
