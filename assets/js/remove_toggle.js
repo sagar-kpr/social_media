@@ -12,7 +12,6 @@ class ToggleRemove{
         $(this.toggler).click(function(e){
             e.preventDefault();
             let self = this;
-            console.log(self);
             $.ajax({
                 type:'post',
                 url: $(self).attr('href'),

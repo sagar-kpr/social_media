@@ -160,7 +160,7 @@ body header #user .text #msg-box {
   border: 1px solid lightgray;
 }
 
-body header #user .text #msg-box .friends {
+body header #user .text #msg-box .chat-friends {
   width: 95%;
   height: 45px;
   margin: 8px;
@@ -174,7 +174,7 @@ body header #user .text #msg-box .friends {
   font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
 }
 
-body header #user .text #msg-box .friends #friends-img-box {
+body header #user .text #msg-box .chat-friends #chat-friends-img-box {
   width: 100%;
   height: 100%;
   display: flex;
@@ -184,14 +184,14 @@ body header #user .text #msg-box .friends #friends-img-box {
   margin-left: 8px;
 }
 
-body header #user .text #msg-box .friends #friends-img-box #friends-img {
+body header #user .text #msg-box .chat-friends #chat-friends-img-box #chat-friends-img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   position: relative;
 }
 
-body header #user .text #msg-box .friends #friends-img-box #friends-img img {
+body header #user .text #msg-box .chat-friends #chat-friends-img-box #chat-friends-img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -199,13 +199,13 @@ body header #user .text #msg-box .friends #friends-img-box #friends-img img {
   object-fit: cover;
 }
 
-body header #user .text #msg-box .friends #friends-img-box #friends-name {
+body header #user .text #msg-box .chat-friends #chat-friends-img-box #chat-friends-name {
   width: 260px;
   height: 100%;
   text-align: start;
 }
 
-body header #user .text #msg-box .friends #friends-img-box #friends-name p {
+body header #user .text #msg-box .chat-friends #chat-friends-img-box #chat-friends-name p {
   color: black;
   text-decoration: none;
   font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
@@ -215,7 +215,7 @@ body header #user .text #msg-box .friends #friends-img-box #friends-name p {
   margin-left: 2px;
 }
 
-body header #user .text #msg-box .friends:hover {
+body header #user .text #msg-box .chat-friends:hover {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   cursor: pointer;

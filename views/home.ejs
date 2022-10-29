@@ -118,14 +118,14 @@
 
 </main>
 <%- include('_asideRight') %>
-<%- include('chat_box') %>
+
 
 
 
 
 <script src="/js/home_post.js"></script>
 <script src="/js/index.js"></script>
-
+<script src="/js/chat_engine.js"></script>
 
 <script>
     $(' .toggle-like').each(function(){
@@ -135,11 +135,4 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.js"></script>
 
-
-<% if(locals.user) { %>
-    <script>
-        new ChatEngine('chat-box', '<%= locals.user.email %>');
-    </script>
-
-<% } %>
 

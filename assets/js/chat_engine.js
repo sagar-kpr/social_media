@@ -1,6 +1,7 @@
 class ChatEngine{
     constructor(chatbox, email){
         this.chatbox = $(`#${chatbox}`)
+        console.log('mychat',$(this.chatbox))
         this.userEmail = email
         this.socket = io.connect('http://localhost:5000');
         this.socketHandler()
@@ -23,7 +24,7 @@ class ChatEngine{
 
         $('#btn').click(function(){
             let msg = $('#inp').val();
-
+            console.log(msg)
             if(msg != ''){
                 self.socket.emit('send_msg', {
                     message : msg,

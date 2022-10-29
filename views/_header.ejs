@@ -60,16 +60,18 @@
                         <% for(frnds of locals.user.friends){ %>
                             <% for(list of users){ %>
                                 <% if(frnds == list.id) { %>
-                                    <div class="friends" id="user-<%=list._id %>">
-                                        <div id="friends-img-box">
-                                            <div id="friends-img">
-                                                <img src="<%= list.avatar %>"  alt="">
-                                            </div>
-                                            <div id="friends-name">
-                                                <p><%=list.first + ' ' + list.last %></p>
-                                            </div>
+                                        <div class="chat-friends" id="user-<%=list._id %>">
+                                            <a href="/chat/chat_toggle/?id=<%=list._id %>">
+                                                <div id="chat-friends-img-box">
+                                                    <div id="chat-friends-img">
+                                                        <img src="<%= list.avatar %>"  alt="">
+                                                    </div>
+                                                    <div id="chat-friends-name">
+                                                        <p><%=list.first + ' ' + list.last %></p>
+                                                    </div>
+                                                </div>
+                                            </a>    
                                         </div>
-                                    </div>
                                 <% } %>   
                             <% } %>
                         <% } %>
@@ -106,3 +108,11 @@
     </div>
 </header>
 <script src="/js/_header.js"></script>
+<script src="/js/chat_toggle.js"></script>
+<script>
+    $(' .chat-friends').each(function(){
+        let self = this;
+        let chatToggle = new ChatToggle(self);
+
+    })
+</script>
