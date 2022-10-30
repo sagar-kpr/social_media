@@ -1,22 +1,25 @@
 #friends-list{
     width: 24%;
-    height: 650px;
+    height: 695px;
     display: inline-block;
     vertical-align: top;
     position:fixed;
     margin-top: 60px; 
-    overflow: scroll;
     h3{
         font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
         text-align: center;
     }
     #myfriends{
         text-align: center;
-        margin-top: 5px;
+        margin: 7px;
         border-bottom: 2px solid lightgrey;
-        width: 100%;
+        width: 97%;
+        max-height: 280px;
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: hidden;
         .friends{
-            width:100%;
+            width:95%;
             height: 45px;
             margin: 5px;
             //border-right: 10px solid green;
@@ -99,13 +102,20 @@
             border-radius: 5px;
         }
     }
+    #myfriends:hover{
+        overflow-y: visible;
+    }
     #totalusers{
         text-align: center;
-        margin-top: 5px;
+        margin: 7px;
         border-bottom: 2px solid lightgrey;
-        width: 100%;
+        width: 95%;
+        max-height: 280px;
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: hidden;
         .users{
-            width:100%;
+            width:97%;
             height: 45px;
             margin: 5px;
             //border-right: 10px solid green;
@@ -186,6 +196,9 @@
             background-color: rgba(0,0,0,0.1);
             border-radius: 5px;
         }
+    }
+    #totalusers:hover{
+        overflow-y: visible;
     }
 } 
 

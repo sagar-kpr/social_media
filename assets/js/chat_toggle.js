@@ -51,7 +51,24 @@ class ChatToggle{
                 </div>`)
                 let script = $(` <script>
                     new ChatEngine('chat-box', '${local}');
-                </script>`)    
+
+                    var minimize = document.getElementById('minimize');
+                    var j = 0 ;
+
+                    var chatbox = document.getElementById('chat-box');
+
+                    minimize.addEventListener('click', function(){
+                        if(j % 2 == 0){
+                            console.log('minimize',chatbox)
+                            chatbox.style.height = '45px'
+                        }else{
+                            console.log('maximize')
+                            chatbox.style.height = '430px'
+                        }
+                        j++;
+                    })
+                </script>`)  
+
                 $('#main').append(newMsg)
                 $('#main').append(script)
                 },

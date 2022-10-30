@@ -1,6 +1,6 @@
 #my-links {
   width: 24%;
-  height: 650px;
+  height: 695px;
   display: inline-block;
   background-color: #F0F2F5;
   overflow: scroll;
@@ -85,6 +85,14 @@
   width: 100%;
   height: auto;
   display: none;
+}
+
+#my-links .shortcuts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
 }
 
 #my-links:hover {
