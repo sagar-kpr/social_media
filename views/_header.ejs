@@ -60,7 +60,7 @@
                         <% for(frnds of locals.user.friends){ %>
                             <% for(list of users){ %>
                                 <% if(frnds == list.id) { %>
-                                        <div class="chat-friends" id="user-<%=list._id %>">
+                                        <div class="chat-friends" id="<%=list._id %>">
                                             <a href="/chat/chat_toggle/?id=<%=list._id %>">
                                                 <div id="chat-friends-img-box">
                                                     <div id="chat-friends-img">

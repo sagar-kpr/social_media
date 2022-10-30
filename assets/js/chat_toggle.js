@@ -16,6 +16,7 @@ class ChatToggle{
                 type: 'post',
                 url: $(self).attr('href'),
                 success: function(data){
+                    $('#msg-box').css("display", "none");
                     let user = data.data.user
                     let local = data.data.local
                     console.log('user found', local)
@@ -55,12 +56,11 @@ class ChatToggle{
                     var minimize = document.getElementById('minimize');
                     var j = 0 ;
 
-                    var chatbox = document.getElementById('chat-box');
+                    var chatbox = document.getElementById('chat-box');                 
 
                     minimize.addEventListener('click', function(){
                         if(j % 2 == 0){
-                            console.log('minimize',chatbox)
-                            chatbox.style.height = '45px'
+                            chatbox.style.height = '40px'
                         }else{
                             console.log('maximize')
                             chatbox.style.height = '430px'

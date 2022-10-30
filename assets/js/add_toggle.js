@@ -10,7 +10,7 @@ class ToggleAdd{
     add(frnds){
         $(this.toggler).click(function(e){
             e.preventDefault();
-            console.log('***',$(frnds))
+
             let self = this;
             $.ajax({
                 type:'post',

@@ -23,6 +23,7 @@ console.log('chat server is running on port 5000');
 
 
 //for node-sass-middleware
+
 app.use(sassMiddlware({
     src: path.join(__dirname, env.assets_path, 'scss'),
     dest:  path.join(__dirname, env.assets_path, 'css'),
@@ -30,13 +31,15 @@ app.use(sassMiddlware({
     prefix: '/css'
 }));
 
+
+
 //for parsing incoming request bodies
 app.use(parser.urlencoded({extended:false}));
 
 //for file uploading
 app.use(express.static(env.assets_path));
 app.use('/upload', express.static(__dirname + '/upload'));
-
+app.use(logger(env.morgan.mode, env.morgan.options));
 
 
 //for using layouts
