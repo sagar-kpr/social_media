@@ -22,10 +22,10 @@
     
     }
 main{
-    width: 750px;
+    width: 790px;
     display: inline-block;
     vertical-align:top;
-    margin-left: 20%;
+    margin-left: 24%;
     margin-top: 60px; 
     #my-feeds{
         width: 100%;
@@ -75,7 +75,7 @@ main{
                 position: relative;
                 display: grid;
                 grid-auto-flow: column;
-                grid-template-columns: 135px 135px;
+                grid-template-columns: 136px 136px;
                 overflow-x: scroll;
                 overflow-y:hidden;
                 .user-story-box{

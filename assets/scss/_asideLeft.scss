@@ -1,7 +1,6 @@
 #my-links{
     width: 24%;
-    height: 650px;
-    //border-right: 1px solid lightgray;
+    height: 695px;
     display: inline-block;
     background-color:#F0F2F5 ;
     overflow: scroll;
@@ -83,7 +82,13 @@
         }
 
     }
-    
+    .shortcuts{
+        width:100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+    }
     
 }
 

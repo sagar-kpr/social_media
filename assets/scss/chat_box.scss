@@ -1,96 +1,165 @@
 #chat-box{
-    width: 300px;
-    height: 380px;
+    width: 330px;
+    height: 430px;
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
     position: fixed;
-    border-radius: 3px;
     right: 5px;
     bottom: 1px;
-    padding: 5px;
     overflow: hidden;
-    display: none;
-    border-top: 5px solid orangered;
-    #cross-box{
-        width: 50px;
-        height: 18px;
-        position: absolute;
-        top: 2px;
-        right: 5px;
+    z-index: 2;
+    #chat-header{
+        width: 100%;
+        height: 50px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        font-family: sans-serif;
-        border: 1px solid red;
-        #minimize{
-            width:45%;
-            height: 100%;
-            text-align: center;
-            font-size: 1.2rem;
-            border: 1px solid red;
-            cursor: pointer;
+        box-sizing: border-box;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 -1px rgba(0, 0, 0, 0.1) inset, 0 2px 1px -1px rgba(255,255,255,0.5) inset;
+        #user-box{
+            width: 275px;
+            height: 35px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            #user-img{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin: 5px;
+                border: 1px solid lightgray;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+            #user-name{
+                width: 230px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+                font-weight: 600;
+            }
         }
-        #minimize:hover{
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-        #cross{
-            width:45%;
-            height: 100%;
-            text-align: center; 
-        }
-        #cross:hover{
-            background-color: rgb(217, 15, 15);
-            color: white;
-            cursor: pointer;
+        #cross-box{
+            width: 50px;
+            height: 35px;
+            display: flex;
+            //border: 1px solid blue;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-family: sans-serif;
+            
+            #minimize{
+                width:24px;
+                height: 24px;
+                text-align: center;
+                font-size: 1.3rem;
+                cursor: pointer;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #1877F2;
+            }
+            #minimize:hover{
+                background-color: rgba(0, 0, 0, 0.1);
+                
+            }
+            #close{
+                width:24px;
+                height: 24px;
+                text-align: center; 
+                cursor: pointer;
+                border-radius: 50%;
+                color: #1877F2;
+                display: flex;
+                font-size: 1.3rem;
+                align-items: center;
+                justify-content: center;
+            }
+            #close:hover{
+                background-color: rgba(0, 0, 0, 0.1);
+            }
         }
     }
+    
     #chat-container{
         list-style: none;
-        height: 85%;
+        height: 300px;
         margin: 0;
         position: relative;
         padding: 10px;
         overflow: auto;
+        font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
         .other-msg{
             text-align: left;
             padding: 5px;
+            
             span{
                 display: inline-block;
-                padding: 15px;
-                background-color: antiquewhite;
-                border-radius: 10px;
+                padding: 8px 12px;
+                background-color: #e4e6eb;
+                border-radius: 18px 18px 18px 0px;
+                font-size: 15px;
+                color: #292a31;
+                max-width:170px;
+                text-align: justify;
             }
         }
         .self-msg{
             text-align: right;
             padding: 5px;
             span{
-                padding: 15px;
+                padding: 8px 12px;
                 display: inline-block;
-                background: bisque;
-                border-radius: 10px;
+                background: #0084ff;
+                border-radius: 18px 18px 0px 18px;
+                font-size: 15px;
+                color: #ffffff;
+                max-width: 170px;
+                text-align: justify;
             }
         }
     }
     #inp-container{
         width:100%;
-        height: 10%;
+        height: 65px;
         display: flex;
         flex-direction: row;
-        
+        box-sizing: border-box;
+        align-items: center;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        justify-content: space-around;
+        margin: none;
         #inp{
-            padding: 5px;
-            line-height: 1;
-            width: 83%;
+            width: 250px;
+            height: 25px;
+            background-color: #e1e1e3;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            font-size: 1.1rem;
         }
-        #btn{
-            padding: 5px;
-            line-height: 1;
-            width: 17%;
-            border: 1px solid gray;
-            background: rgb(6, 188, 6);
+        #inp:focus{
+            outline: none;
+        }
+        #send{
+           width: auto;
+           height: auto;
+           font-size: 22px;
+           color: #1877F2;
+           margin-right: 10px;
+           #btn{
+            cursor: pointer;
+            
+           }
         }    
         
     }

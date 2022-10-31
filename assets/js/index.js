@@ -5,11 +5,15 @@ var k = 0;
 var arrow2 = document.getElementById('arrow2');
 var i = 0;
 
+<<<<<<< HEAD
 /*var mini = document.getElementById('minimize');
 var m = 0;
 
 var cross = document.getElementById('cross');
 var l= 0;*/
+=======
+
+>>>>>>> d71c97b56139069c54ba6dbbee53bdb9e3a8e34d
 
 arrow1.addEventListener('click', function(){
     if(k % 2 == 0){
@@ -29,6 +33,7 @@ arrow2.addEventListener('click', function(){
     i++;
 });
 
+<<<<<<< HEAD
 /*cross.addEventListener('click', function(){
     if(l % 2 == 0){
         document.getElementById('chat-box').style.display = 'none';
@@ -48,4 +53,7 @@ mini.addEventListener('click', function(){
     m++;
 
 })*/
+=======
+
+>>>>>>> d71c97b56139069c54ba6dbbee53bdb9e3a8e34d
 

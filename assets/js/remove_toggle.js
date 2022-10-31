@@ -12,12 +12,19 @@ class ToggleRemove{
         $(this.toggler).click(function(e){
             e.preventDefault();
             let self = this;
-            console.log(self);
             $.ajax({
                 type:'post',
                 url: $(self).attr('href'),
                 success: function(data){
                 friends.remove();
+                let text = 'Friend removed ';
+                new Noty({
+                    theme: 'semanticui',
+                    text: text,
+                    type: 'error',
+                    timeout:400,
+                    layout: 'topRight'
+                }).show();
                 let otherUser = data.data.otherUser
                 $('#totalusers').prepend($(`<div class="users" id="user-${otherUser._id}">
                     <div id="users-img-box">

@@ -15,7 +15,7 @@ class postComments{
     createComment(postId){
         let postSelf = this; //refereing to postcomment class
         this.commentForm.submit(function(e){
-            e.preventDefault();
+           e.preventDefault();
             let self = this;
             
             $.ajax({

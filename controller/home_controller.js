@@ -19,7 +19,7 @@ module.exports.profile = async function(req,res){
     User.findById(req.params.id, function(err,user){
         return res.render('profile',{
             thatUser: user,
-            users : allUsers
+            users: allUsers
         });
     });
     
