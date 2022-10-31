@@ -6,7 +6,6 @@
     position:fixed;
     margin-top: 4%; 
     overflow: scroll;
-    border: 1px solid blue;
     h3{
         font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
         text-align: center;
@@ -19,9 +18,8 @@
         overflow: scroll;
         overflow-x: hidden;
         overflow-y: hidden;
-        border: 1px solid red;
         .friends{
-            width:100%;
+            width:97%;
             margin-bottom:5px ;
             height: 45px;
             //border-right: 10px solid green;
@@ -30,10 +28,10 @@
             box-sizing: border-box;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: flex-start;
             font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
             #friends-img-box{
-                width: 78%;
+                width: 70%;
                 height: 100%;
                 display: flex;
                 align-items: center;
@@ -78,7 +76,7 @@
 
             }
             #add-box{
-                width: 22%;
+                width: 80px;
                 height: 80%;
                 display: flex;
                 justify-content: flex-start;
@@ -110,27 +108,25 @@
     #totalusers{
         text-align: center;
         border-bottom: 2px solid lightgrey;
-        width: 95%;
-        border: 1px solid red;
+        width: 100%;
         max-height: 280px;
         overflow: scroll;
         overflow-x: hidden;
         overflow-y: hidden;
         .users{
-            width:95%;
+            width:97%;
             height: 45px;
-            margin: 5px;
+            margin-bottom: 5px;
             //border-right: 10px solid green;
             font-size: 1rem;
             text-align: center;
-            border: 1px solid blue;
             box-sizing: border-box;
             display: flex;
             align-items: center;
             justify-content: flex-start;
             font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
             #users-img-box{
-                width: 78%;
+                width: 70%;
                 height: 100%;
                 display: flex;
                 align-items: center;
@@ -175,7 +171,7 @@
 
             }
             #add-box{
-                width: 22%;
+                width: 80px;
                 height: 80%;
                 display: flex;
                 justify-content: flex-start;
@@ -183,7 +179,7 @@
                 a{
                     text-decoration: none;
                     padding: 5px;
-                    width: 80%;
+                    width: 90%;
                     background-color: rgb(20, 157, 20);
                     color: white;
                     border: none;
