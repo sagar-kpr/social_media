@@ -14,10 +14,12 @@ module.exports.signup = function(req,res){
     
 }
 
-module.exports.profile = function(req,res){
+module.exports.profile = async function(req,res){
+    let allUsers = await User.find({})
     User.findById(req.params.id, function(err,user){
         return res.render('profile',{
-            thatUser: user
+            thatUser: user,
+            users : allUsers
         });
     });
     

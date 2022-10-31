@@ -25,6 +25,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: sans-serif;
+  border: 1px solid red;
 }
 
 #chat-box #cross-box #minimize {
@@ -32,10 +33,8 @@
   height: 100%;
   text-align: center;
   font-size: 1.2rem;
-}
-
-#chat-box #cross-box #minimize span {
-  cursor: default;
+  border: 1px solid red;
+  cursor: pointer;
 }
 
 #chat-box #cross-box #minimize:hover {
@@ -48,13 +47,10 @@
   text-align: center;
 }
 
-#chat-box #cross-box #cross span {
-  cursor: default;
-}
-
 #chat-box #cross-box #cross:hover {
   background-color: #d90f0f;
   color: white;
+  cursor: pointer;
 }
 
 #chat-box #chat-container {

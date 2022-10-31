@@ -23,30 +23,27 @@
         justify-content: space-between;
         align-items: center;
         font-family: sans-serif;
+        border: 1px solid red;
         #minimize{
             width:45%;
             height: 100%;
             text-align: center;
             font-size: 1.2rem;
-            span{
-                cursor:default;
-            }
+            border: 1px solid red;
+            cursor: pointer;
         }
         #minimize:hover{
             background-color: rgba(0, 0, 0, 0.2);
-            
         }
         #cross{
             width:45%;
             height: 100%;
             text-align: center; 
-            span{
-                cursor:default;
-            }
         }
         #cross:hover{
             background-color: rgb(217, 15, 15);
             color: white;
+            cursor: pointer;
         }
     }
     #chat-container{

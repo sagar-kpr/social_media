@@ -9,16 +9,16 @@ class ToggleAdd{
     add(frnds){
         $(this.toggler).click(function(e){
             e.preventDefault();
-            console.log('***',$(users))
+            console.log('***',$(frnds))
             let self = this;
             $.ajax({
                 type:'post',
                 url: $(self).attr('href'),
                 success: function(data){
-                users.remove();
+                
                 let otherUser = data.data.otherUser
                 frnds.remove();
-                $('#friends-logo').prepend($(`<div class="friends" id="user-${otherUser._id}")
+                $('#myfriends').prepend($(`<div class="friends" id="user-${otherUser._id}">
                     <div id="friends-img-box">
                         <div id="friends-img">
                             <img src="${otherUser.avatar}"  alt="">

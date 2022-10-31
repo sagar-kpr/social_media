@@ -3,6 +3,9 @@ var j = 0 ;
 
 const frndsbox = document.querySelectorAll(' .friends')
 
+var minimize = document.getElementById('minimize');
+var i = 0 ;
+
 
 messenger.addEventListener('click', function(){
     if(j % 2 == 0){
@@ -19,4 +22,13 @@ frndsbox[0].addEventListener('click', function(){
     document.getElementById('chat-box').style.display = 'block';
 })
 
+minimize.addEventListener('click', function(){
+    if(i % 2 == 0){
+        document.getElementById('chat-box').style.height = '30px'
+    }else{
+        document.getElementById('chat-box').style.height = '380px';
+    }
+    i++;
+    
+})
 

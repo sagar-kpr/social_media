@@ -36,6 +36,8 @@ app.use(parser.urlencoded({extended:false}));
 app.use(express.static(env.assets_path));
 app.use('/upload', express.static(__dirname + '/upload'));
 
+
+
 //for using layouts
 app.use(layout);
 
