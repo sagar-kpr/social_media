@@ -1,0 +1,219 @@
+#user_profile {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user_profile #profile {
+  width: 99%;
+  height: 400px;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 130px;
+  /*#my-img::after{
+            content: ' ';
+            bottom:20px;
+            right:37px;
+            position:absolute;
+            width:15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: green;
+            border: 2px solid white;
+            
+        }*/
+}
+
+#user_profile #profile #my-img2 {
+  width: 100%;
+  height: 400px;
+}
+
+#user_profile #profile #my-img2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#user_profile #profile #my-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top: 57%;
+  left: 39%;
+  border: 2px solid white;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#user_profile #profile #my-img img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#user_profile #profile #my-img #status {
+  bottom: 20px;
+  right: 37px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #FA383E;
+  border: 2px solid white;
+}
+
+#user_profile #profile sup i {
+  position: absolute;
+  right: 7px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: dimgray;
+}
+
+#user_profile #profile .edit {
+  width: 300px;
+  height: auto;
+  background-color: aliceblue;
+  position: absolute;
+  right: 0;
+  display: none;
+  top: 40px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+#user_profile #profile .edit form {
+  width: 90%;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user_profile #profile .edit form #inp {
+  width: 90%;
+  padding: 7px;
+  margin: 5px;
+}
+
+#user_profile #profile .edit form #btn {
+  width: 95%;
+  padding: 7px;
+  margin: 5px;
+  background-color: #4267B2;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#user_profile #profile .edit form #btn:hover {
+  background-color: #375695;
+}
+
+@media screen and (max-width: 650px) {
+  #user_profile #profile #my-img {
+    left: 20%;
+  }
+}
+
+#user_profile #name {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  position: relative;
+}
+
+#user_profile #name h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: inline-block;
+}
+
+#user_profile #name h2 sup {
+  color: dimgray;
+  cursor: pointer;
+}
+
+#user_profile #name .edit2 {
+  width: 300px;
+  height: auto;
+  background-color: aliceblue;
+  position: absolute;
+  left: 40%;
+  display: none;
+  top: 60px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+#user_profile #name .edit2 form {
+  width: 90%;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user_profile #name .edit2 form #inp {
+  width: 90%;
+  padding: 7px;
+  margin: 5px;
+}
+
+#user_profile #name .edit2 form #btn {
+  width: 95%;
+  padding: 7px;
+  margin: 5px;
+  background-color: #4267B2;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#user_profile #name .edit2 form #btn:hover {
+  background-color: #375695;
+}
+
+@media screen and (max-width: 650px) {
+  #user_profile #name .edit2 {
+    left: 25%;
+  }
+}
+
+#user_profile #about {
+  width: 45%;
+  height: 130px;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+#user_profile #about div {
+  margin: 5px 5px 5px 0;
+}
+
+#user_profile #about div span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: gray;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 650px) {
+  #user_profile #about div span {
+    display: block;
+    margin-left: 0px;
+  }
+}

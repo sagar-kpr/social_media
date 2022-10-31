@@ -18,7 +18,7 @@ const development = {
     name : 'development',
     assets_path : './assets',
     session_key : 'kwality',
-    db : 'facebook2',
+    db : 'facebook',
     smtp : {
         service:'gmail',
         host: 'smtp.gmail.com',
