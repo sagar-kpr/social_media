@@ -22,11 +22,13 @@
     
     }
 main{
-    width: 790px;
+    width: 50%;
     display: inline-block;
     vertical-align:top;
-    margin-left: 24%;
-    margin-top: 60px; 
+    margin-left:25%;
+    margin-top: 4%; 
+    position: relative;
+    border: 1px solid red;
     #my-feeds{
         width: 100%;
         height:auto;
@@ -615,6 +617,7 @@ main{
 @media screen and (max-width: 1000px){
     #main{
         margin-left: 10%;
+        margin-top: 6%;
         #my-feeds{
             #story-box , #form-box , #post-box {
                 min-width: 550px;
@@ -627,6 +630,7 @@ main{
     #main{
         margin-left: 10%;
         width: 590px;
+        margin-top: 7%;
         #my-feeds{
             #story-box, #form-box,#post-box {
                 min-width: 550px;
@@ -640,6 +644,7 @@ main{
     #main{
         margin-left: 10%;
         width: 490px;
+        margin-top: 8%;
         #my-feeds{   
             #story-box, #form-box, #post-box {
                 min-width: 450px;
@@ -653,6 +658,7 @@ main{
     #main{
         width: 100%;
         margin-left: 0;
+        margin-top: 10%;
         #my-feeds{
             #story-box{
                 min-width: 98%;

@@ -1,6 +1,6 @@
 #my-links {
-  width: 24%;
-  height: 695px;
+  width: 25%;
+  height: 92%;
   display: inline-block;
   background-color: #F0F2F5;
   overflow: scroll;
@@ -8,11 +8,12 @@
   overflow-y: hidden;
   vertical-align: top;
   position: fixed;
-  margin-top: 60px;
+  border: 1px solid red;
+  margin-top: 4%;
 }
 
 #my-links .links-container {
-  width: 100%;
+  width: 97%;
   height: auto;
   display: flex;
   flex-direction: column;
