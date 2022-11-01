@@ -30,7 +30,6 @@ class ToggleRemove{
                     <div id="users-img-box">
                         <div id="users-img">
                             <img src="${otherUser.avatar}"  alt="">
-                            <div id="status"></div>
                         </div>
                         <p><a href="/home/profile/${otherUser._id}">${otherUser.first}  ${otherUser.last}</a></p>
                     </div>

@@ -138,7 +138,7 @@ module.exports.changePassword = function(req,res){
 }
 
 module.exports.destroy = function(req,res){
-    req.logout(function(err,user){
+   req.logout(function(err,user){
         if(err) { console.log('error in logout'); return}
         req.flash('success', "loged out successfully ")
         return res.redirect('/');

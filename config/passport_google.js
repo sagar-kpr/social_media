@@ -25,7 +25,7 @@ passport.use(new googleStrategy({
                     email: profile.emails[0].value,
                     age: '20',
                     password : crypto.randomBytes(20).toString('hex'),
-                    profilePic : profile.photos[0].value 
+                    avatar : profile.photos[0].value 
                 }, function(err,user){
                     if(err) { console.log('err in finding email'); return }
                     return done(null, user);

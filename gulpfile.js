@@ -6,6 +6,7 @@ const cssnano = require('gulp-cssnano');
 const rev = require('gulp-rev');
 const del = require('del');
 
+
 gulp.task('css', function(done){
     console.log('minifiest css..')
     gulp.src('./assets/sass/**/*.scss')
@@ -47,7 +48,7 @@ gulp.task('js', function(done){
 gulp.task('images', function(done){
     console.log('manifest images...')
 
-    gulp.src('./assets/**/*.+(png | jpeg | svg | jpg | gif)')
+    gulp.src('./assets/images/**/*.+(png | jpeg | svg | jpg | gif)')
     .pipe(imagemin())
     .pipe(rev())
     .pipe(gulp.dest('./public/assets'))
@@ -60,16 +61,11 @@ gulp.task('images', function(done){
     done();
 })
 
+gulp.task('clean', function(){
+    del.deleteAsync(['public/assets/**'], {force: true}) 
+})
 
-//del.sync(['.public/assets'], {force: true});
-/*gulp.task('clean', function(){
-    return del.deleteSync(['.public/assets'], {force: true});
-    //del.deleteSync('./public/assets', {force:true});
-    
-})*/
-
-
-gulp.task('build', gulp.series( 'css', 'js', 'images'), function(done){
+gulp.task('build', gulp.series( 'clean','css', 'js', 'images'), function(done){
     console.log('building assets')
     done()
 })
