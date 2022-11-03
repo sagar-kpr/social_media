@@ -599,3 +599,227 @@
 [0mGET /home [32m200[0m 52.743 ms - 33265[0m
 [0mGET /home [32m200[0m 52.924 ms - 33265[0m
 [0mGET /home [36m304[0m 53.442 ms - -[0m
+::1 - - [03/Nov/2022:07:21:08 +0000] "GET / HTTP/1.1" 200 3913 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:08 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:08 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:08 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:08 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:08 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:08 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:08 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:08 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:09 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:09 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:09 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:09 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:09 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:09 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:09 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:16 +0000] "GET / HTTP/1.1" 200 3913 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:16 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:16 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:16 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:16 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:16 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:16 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:16 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:17 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:17 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:21:17 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:35 +0000] "GET /signup HTTP/1.1" 200 3796 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:35 +0000] "GET /css/signup.css HTTP/1.1" 404 153 "http://localhost:8000/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:35 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:8000/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:35 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:8000/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:35 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:8000/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:35 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:8000/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:35 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:8000/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:36 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:8000/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:36 +0000] "GET /css/signup.css HTTP/1.1" 404 153 "http://localhost:8000/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:37 +0000] "GET / HTTP/1.1" 304 - "http://localhost:8000/signup" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:37 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:37 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:38 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:38 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:38 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:38 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:07:22:38 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+[0mGET / [36m304[0m 15.514 ms - -[0m
+[0mGET /css/_header.css [33m404[0m 4.745 ms - 154[0m
+[0mGET /css/signin.css [33m404[0m 10.869 ms - 153[0m
+[0mGET /js/_header.js [33m404[0m 1.627 ms - 152[0m
+[0mGET /js/chat_toggle.js [33m404[0m 1.927 ms - 156[0m
+[0mGET /js/profile.js [33m404[0m 1.543 ms - 152[0m
+[0mGET /icons/fbnew.png [33m404[0m 1.470 ms - 154[0m
+[0mGET /icons/google.png [33m404[0m 1.503 ms - 155[0m
+[0mGET /css/_header.css [33m404[0m 3.087 ms - 154[0m
+[0mGET /css/signin.css [33m404[0m 2.802 ms - 153[0m
+[0mGET / [36m304[0m 4.385 ms - -[0m
+[0mGET /css/_header.css [33m404[0m 3.084 ms - 154[0m
+[0mGET /css/signin.css [33m404[0m 3.544 ms - 153[0m
+[0mGET /js/_header.js [33m404[0m 3.420 ms - 152[0m
+[0mGET /js/chat_toggle.js [33m404[0m 3.890 ms - 156[0m
+[0mGET /icons/google.png [33m404[0m 3.723 ms - 155[0m
+[0mGET /js/profile.js [33m404[0m 8.368 ms - 152[0m
+[0mGET /icons/fbnew.png [33m404[0m 8.261 ms - 154[0m
+[0mGET / [36m304[0m 3.121 ms - -[0m
+[0mGET /css/_header.css [33m404[0m 2.478 ms - 154[0m
+[0mGET /css/signin.css [33m404[0m 2.971 ms - 153[0m
+[0mGET /js/_header.js [33m404[0m 5.672 ms - 152[0m
+[0mGET /js/chat_toggle.js [33m404[0m 5.930 ms - 156[0m
+[0mGET /js/profile.js [33m404[0m 5.481 ms - 152[0m
+[0mGET /icons/fbnew.png [33m404[0m 5.163 ms - 154[0m
+[0mGET /icons/google.png [33m404[0m 6.425 ms - 155[0m
+[0mGET / [36m304[0m 13.706 ms - -[0m
+[0mGET /css/_header.css [33m404[0m 4.834 ms - 154[0m
+[0mGET /css/signin.css [33m404[0m 14.348 ms - 153[0m
+[0mGET /js/_header.js [33m404[0m 7.564 ms - 152[0m
+[0mGET /icons/fbnew.png [33m404[0m 6.928 ms - 154[0m
+[0mGET /icons/google.png [33m404[0m 6.023 ms - 155[0m
+[0mGET /js/chat_toggle.js [33m404[0m 16.252 ms - 156[0m
+[0mGET /js/profile.js [33m404[0m 14.108 ms - 152[0m
+[0mGET / [36m304[0m 4.173 ms - -[0m
+[0mGET /css/signin.css [33m404[0m 2.401 ms - 153[0m
+[0mGET /css/_header.css [33m404[0m 3.540 ms - 154[0m
+[0mGET /js/_header.js [33m404[0m 6.376 ms - 152[0m
+[0mGET /js/chat_toggle.js [33m404[0m 7.047 ms - 156[0m
+[0mGET /js/profile.js [33m404[0m 6.996 ms - 152[0m
+[0mGET /icons/fbnew.png [33m404[0m 6.909 ms - 154[0m
+[0mGET /icons/google.png [33m404[0m 9.426 ms - 155[0m
+[0mGET / [36m304[0m 3.422 ms - -[0m
+[0mGET /css/_header.css [33m404[0m 2.483 ms - 154[0m
+[0mGET /css/signin.css [33m404[0m 3.316 ms - 153[0m
+[0mGET /js/_header.js [33m404[0m 4.176 ms - 152[0m
+[0mGET /js/profile.js [33m404[0m 4.604 ms - 152[0m
+[0mGET /js/chat_toggle.js [33m404[0m 6.264 ms - 156[0m
+[0mGET /icons/fbnew.png [33m404[0m 2.560 ms - 154[0m
+[0mGET /icons/google.png [33m404[0m 2.580 ms - 155[0m
+[0mGET / [36m304[0m 5.353 ms - -[0m
+[0mGET /css/_header.css [33m404[0m 3.358 ms - 154[0m
+[0mGET /css/signin.css [33m404[0m 3.718 ms - 153[0m
+[0mGET /js/chat_toggle.js [33m404[0m 3.818 ms - 156[0m
+[0mGET /js/_header.js [33m404[0m 6.660 ms - 152[0m
+[0mGET /css/_header.css [33m404[0m 7.478 ms - 154[0m
+[0mGET /js/profile.js [33m404[0m 6.725 ms - 152[0m
+[0mGET /css/signin.css [33m404[0m 5.543 ms - 153[0m
+[0mGET /icons/fbnew.png [33m404[0m 6.263 ms - 154[0m
+[0mGET /icons/google.png [33m404[0m 2.961 ms - 155[0m
+[0mGET / [36m304[0m 13.595 ms - -[0m
+::1 - - [03/Nov/2022:08:03:20 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:20 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:20 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:20 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:20 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:20 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:20 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:20 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:21 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:21 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:25 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:25 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:25 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:25 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:25 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:25 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:25 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:25 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:25 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:03:25 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:57 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:57 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:57 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:57 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:57 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:57 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:57 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:57 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:57 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:59 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:59 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:59 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:59 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:59 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:59 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:59 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:29:59 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:00 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:01 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:02 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:48 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:48 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:48 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:48 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:48 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:48 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:48 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:48 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:49 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:49 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:49 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:49 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:49 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:49 +0000] "GET /js/_header.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:49 +0000] "GET /js/chat_toggle.js HTTP/1.1" 404 156 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:49 +0000] "GET /icons/google.png HTTP/1.1" 404 155 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:49 +0000] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [03/Nov/2022:08:30:49 +0000] "GET /js/profile.js HTTP/1.1" 404 152 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"

@@ -24,13 +24,16 @@ console.log('chat server is running on port 5000');
 
 
 //for node-sass-middleware
+if(env.name = 'development'){
+    app.use(sassMiddlware({
+        src: path.join(__dirname, env.assets_path, 'scss'),
+        dest:  path.join(__dirname, env.assets_path, 'css'),
+        outputStyle: 'expanded',
+        prefix: '/css'
+    }));
 
-app.use(sassMiddlware({
-    src: path.join(__dirname, env.assets_path, 'scss'),
-    dest:  path.join(__dirname, env.assets_path, 'css'),
-    outputStyle: 'expanded',
-    prefix: '/css'
-}));
+}
+
 
 
 
