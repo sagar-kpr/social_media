@@ -4,7 +4,6 @@ const uglify = require('gulp-uglify-es').default;
 const imagemin = require('gulp-imagemin')
 const cssnano = require('gulp-cssnano');
 const rev = require('gulp-rev');
-//const del = require('del');
 
 
 gulp.task('css', function(done){
@@ -61,9 +60,6 @@ gulp.task('images', function(done){
     done();
 })
 
-/*gulp.task('clean', function(){
-    del.deleteAsync(['public/assets/**'], {force: true}) 
-})*/
 
 gulp.task('build', gulp.series( 'css', 'js', 'images'), function(done){
     console.log('building assets')
