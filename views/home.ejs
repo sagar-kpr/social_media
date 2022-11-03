@@ -1,7 +1,7 @@
-<link rel="stylesheet" type="text/css" href="/css/home.css">
-<link rel="stylesheet" type="text/css" href="/css/_asideLeft.css">
-<link rel="stylesheet" type="text/css" href="/css/_asideRight.css">
-<link rel="stylesheet" type="text/css" href="/css/chat_box.css">
+<link rel="stylesheet" type="text/css" href="<%= assetsPath('css/home.css') %>">
+<link rel="stylesheet" type="text/css" href="<%= assetsPath('css/_asideLeft.css') %>">
+<link rel="stylesheet" type="text/css" href="<%= assetsPath('css/_asideRight.css') %>">
+<link rel="stylesheet" type="text/css" href="<%= assetsPath('css/chat_box.css') %>">
 
 
 
@@ -120,9 +120,9 @@
 <%- include('_asideRight') %>
 
 
-<script src="/js/home_post.js"></script>
-<script src="/js/index.js"></script>
-<script src="/js/chat_engine.js"></script>
+<script src="<%= assetsPath('js/home_post.js') %>"></script>
+<script src="<%= assetsPath('js/index.js') %>"></script>
+<script src="<%= assetsPath('js/chat_engine.js') %>"></script>
 
 <script>
     $(' .toggle-like').each(function(){
