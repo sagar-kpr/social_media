@@ -1,5 +1,5 @@
 
-const fs = require('fs');
+/*const fs = require('fs');
 const rfs = require('rotating-file-stream');
 const path = require('path');
 
@@ -10,7 +10,7 @@ fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
 const accessLogStream = rfs.createStream('access.log', {
     interval : '1d',
     path : logDirectory
-})
+})*/
 
 
 
@@ -32,11 +32,7 @@ const development = {
     google_client_id : process.env.GOOGLE_CLIENT_ID,
     google_client_secret : process.env.GOOGLE_CLIENT_SECRET,
     google_call_back_url : "http://localhost:8000/auth/google/callback",
-    jwt_secret : process.env.JWT_KEY,
-    morgan : {
-        mode : 'dev',
-        options : {stream : accessLogStream}
-    }
+    jwt_secret : process.env.JWT_KEY
 }
 
 const production = {
@@ -57,11 +53,7 @@ const production = {
     google_client_id : process.env.GOOGLE_CLIENT_ID,
     google_client_secret : process.env.GOOGLE_CLIENT_SECRET,
     google_call_back_url : "http://localhost:8000/auth/google/callback",
-    jwt_secret : process.env.JWT_KEY,
-    morgan: {
-        mode : 'combined',
-        options : {stream : accessLogStream}
-    }
+    jwt_secret : process.env.JWT_SECRET
 }
 
 module.exports = eval(process.env.CODIAL_ENV) == undefined ? development : eval(process.env.CODIAL_ENV)
