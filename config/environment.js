@@ -15,10 +15,10 @@ const accessLogStream = rfs.createStream('access.log', {
 
 
 const development = {
-    name : 'development',
-    assets_path : './assets',
-    session_key : 'kwality',
-    db : 'facebook',
+    name : process.env.NAME,
+    assets_path : process.env.ASSETS_PATH,
+    session_key : process.env.KEY,
+    db : process.env.DB,
     smtp : {
         service:'gmail',
         host: 'smtp.gmail.com',
@@ -29,10 +29,10 @@ const development = {
             pass: 'ndlqznlpvigcdxpo'
         }
     },
-    google_client_id : "594983700466-saoqqo9dbo1lh8b6sin8hflju1cf79le.apps.googleusercontent.com",
-    google_client_secret : "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",
+    google_client_id : process.env.GOOGLE_CLIENT_ID,
+    google_client_secret : process.env.GOOGLE_CLIENT_SECRET,
     google_call_back_url : "http://localhost:8000/auth/google/callback",
-    jwt_secret : 'social',
+    jwt_secret : process.env.JWT_KEY,
     morgan : {
         mode : 'dev',
         options : {stream : accessLogStream}
@@ -40,9 +40,9 @@ const development = {
 }
 
 const production = {
-    name : 'production',
+    name : process.env.NAME,
     assets_path : process.env.ASSETS_PATH,
-    session_key : process.env.SESSION_KEY,
+    session_key : process.env.KEY,
     db : process.env.DB,
     smtp : {
         service: 'gmail',
@@ -57,7 +57,7 @@ const production = {
     google_client_id : process.env.GOOGLE_CLIENT_ID,
     google_client_secret : process.env.GOOGLE_CLIENT_SECRET,
     google_call_back_url : "http://localhost:8000/auth/google/callback",
-    jwt_secret : process.env.JWT_SECRET,
+    jwt_secret : process.env.JWT_KEY,
     morgan: {
         mode : 'combined',
         options : {stream : accessLogStream}
