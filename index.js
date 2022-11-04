@@ -2,7 +2,7 @@ const express = require('express');
 const env = require('./config/environment');
 const app = express();
 require('./config/view_helper')(app);
-//const logger = require('morgan');
+const logger = require('morgan');
 const db = require('./config/mongoose');
 const port = 8000 //process.env.PORT  ;
 const parser = require('body-parser');
@@ -44,7 +44,7 @@ app.use(parser.urlencoded({extended:false}));
 app.use(express.static(env.assets_path));
 app.use('/upload', express.static(__dirname + '/upload'));
 
-//app.use(logger(env.morgan.mode, env.morgan.options));
+app.use(logger(env.morgan.mode, env.morgan.options));
 
 
 
