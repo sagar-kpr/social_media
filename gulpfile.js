@@ -45,13 +45,14 @@ gulp.task('js', function(done){
 
 gulp.task('icons', function(done){
     console.log('manifest icons...')
-    gulp.src('./assets/icons/**/*.+(png | jpeg | svg | jpg | gif)')
+
+    gulp.src('./assets/**/*.png')
     .pipe(imagemin())
     .pipe(rev())
     .pipe(gulp.dest('./public/assets'))
     .pipe(rev.manifest({
         cwd: 'public',
-        merge : true
+        merge: true
     }))
     .pipe(gulp.dest('./public/assets'))
 
@@ -59,15 +60,18 @@ gulp.task('icons', function(done){
 })
 
 
+
+
+
 gulp.task('images', function(done){
     console.log('manifest images...')
 
-    gulp.src('./assets/images/*.+(png | jpeg | svg | jpg | gif)')
+    gulp.src('./assets/**/*.jpg')
     .pipe(imagemin())
     .pipe(rev())
     .pipe(gulp.dest('./public/assets'))
     .pipe(rev.manifest({
-        cwd : 'public',
+        cwd: 'public',
         merge: true
     }))
     .pipe(gulp.dest('./public/assets'))

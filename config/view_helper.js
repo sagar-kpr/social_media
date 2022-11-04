@@ -8,6 +8,7 @@ module.exports = (app) => {
         
             return filePath
         }
+        console.log('file', filePath)
         return '/'+JSON.parse(fs.readFileSync(path.join(__dirname, '../public/assets/rev-manifest.json')))[filePath]
     }
 }
