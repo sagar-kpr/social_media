@@ -39,7 +39,6 @@ gulp.task('js', function(done){
         merge: true
     }))
     .pipe(gulp.dest('./public/assets'))
-
     done()
 })
 
@@ -80,7 +79,7 @@ gulp.task('images', function(done){
 })
 
 
-gulp.task('build', gulp.series( 'css', 'js', 'icons' ,'images'), function(done){
+gulp.task('build', gulp.parallel( 'css', 'js', 'icons' ,'images'), function(done){
     console.log('building assets')
     done()
 })

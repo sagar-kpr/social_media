@@ -42,7 +42,7 @@
                             <% if(frnds == list.id) { %>
                                 <div class="user-story-box">
                                     <div class="user-story" >
-                                        <img  src="/images/pic2.jpg">
+                                        <img  src="<%= assetsPath('images/pic2.jpg') %>">
                                     </div>
                                     <div class="user-img">
                                         <img src="<%= list.avatar %>" alt="<%= list.first %>">
@@ -74,7 +74,7 @@
                     <div id="inner-status">
                         <div class="status-box">
                             <div class="status-logo">
-                                <img src="/icons/live.png" >
+                                <img src="<%= assetsPath('icons/live.png') %>" >
                             </div>
                             <div class="status-text">
                                 <span>Live video</span>
@@ -82,7 +82,7 @@
                         </div>
                         <div class="status-box">
                             <div class="status-logo">
-                                <img src="/icons/gallery.png" >
+                                <img src="<%= assetsPath('icons/gallery.png') %>" >
                             </div>
                             <div class="status-text">
                                 <span>Photo/video</span>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="status-box">
                             <div class="status-logo">
-                                <img src="/icons/smile.png" >
+                                <img src="<%= assetsPath('icons/smile.png') %>" >
                             </div>
                             <div class="status-text">
                                 <span>Feeling/activity</span>
