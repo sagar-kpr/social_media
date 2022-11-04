@@ -39,35 +39,18 @@ gulp.task('js', function(done){
         merge: true
     }))
     .pipe(gulp.dest('./public/assets'))
-
     done()
 })
 
 gulp.task('icons', function(done){
     console.log('manifest icons...')
-    gulp.src('./assets/icons/**/*.+(png | jpeg | svg | jpg | gif)')
+
+    gulp.src('./assets/**/*.png')
     .pipe(imagemin())
     .pipe(rev())
     .pipe(gulp.dest('./public/assets'))
     .pipe(rev.manifest({
         cwd: 'public',
-        merge : true
-    }))
-    .pipe(gulp.dest('./public/assets'))
-
-    done();
-})
-
-
-gulp.task('images', function(done){
-    console.log('manifest images...')
-
-    gulp.src('./assets/images/**/*.+(png | jpeg | svg | jpg | gif)')
-    .pipe(imagemin())
-    .pipe(rev())
-    .pipe(gulp.dest('./public/assets'))
-    .pipe(rev.manifest({
-        cwd : 'public',
         merge: true
     }))
     .pipe(gulp.dest('./public/assets'))
@@ -76,7 +59,27 @@ gulp.task('images', function(done){
 })
 
 
-gulp.task('build', gulp.series( 'css', 'js', 'icons' ,'images'), function(done){
+
+
+
+gulp.task('images', function(done){
+    console.log('manifest images...')
+
+    gulp.src('./assets/**/*.jpg')
+    .pipe(imagemin())
+    .pipe(rev())
+    .pipe(gulp.dest('./public/assets'))
+    .pipe(rev.manifest({
+        cwd: 'public',
+        merge: true
+    }))
+    .pipe(gulp.dest('./public/assets'))
+
+    done();
+})
+
+
+gulp.task('build', gulp.parallel( 'css', 'js', 'icons' ,'images'), function(done){
     console.log('building assets')
     done()
 })

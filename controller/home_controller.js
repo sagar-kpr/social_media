@@ -1,8 +1,6 @@
 const User = require('../models/user_schema');
 const Post = require('../models/post_schema');
-const jwt = require('jsonwebtoken');
-const fs = require('fs');
-const path = require('path');
+
 
 
 
