@@ -62,7 +62,7 @@ gulp.task('icons', function(done){
 gulp.task('images', function(done){
     console.log('manifest images...')
 
-    gulp.src('./assets/images/**/*.+(png | jpeg | svg | jpg | gif)')
+    gulp.src('./assets/images/*.+(png | jpeg | svg | jpg | gif)')
     .pipe(imagemin())
     .pipe(rev())
     .pipe(gulp.dest('./public/assets'))
