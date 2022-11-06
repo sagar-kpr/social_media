@@ -64,7 +64,7 @@ app.set('layout extractScripts', true);
 //for session and passport and connect-mongo
 app.use(session({
     name:'social_media',
-    secret: process.env.session_key,
+    secret: process.env.KEY,
     saveUninitialized: false,
     resave: false,
     outputStyle: 'expended',
