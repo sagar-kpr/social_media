@@ -28,3 +28,5 @@
 ::1 - - [Sun, 06 Nov 2022 15:53:50 GMT] "GET / HTTP/1.1" 200 4001 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
 ::1 - - [Sun, 06 Nov 2022 15:54:02 GMT] "POST /session HTTP/1.1" 302 54 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
 ::1 - - [Sun, 06 Nov 2022 15:54:02 GMT] "GET /home HTTP/1.1" 200 27435 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 16:34:13 GMT] "GET / HTTP/1.1" 302 54 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 16:34:13 GMT] "GET /home HTTP/1.1" 200 27170 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"

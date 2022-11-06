@@ -17,7 +17,7 @@ const accessLogStream = rfs.createStream('access.log', {
 const development = {
     name : process.env.CODIAL_ENV,
     assets_path : process.env.ASSETS_PATH,
-    session_key : process.env.KEY,
+    session_key : process.env.SESSION_KEY,
     db : process.env.DB,
     smtp : {
         service:'gmail',
@@ -32,7 +32,7 @@ const development = {
     google_client_id : process.env.GOOGLE_CLIENT_ID,
     google_client_secret : process.env.GOOGLE_CLIENT_SECRET,
     google_call_back_url : "http://localhost:8000/auth/google/callback",
-    jwt_secret : process.env.JWT_KEY,
+    jwt_secret : process.env.JWT_SECRET,
     morgan : {
         moode : 'dev',
         options : {stream : accessLogStream}
@@ -42,7 +42,7 @@ const development = {
 const production = {
     name : process.env.CODIAL_ENV,
     assets_path : process.env.ASSETS_PATH,
-    session_key : process.env.KEY,
+    session_key : process.env.SESSION_KEY,
     db : process.env.DB,
     smtp : {
         service: 'gmail',
