@@ -4,7 +4,7 @@ const rfs = require('rotating-file-stream');
 const path = require('path');
 
 
-const logDirectory = path.join(__dirname, '../production_log');
+const logDirectory = path.join(__dirname, '../newproduction_log');
 fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
 
 const accessLogStream = rfs.createStream('access.log', {
@@ -13,8 +13,9 @@ const accessLogStream = rfs.createStream('access.log', {
 })
 
 
+
 const development = {
-    name : process.env.NAME,
+    name : process.env.CODIAL_ENV,
     assets_path : process.env.ASSETS_PATH,
     session_key : process.env.KEY,
     db : process.env.DB,
@@ -39,7 +40,7 @@ const development = {
 }
 
 const production = {
-    name : process.env.NAME,
+    name : process.env.CODIAL_ENV,
     assets_path : process.env.ASSETS_PATH,
     session_key : process.env.KEY,
     db : process.env.DB,
