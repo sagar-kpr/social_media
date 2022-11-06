@@ -2,9 +2,9 @@ const express = require('express');
 const env = require('./config/environment');
 const app = express();
 require('./config/view_helper')(app);
-//const logger = require('morgan');
+const logger = require('morgan');
 const db = require('./config/mongoose');
-const port = 8000 //process.env.PORT  ;
+const port = process.env.PORT  ;
 const parser = require('body-parser');
 const layout = require('express-ejs-layouts');
 const passport = require('passport');
@@ -44,7 +44,7 @@ app.use(parser.urlencoded({extended:false}));
 app.use(express.static(env.assets_path));
 app.use('/upload', express.static(__dirname + '/upload'));
 
-//app.use(logger(env.morgan.mode, env.morgan.options));
+app.use(logger(env.morgan.mode, env.morgan.options));
 
 
 
@@ -72,8 +72,8 @@ app.use(session({
         maxAge: (1000*60*200)
     },
     store: mongoStore.create({
-        //mongoUrl : process.env.MONGODB_URL || `mongodb://localhost/${env.db}`,
-        mongoUrl: `mongodb://localhost/${env.db}`,
+        mongoUrl : process.env.MONGODB_URL || `mongodb://localhost/${env.db}`,
+        //mongoUrl: `mongodb://localhost/${env.db}`,
         autoRemove:'disabled',
     })
 }));
