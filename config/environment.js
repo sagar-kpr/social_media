@@ -31,7 +31,7 @@ const development = {
     },
     google_client_id : process.env.GOOGLE_CLIENT_ID,
     google_client_secret : process.env.GOOGLE_CLIENT_SECRET,
-    google_call_back_url : "https://funbook-sagar.herokuapp.com/auth/google/callback",
+    google_call_back_url : "https://funbuk.herokuapp.com/auth/google/callback",
     jwt_secret : process.env.JWT_SECRET,
     morgan : {
         moode : 'dev',
@@ -56,7 +56,7 @@ const production = {
     },
     google_client_id : process.env.GOOGLE_CLIENT_ID,
     google_client_secret : process.env.GOOGLE_CLIENT_SECRET,
-    google_call_back_url : "https://funbook-sagar.herokuapp.com/auth/google/callback",
+    google_call_back_url : "https://funbuk.herokuapp.com/auth/google/callback",
     jwt_secret : process.env.JWT_SECRET,
     morgan : {
         moode : 'combined',

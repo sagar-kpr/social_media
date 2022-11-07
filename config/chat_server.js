@@ -1,7 +1,7 @@
 module.exports.chatserver = function(chatServer){
     let io = require('socket.io')(chatServer, {
         cors: {
-            origin: 'https://funbook-sagar.herokuapp.com'
+            origin: 'https://funbuk.herokuapp.com'
         }
     });
 
