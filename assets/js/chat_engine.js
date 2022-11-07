@@ -2,8 +2,7 @@ class ChatEngine{
     constructor(chatbox, email){
         this.chatbox = $(`#${chatbox}`)
         this.userEmail = email
-        console.log('mychat',$(this.chatbox));
-        this.socket = io.connect('http://localhost:5000');
+        this.socket = io.connect('https://funbuk.herokuapp.com');
         this.socketHandler()
     }
 
