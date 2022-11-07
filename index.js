@@ -19,9 +19,9 @@ const customMiddlware = require('./config/middleware');
 const path = require('path');
 const chatServer = require('http').Server(app);
 const chatSocket = require('./config/chat_server').chatserver(chatServer);
-chatServer.listen(5000);
+chatServer.listen(process.env.PORT);
 const cors = require('cors');
-console.log('chat server is running on port 5000');
+console.log('chat server is running on port ',process.env.PORT);
 
 app.use(cors());
 //for node-sass-middleware
