@@ -4,7 +4,7 @@ const app = express();
 require('./config/view_helper')(app);
 const logger = require('morgan');
 const db = require('./config/mongoose');
-const port = 8000 //process.env.PORT || 8000  ;
+const port = process.env.PORT || 8000  ;
 const parser = require('body-parser');
 const layout = require('express-ejs-layouts');
 const passport = require('passport');
