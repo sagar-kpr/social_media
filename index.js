@@ -21,7 +21,7 @@ const chatServer = require('http').Server(app);
 const chatSocket = require('./config/chat_server').chatserver(chatServer);
 chatServer.listen(5000);
 const cors = require('cors');
-console.log('chat server is running on port 5000');
+console.log('chat server is running on port ' );
 
 app.use(cors());
 //for node-sass-middleware
