@@ -4,7 +4,7 @@ const app = express();
 require('./config/view_helper')(app);
 const logger = require('morgan');
 const db = require('./config/mongoose');
-const port = process.env.PORT || 8000  ;
+const port = 8000 //process.env.PORT || 8000  ;
 const parser = require('body-parser');
 const layout = require('express-ejs-layouts');
 const passport = require('passport');
@@ -20,9 +20,10 @@ const path = require('path');
 const chatServer = require('http').Server(app);
 const chatSocket = require('./config/chat_server').chatserver(chatServer);
 chatServer.listen(5000);
+const cors = require('cors');
 console.log('chat server is running on port 5000');
 
-
+app.use(cors());
 //for node-sass-middleware
 if(env.name = 'development'){
     app.use(sassMiddlware({
@@ -93,5 +94,5 @@ app.use('/', require('./routes/index'));
 //for listening port
 app.listen(port, (err) => {
     if(err) { console.log('error in listening port'); return }
-    console.log('connected to express');
+    console.log('connected to express', port);
 });
