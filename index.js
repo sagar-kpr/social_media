@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const env = require('./config/environment');
 const app = express();
@@ -21,6 +22,8 @@ const chatServer = require('http').Server(app);
 const chatSocket = require('./config/chat_server').chatserver(chatServer);
 chatServer.listen(5000);
 const cors = require('cors');
+
+//console.log(process.env.TEST_ENV);
 console.log('chat server is running on port ' );
 
 app.use(cors());
