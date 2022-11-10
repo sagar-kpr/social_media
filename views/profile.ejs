@@ -1,64 +1,144 @@
 <link rel="stylesheet" type="text/css" href="<%= assetsPath('css/profile.css') %>">
 
 
-<div id="user_profile">
-    <div id="profile">
-        <div id="my-img2">
-            <% if(thatUser.avatar2) { %>
-                <img src="<%= thatUser.avatar2 %>" alt="<%= thatUser.first %>">
-            <% } else { %> 
-                <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= thatUser.first %>">
-            <% } %>
-        </div>        
-        <div id="my-img">
-            <% if(thatUser.avatar) { %>
-                <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>">
-            <% } else { %>
-                <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= thatUser.first %>">
-            <% } %>
-            <div id="status"></div>
-            
-        </div>
-        <% if(locals.user.id == thatUser.id){ %>
-            <sup><i class="fa-solid fa-pen-to-square" id="edit-btn1"></i></sup> 
-            <div id="edit1" class="edit" >
-                <form action="/change2/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
-                    <input id= "inp" type="file" name = "avatar2" >
-                    <input id="btn"  type="submit" value="Update">
-                </form>
+<header id="profile-box">
+    <div id="profile-header">
+        <div id="profile-timeline">
+            <div id="timeline-img">
+                <% if(thatUser.avatar2) { %>
+                    <img src="<%= thatUser.avatar2 %>" alt="<%= thatUser.first %>">
+                <% }  %> 
+                <% if(locals.user.id == thatUser.id){ %>
+                    <div id="edit-timeline">
+                        <div id="icon">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <div id="cover-image">
+                            <span>Add cover photo</span>
+                        </div> 
+                    </div>
+                    <div id="edit1" class="edit" >
+                        <form action="/change2/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
+                            <input id= "inp" type="file" name = "avatar2" >
+                            <input id="btn"  type="submit" value="Update">
+                        </form>
+                    </div>
+                    
+                    
+                <% } %>   
             </div>
-        <% } %> 
-
-    </div>
-    <div id="name">
-        <h2><%= thatUser.first + ' ' + thatUser.last %>
-            <% if(locals.user.id == thatUser.id){ %>
-                <sup ><i class="fa-solid fa-pen-to-square "  id="edit-btn2"></i></sup> 
-            <% } %>
-        </h2>
-        <% if(locals.user.id == thatUser.id){ %>
-            <div id="edit2" class="edit2">
-                <form action="/change/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
-                    <input id="inp" type="text" name = "first" value="<%= thatUser.first  %>" required >
-                    <input id="inp" type="text" name = "last" value="<%= thatUser.last  %>" required >
-                    <input id= "inp" type="file" name = "avatar" >
-                    <input id="btn" type="submit" value="Update">
-                </form>
+            <div id="user-box">
+                <div id="user-img">
+                    <% if(thatUser.avatar) { %>
+                        <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>">
+                    <% } else { %>
+                        <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= thatUser.first %>">
+                    <% } %>
+                    <div id="camera">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <% if(locals.user.id == thatUser.id){ %>
+                        <div id="edit2" class="edit2">
+                            <form action="/change/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
+                                <input id="inp" type="text" name = "first" value="<%= thatUser.first  %>" required >
+                                <input id="inp" type="text" name = "last" value="<%= thatUser.last  %>" required >
+                                <input id= "inp" type="file" name = "avatar" >
+                                <input id="btn" type="submit" value="Update">
+                            </form>
+                        </div>
+                    <% } %>
+                </div>
+                <div id="user-name">
+                    <div id="user-name-text">
+                        <h2><%= thatUser.first %> <%= thatUser.last %></h2>
+                        <span><%= thatUser.friends.length %> friends</span>
+                    </div>
+                    <div id="user-name-img">
+                        <% for (list of users) { %>
+                            <% if(locals.user.id != list.id) { %>
+                                <% for(frnds of locals.user.friends){ %>
+                                    <% if(frnds == list.id) { %>
+                                        <img src="<%= list.avatar %>">
+                                    <% } %>
+                                <% } %>
+                            <% } %>   
+                        <% } %>
+                        
+                    </div>
+                   
+                </div>
+                <div id="user-edit">
+                    <div id="user-add-story">
+                         <div id="icon">
+                            <i class="fa-solid fa-plus"></i>
+                         </div>
+                         <div id="story-text">
+                            <span>Add to story</span>
+                         </div>
+                    </div>
+                    <div id="edit-profile">
+                        <div id="icon">
+                            <i class="fa-solid fa-pencil"></i>
+                         </div>
+                         <div id="story-text">
+                            <span>Edit profile</span>
+                         </div> 
+                    </div>
+                </div>
             </div>
-        <% } %>
+            <div id="user-links">
+                <div id="link-name">
+                    <div class="single-link" >
+                        <p><a href="#">Post</a></p>
+                    </div>
+                    <div class="single-link">
+                        <p ><a href="#">About</a></p>
+                    </div>
+                    <div class="single-link">
+                        <p ><a href="#">Friends</a></p>
+                    </div>
+                    <div class="single-link">
+                        <p ><a href="#">Photos</a></p>
+                    </div>
+                    <div class="single-link">
+                        <p ><a href="#">Videos</a></p>
+                    </div>
+                    <div class="single-link">
+                        <p ><a href="#">Check-ins</a></p>
+                    </div>
+                    <div class="single-link">
+                        <p ><a href="#">More</a></p>
+                    </div>
+                </div>
+                <div id="link-edit">
+                    <div id="link-bar">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div id="about">
-        <div>
-            <img width="25" src="<%= assetsPath('icons/home (1).png') %>">
-            <span><%= thatUser.email %></span>
+    <div id="profile-main">
+        <div id="profile-info">
+            <div id="left-side"> 
+                <div id="intro">
+                    <h1>Intro</h1>
+                </div>
+                <div id="about" >
+                    <p>In profile page two functions are implemented<br> 1: cover photo change by clickig 'Add cover photo'<br>2: change profile picture by clicking on 'camera' button</p>
+                </div>
+                <div id="address">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>: <%= thatUser.email %></p>
+                </div>
+            </div>
+            <div id="right-side">
+
+            </div>
+
         </div>
-        <div>
-            <img width="25" src="<%= assetsPath('icons/smartphone.png') %>">
-            <span>8566848794</span>
-        </div>
-        
     </div>
 
-</div>
-
+</header>    
 

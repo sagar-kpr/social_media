@@ -7,24 +7,24 @@ const rev = require('gulp-rev');
 
 
 gulp.task('css', function(done){
-    console.log('minifiest css..')
-    gulp.src('./assets/sass/**/*.scss')
-    .pipe(sass())
-    .pipe(cssnano())
-    .pipe(gulp.dest('./assets.css'))
+     console.log('minifiest css..')
+     gulp.src('./assets/sass/**/*.scss')
+     .pipe(sass())
+     .pipe(cssnano())
+     .pipe(gulp.dest('./assets.css'))
 
-    gulp.src('./assets/**/*.css')
-    .pipe(rev())
-    .pipe(gulp.dest('./public/assets'))
-    .pipe(rev.manifest({
-        cwd : 'public',
-        merge : true
-    }))
-    .pipe(gulp.dest('./public/assets'))
+     gulp.src('./assets/**/*.css')
+     .pipe(rev())
+     .pipe(gulp.dest('./public/assets'))
+     .pipe(rev.manifest({
+         cwd : 'public',
+         merge : true
+     }))
+     .pipe(gulp.dest('./public/assets'))
 
-    done()
+     done()
 
-});
+ });
 
 
 gulp.task('js', function(done){
@@ -79,7 +79,7 @@ gulp.task('images', function(done){
 })
 
 
-gulp.task('build', gulp.parallel( 'css', 'js', 'icons' ,'images'), function(done){
+gulp.task('build', gulp.parallel(  'js', 'icons' ,'images'), function(done){
     console.log('building assets')
     done()
 })

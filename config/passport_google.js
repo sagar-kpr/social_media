@@ -5,14 +5,13 @@ const User = require('../models/user_schema');
 const env = require('./environment');
 
 
-
 passport.use(new googleStrategy({
     clientID: env.google_client_id ,
     clientSecret: env.google_client_secret ,
     callbackURL : env.google_call_back_url
     },
     function(accessToken, refreshToken, profile, done){
-
+        
         User.findOne({email: profile.emails[0].value}).exec(function(err,user){
             if(err) { console.log('err in finding email'); return }
 

@@ -3,8 +3,17 @@ const Post = require('../models/post_schema');
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const path = require('path');
+const verify = require('email-verifier');
+const verifier = new verify('at_lv6bUl9woSgoEWHaa74HKD36SISxr');
 
-
+let id= 'sagar@gmail.com'
+verifier.verify(id,function(err,data){
+    if(err){
+        console.log('er')
+        return
+    }
+    console.log(data.smtpCheck)
+})
 
 module.exports.signup = function(req,res){
     if(req.isAuthenticated()){
@@ -63,7 +72,7 @@ module.exports.create = async function(req,res){
     }
     try{
         let userFind = await User.findOne({email:req.body.email});
-      
+        console.log('rerwere',userFind.email)
         if(!userFind){
             await User.create(req.body);
             req.flash('success', "Sign up successfully ");

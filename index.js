@@ -24,7 +24,7 @@ console.log('chat server is running on port 5000');
 
 
 //for node-sass-middleware
-if(env.name = 'development'){
+
     app.use(sassMiddlware({
         src: path.join(__dirname, env.assets_path, 'scss'),
         dest:  path.join(__dirname, env.assets_path, 'css'),
@@ -32,7 +32,7 @@ if(env.name = 'development'){
         prefix: '/css'
     }));
 
-}
+
 
 
 
@@ -92,5 +92,5 @@ app.use('/', require('./routes/index'));
 //for listening port
 app.listen(port, (err) => {
     if(err) { console.log('error in listening port'); return }
-    console.log('connected to express');
+    console.log('connected to express with port no.', port);
 });

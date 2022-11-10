@@ -1,7 +1,7 @@
-var btn1 = document.getElementById('edit-btn1');
+var btn1 = document.getElementById('edit-timeline');
 var edit1 = document.getElementById('edit1');
 
-var btn2 = document.getElementById('edit-btn2');
+var btn2 = document.getElementById('camera');
 var edit2 = document.getElementById('edit2');
 
 var i = 0;
