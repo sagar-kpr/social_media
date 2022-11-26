@@ -501,3 +501,112 @@
   box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
+
+#profile-box #profile-main #profile-info #right-side #friends-text {
+  width: 95%;
+  height: 40px;
+  font-size: 12px;
+  margin-bottom: 15px;
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+#profile-box #profile-main #profile-info #right-side #friends{
+  width:95%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  
+}
+#profile-box #profile-main #profile-info #right-side #friends #friends-img{
+  width: 105px;
+  height: 125px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#profile-box #profile-main #profile-info #right-side #friends-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  border: 1px solid lightgray;
+}
+
+
+@media screen and (max-width: 1000px) {
+  #profile-box{
+    margin-top: 6%;
+  }
+  #profile-box #profile-header #profile-timeline{
+    width: 100%;
+    
+  }
+  
+  
+}
+
+@media screen and (max-width: 800px) {
+  #profile-box{
+    margin-top: 7%;
+  }
+  
+  #profile-box #profile-header #profile-timeline #user-box{
+    flex-direction: column;
+  }
+  #profile-box #profile-header #profile-timeline #timeline-img #edit-timeline #cover-image{
+    display: none;
+  }
+  #profile-box #profile-header #profile-timeline #user-box #user-name{
+    margin-top: 0px;
+  }
+  #profile-box #profile-header #profile-timeline #user-box #user-name #user-name-text{
+    text-align: center;
+  }
+  #profile-box #profile-header #profile-timeline #user-box #user-name #user-name-img{
+    justify-content: center;
+  }
+  #profile-box #profile-header #profile-timeline #user-box #user-edit{
+    width: 100%;
+    margin-top: -10px;
+    justify-content: center;
+  }
+  #profile-box #profile-header #profile-timeline #user-box #user-edit #user-add-story{
+    width: 45%;
+    justify-content: center;
+    column-gap: 10px;
+  }
+  #profile-box #profile-header #profile-timeline #user-box #user-edit #edit-profile{
+    width: 45%;
+    justify-content: center;
+    column-gap: 10px;
+  }
+  #profile-box #profile-header #profile-timeline #user-links #link-name #hide-link{
+    display: none;
+  }
+  #profile-box #profile-main #profile-info{
+    flex-direction: column;
+    align-items: center;
+  }
+  #profile-box #profile-main #profile-info #left-side{
+    width: 90%;
+  }
+  #profile-box #profile-main #profile-info #right-side{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #profile-box{
+    margin-top: 8%;
+  }
+  
+  
+}
+
+@media screen and (max-width: 650px) {
+  #profile-box{
+    margin-top: 10%;
+  }
+  
+}

@@ -56,7 +56,7 @@
                     <div id="user-name-img">
                         <% for (list of users) { %>
                             <% if(locals.user.id != list.id) { %>
-                                <% for(frnds of locals.user.friends){ %>
+                                <% for(frnds of thatUser.friends){ %>
                                     <% if(frnds == list.id) { %>
                                         <img src="<%= list.avatar %>">
                                     <% } %>
@@ -104,9 +104,9 @@
                         <p ><a href="#">Videos</a></p>
                     </div>
                     <div class="single-link">
-                        <p ><a href="#">Check-ins</a></p>
+                        <p ><a href="#">Check</a></p>
                     </div>
-                    <div class="single-link">
+                    <div class="single-link" id="hide-link">
                         <p ><a href="#">More</a></p>
                     </div>
                 </div>
@@ -134,7 +134,22 @@
                 </div>
             </div>
             <div id="right-side">
-
+                <div id="friends-text">
+                    <h1>Friends</h1>
+                </div>
+                <div id="friends">
+                    <% for (list of users) { %>
+                        <% if(locals.user.id != list.id) { %>
+                            <% for(frnds of thatUser.friends){ %>
+                                <% if(frnds == list.id) { %>
+                                    <div id="friends-img">
+                                        <img src="<%= list.avatar %>">
+                                    </div>
+                                <% } %>
+                            <% } %>
+                        <% } %>   
+                    <% } %>
+                </div>
             </div>
 
         </div>

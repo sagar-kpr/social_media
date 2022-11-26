@@ -100,14 +100,15 @@ main #my-feeds #story-box #all-stories .user-story-box {
   margin: 5px;
   position: relative;
   cursor: pointer;
+  
 }
 
 main #my-feeds #story-box #all-stories .user-story-box .user-story {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
+
 }
 
 main #my-feeds #story-box #all-stories .user-story-box .user-story img {
@@ -130,6 +131,7 @@ main #my-feeds #story-box #all-stories .user-story-box #create-story #story-text
   height: auto;
   margin-top: 25px;
   text-align: center;
+ 
 }
 
 main #my-feeds #story-box #all-stories .user-story-box #create-story #story-text span {
@@ -212,6 +214,7 @@ main #my-feeds #form-box #form-inner #my-img {
   position: relative;
   box-sizing: border-box;
   margin: 5px;
+  background-color: #F0F2F5;
 }
 
 main #my-feeds #form-box #form-inner #my-img img {
@@ -348,6 +351,7 @@ main #my-feeds #post-box .posts #name-and-del-box #profile-name #profile {
   height: 40px;
   border-radius: 50%;
   margin: 5px;
+  background-color: #F0F2F5;
 }
 
 main #my-feeds #post-box .posts #name-and-del-box #profile-name #profile img {
@@ -356,6 +360,7 @@ main #my-feeds #post-box .posts #name-and-del-box #profile-name #profile img {
   border-radius: 50%;
   border: 1px solid lightgray;
   object-fit: cover;
+
 }
 
 main #my-feeds #post-box .posts #name-and-del-box #profile-name #name {
@@ -435,6 +440,7 @@ main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAnd
   position: relative;
   box-sizing: border-box;
   margin: 5px 10px 5px 7px;
+  background-color: #F0F2F5;
 }
 
 main #my-feeds #post-box .posts #comment-box .comment-scroller .comment #cmntAndImg #cmnt-img img {
@@ -542,6 +548,7 @@ main #my-feeds #post-box .posts #comment-box #form-controller #form-img {
   position: relative;
   box-sizing: border-box;
   margin: -7px 5px 5px 5px;
+  background-color: #F0F2F5;
 }
 
 main #my-feeds #post-box .posts #comment-box #form-controller #form-img img {

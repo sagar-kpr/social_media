@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const env = require('./config/environment');
 const app = express();
 require('./config/view_helper')(app);
 const logger = require('morgan');
 const db = require('./config/mongoose');
-const port = 8000;
+const port = process.env.PORT || 8000  ;
 const parser = require('body-parser');
 const layout = require('express-ejs-layouts');
 const passport = require('passport');
@@ -20,17 +21,19 @@ const path = require('path');
 const chatServer = require('http').Server(app);
 const chatSocket = require('./config/chat_server').chatserver(chatServer);
 chatServer.listen(5000);
-console.log('chat server is running on port 5000');
+const cors = require('cors');
 
+//console.log(process.env.TEST_ENV);
+console.log('chat server is running on port ' );
 
+app.use(cors());
 //for node-sass-middleware
-
-    app.use(sassMiddlware({
-        src: path.join(__dirname, env.assets_path, 'scss'),
-        dest:  path.join(__dirname, env.assets_path, 'css'),
-        outputStyle: 'expanded',
-        prefix: '/css'
-    }));
+app.use(sassMiddlware({
+    src: path.join(__dirname, env.assets_path, 'scss'),
+    dest:  path.join(__dirname, env.assets_path, 'css'),
+    outputStyle: 'expanded',
+    prefix: '/css'
+}));
 
 
 
@@ -64,7 +67,7 @@ app.set('layout extractScripts', true);
 //for session and passport and connect-mongo
 app.use(session({
     name:'social_media',
-    secret: env.session_key,
+    secret: process.env.KEY || 'kisjsj',
     saveUninitialized: false,
     resave: false,
     outputStyle: 'expended',
@@ -72,7 +75,8 @@ app.use(session({
         maxAge: (1000*60*200)
     },
     store: mongoStore.create({
-        mongoUrl:`mongodb://localhost/${env.db}`,
+        mongoUrl : process.env.MONGODB_URL || `mongodb://localhost/${env.db}`,
+        //mongoUrl: `mongodb://localhost/${env.db}`,
         autoRemove:'disabled',
     })
 }));
@@ -93,4 +97,5 @@ app.use('/', require('./routes/index'));
 app.listen(port, (err) => {
     if(err) { console.log('error in listening port'); return }
     console.log('connected to express with port no.', port);
+
 });

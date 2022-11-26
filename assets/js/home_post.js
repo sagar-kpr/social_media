@@ -4,6 +4,7 @@
         let postForm = $('#post-form');
         postForm.submit(function(e){
             e.preventDefault();
+            console.log(e)
             $.ajax({
                 type: 'post',
                 url : '/post/create',
@@ -13,7 +14,8 @@
                     notySuccess('Status Posted Successfully.');
                     $('#post-box').prepend(newpost); 
                     deletePost($(' .del-btn', newpost));
-                    $('#textarea').val('');
+                    let a= $('#textarea').val('');
+                    console.log('789',a)
                     new postComments(data.data.post._id);       
                     new ToggleLike($(' .toggle-like', newpost));            
                 },

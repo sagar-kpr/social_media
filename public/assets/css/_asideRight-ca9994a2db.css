@@ -51,6 +51,7 @@
   border-radius: 50%;
   position: relative;
   margin: 5px;
+  background-color: #F0F2F5;
 }
 
 #friends-list #myfriends .friends #friends-img-box #friends-img img {

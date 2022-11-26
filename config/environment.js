@@ -4,7 +4,7 @@ const rfs = require('rotating-file-stream');
 const path = require('path');
 
 
-const logDirectory = path.join(__dirname, '../production_log');
+const logDirectory = path.join(__dirname, '../newproduction_log');
 fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory)
 
 const accessLogStream = rfs.createStream('access.log', {
@@ -15,10 +15,10 @@ const accessLogStream = rfs.createStream('access.log', {
 
 
 const development = {
-    name : 'development',
-    assets_path : './assets',
-    session_key : 'kwality',
-    db : 'facebook',
+    name : process.env.CODIAL_ENV,
+    assets_path : process.env.ASSETS_PATH,
+    session_key : process.env.SESSION_KEY,
+    db : process.env.DB,
     smtp : {
         service:'gmail',
         host: 'smtp.gmail.com',
@@ -29,21 +29,21 @@ const development = {
             pass: 'ndlqznlpvigcdxpo'
         }
     },
-    google_client_id : "594983700466-saoqqo9dbo1lh8b6sin8hflju1cf79le.apps.googleusercontent.com",
-    google_client_secret : "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",
-    google_call_back_url : "http://localhost:8000/auth/google/callback",
-    jwt_secret : 'social',
+    google_client_id : process.env.GOOGLE_CLIENT_ID,
+    google_client_secret : process.env.GOOGLE_CLIENT_SECRET,
+    google_call_back_url : process.env.GOOGLE_CALL_BACK,
+    jwt_secret : process.env.JWT_SECRET,
     morgan : {
-        mode : 'dev',
+        moode : 'dev',
         options : {stream : accessLogStream}
     }
 }
 
 const production = {
-    name : 'production',
+    name : process.env.CODIAL_ENV,
     assets_path : process.env.ASSETS_PATH,
     session_key : process.env.SESSION_KEY,
-    db : process.env.DB,
+    db : 'office',
     smtp : {
         service: 'gmail',
         host: 'smtp.gmail.com',
@@ -56,10 +56,10 @@ const production = {
     },
     google_client_id : process.env.GOOGLE_CLIENT_ID,
     google_client_secret : process.env.GOOGLE_CLIENT_SECRET,
-    google_call_back_url : "http://localhost:8000/auth/google/callback",
+    google_call_back_url : process.env.GOOGLE_CALL_BACK,
     jwt_secret : process.env.JWT_SECRET,
-    morgan: {
-        mode : 'combined',
+    morgan : {
+        moode : 'combined',
         options : {stream : accessLogStream}
     }
 }

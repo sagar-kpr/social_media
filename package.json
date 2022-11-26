@@ -4,13 +4,16 @@
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "del": "^7.0.0",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "email-verifier": "^0.4.1",
     "express": "^4.18.1",
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.17.3",
+    "fs.promises": "^0.1.2",
     "gulp": "^4.0.2",
     "gulp-cssnano": "^2.1.3",
     "gulp-imagemin": "^6.2.0",
@@ -44,5 +47,8 @@
     "prod_start": "echo \"process.env.CODIAL_ENV\" && nodemon index.js"
   },
   "author": "'sagar kapoor'",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.9"
+  }
 }

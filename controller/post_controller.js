@@ -9,7 +9,7 @@ module.exports.create = async function(req,res){
         content:req.body.content,
         user: req.user._id
     });
-
+    console.log('ererere',post)
     if(req.xhr){
         
         return res.status(200).json({

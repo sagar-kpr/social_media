@@ -1,4 +1,5 @@
 
+
 ::1 - - [03/Nov/2022:08:55:43 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
 ::1 - - [03/Nov/2022:08:55:43 +0000] "GET /css/_header.css HTTP/1.1" 404 154 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
 ::1 - - [03/Nov/2022:08:55:43 +0000] "GET /css/signin.css HTTP/1.1" 404 153 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
@@ -2746,3 +2747,24 @@
 ::1 - - [10/Nov/2022:12:33:50 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:5000/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.35"
 ::1 - - [10/Nov/2022:12:34:06 +0000] "POST /chat/chat_toggle/?id=633a7dffd4dcab2403b7b557 HTTP/1.1" 200 534 "http://localhost:5000/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.35"
 ::1 - - [10/Nov/2022:12:35:34 +0000] "GET /home HTTP/1.1" 200 42730 "http://localhost:5000/home/profile/635a63044e3d9c469f368ac3" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.35"
+
+::1 - - [Sun, 06 Nov 2022 11:20:46 GMT] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 11:20:51 GMT] "POST /session HTTP/1.1" 302 46 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 11:20:51 GMT] "GET / HTTP/1.1" 200 4262 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 11:39:52 GMT] "GET / HTTP/1.1" 500 1452 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 11:40:11 GMT] "GET / HTTP/1.1" 500 1452 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 11:42:37 GMT] "GET / HTTP/1.1" 200 4001 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 11:42:51 GMT] "POST /session HTTP/1.1" 302 54 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 11:42:51 GMT] "GET /home HTTP/1.1" 200 27435 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 12:39:55 GMT] "GET / HTTP/1.1" 302 54 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 12:39:55 GMT] "GET /home HTTP/1.1" 200 27170 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 12:39:55 GMT] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:5000/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 13:02:36 GMT] "GET / HTTP/1.1" 302 54 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 13:02:36 GMT] "GET /home HTTP/1.1" 500 2102 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 13:06:23 GMT] "GET /home HTTP/1.1" 500 2264 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 13:06:26 GMT] "GET /home HTTP/1.1" 500 2264 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 13:06:51 GMT] "GET /home HTTP/1.1" 500 2264 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 13:07:55 GMT] "GET /home HTTP/1.1" 200 27159 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 13:07:55 GMT] "GET /icons/fbnew.png HTTP/1.1" 404 154 "http://localhost:5000/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+::1 - - [Sun, 06 Nov 2022 13:08:12 GMT] "GET /home HTTP/1.1" 200 27170 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.26"
+
