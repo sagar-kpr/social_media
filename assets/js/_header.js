@@ -5,6 +5,12 @@ var i = 0 ;
 
 
 messenger.addEventListener('click', function(){
-    document.getElementById('msg-box').style.display = 'block';
+    if(i % 2 == 0){
+        document.getElementById('msg-box').style.display = 'block';
+    }
+    else{
+        document.getElementById('msg-box').style.display = 'none';
+    }
+    i++;
    
 })

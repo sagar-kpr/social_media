@@ -34,9 +34,6 @@ class ChatToggle{
                             <div id="minimize">
                                 <i class="fa-sharp fa-solid fa-minus"></i>
                             </div>
-                            <div id="close">
-                                <i class="fa-sharp fa-solid fa-xmark"></i>
-                            </div>
                         </div>
                     </div>
                     <ul id="chat-container">
@@ -51,7 +48,6 @@ class ChatToggle{
                     </div>
                 </div>`)
                 let script = $(` <script>
-                    new ChatEngine('chat-box', '${local}');
 
                     var minimize = document.getElementById('minimize');
                     var j = 0 ;

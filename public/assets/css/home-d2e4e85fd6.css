@@ -235,9 +235,10 @@ main #my-feeds #form-box #form-inner #main-form form {
 }
 
 main #my-feeds #form-box #form-inner #main-form form textarea {
-  font-size: 1.2rem;
+  font-size: 14px;
   border-radius: 25px;
   padding: 10px;
+  word-wrap: none;
   overflow-y: hidden;
 }
 
@@ -584,9 +585,10 @@ main #my-feeds #post-box .posts #comment-box #form-controller #form-text form {
 
 main #my-feeds #post-box .posts #comment-box #form-controller #form-text form textarea {
   margin-bottom: 5px;
-  font-size: 1rem;
+  font-size: 12px;
   border-radius: 25px;
   padding: 10px;
+  overflow-y: hidden;
 }
 
 main #my-feeds #post-box .posts #comment-box #form-controller #form-text form #comment-btn {

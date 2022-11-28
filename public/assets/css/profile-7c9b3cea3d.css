@@ -246,6 +246,7 @@
   width: 350px;
   height: 90%;
   margin: 30px;
+ 
 }
 
 #profile-box #profile-header #profile-timeline #user-box #user-name #user-name-text {
@@ -268,6 +269,8 @@
 #profile-box #profile-header #profile-timeline #user-box #user-name #user-name-img {
   width: 100%;
   height: 50%;
+  display: flex;
+ 
 }
 
 #profile-box #profile-header #profile-timeline #user-box #user-name #user-name-img img {
@@ -394,8 +397,8 @@
   flex-direction: row;
   align-items: center;
   column-gap: 10px;
+  
 }
-
 #profile-box #profile-header #profile-timeline #user-links #link-name .single-link {
   width: auto;
   height: 100%;
@@ -439,25 +442,26 @@
   background: #F0F2F5;
   display: flex;
   justify-content: center;
+ 
 }
 
 #profile-box #profile-main #profile-info {
   width: 100%;
-  height: 700px;
+  height: auto;
   border-radius: 5px;
   background-color: transparent;
   display: flex;
   flex-direction: row;
   justify-content: center;
   column-gap: 20px;
+  align-items: baseline;
 }
 
 #profile-box #profile-main #profile-info #left-side {
   width: 370px;
-  height: 500px;
+  height: auto;
   border-radius: 5px;
   display: flex;
-  margin-top: 30px;
   align-items: center;
   flex-direction: column;
   box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.1);
@@ -519,8 +523,8 @@
   height: 100%;
   margin-left: 10px;
   display: grid;
-  grid-template-columns: 110px 110px 110px 110px;
-  grid-template-rows: 120px 120px 120px 120px;
+  grid-template-columns: 110px 110px 110px ;
+  grid-template-rows: 120px 120px 120px ;
   row-gap: 10px;
 }
 #profile-box #profile-main #profile-info #right-side #friends #friends-img{
@@ -546,7 +550,6 @@
   }
   #profile-box #profile-header #profile-timeline{
     width: 100%;
-    
   }
   
   
@@ -575,7 +578,8 @@
   #profile-box #profile-header #profile-timeline #user-box #user-edit{
     width: 100%;
     margin-top: -10px;
-    justify-content: center;
+    justify-content: space-evenly;
+    
   }
   #profile-box #profile-header #profile-timeline #user-box #user-edit #user-add-story{
     width: 45%;
@@ -587,18 +591,23 @@
     justify-content: center;
     column-gap: 10px;
   }
-  #profile-box #profile-header #profile-timeline #user-links #link-name #hide-link{
+  #profile-box #profile-header #profile-timeline #user-links #link-name #hide-more{
     display: none;
   }
   #profile-box #profile-main #profile-info{
     flex-direction: column;
     align-items: center;
+    
   }
   #profile-box #profile-main #profile-info #left-side{
-    width: 90%;
+    width: 95%;
+    margin-top: 10px;
+   
+  
   }
   #profile-box #profile-main #profile-info #right-side{
-    width: 90%;
+    width: 95%;
+    margin-top: 10px;
   }
 }
 
@@ -613,7 +622,49 @@
 @media screen and (max-width: 650px) {
   #profile-box{
     margin-top: 10%;
+  
   }
   
 }
+@media screen and (max-width: 550px) {
+  #profile-box #profile-header #profile-timeline #timeline-img #edit-timeline {
+    width: 50px;
+    bottom: 70px;
+    right: 2px;
+  } 
+}  
+@media screen and (max-width: 500px) {
+  #profile-box{
+    margin-top: 11%;
+  }
+}  
 
+@media screen and (max-width: 470px) {
+  #profile-box{
+    margin-top: 12%;
+  }
+  #profile-box #profile-header #profile-timeline #user-links #link-name #hide-check{
+    display: none;
+  }
+}  
+
+@media screen and (max-width: 400px) {
+  #profile-box{
+    margin-top: 13%;
+  }
+  #profile-box #profile-header #profile-timeline #user-links #link-name #hide-videos{
+    display: none;
+  }
+}  
+
+
+@media screen and (max-width: 380px) {
+  #profile-box{
+    margin-top: 14%;
+  }
+}
+@media screen and (max-width: 360px) {
+  #profile-box{
+    margin-top: 15%;
+  }
+}

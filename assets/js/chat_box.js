@@ -1,7 +1,5 @@
 var chat_box = document.getElementById('chat-box')
 
-
-
 var close = document.getElementById('close');
 close.addEventListener('click', function(){
     chat_box.style.display = 'none'
