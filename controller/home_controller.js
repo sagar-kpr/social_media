@@ -25,6 +25,13 @@ module.exports.profile = async function(req,res){
     
 }
 
+module.exports.friends = async function(req,res){
+    let user = await User.find({})
+        return res.render('friends', {
+            users: user
+        });
+}
+
 module.exports.login = function(req,res){
     if(req.isAuthenticated()){
         return res.redirect('/home');

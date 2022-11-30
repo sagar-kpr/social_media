@@ -11,7 +11,7 @@ router.get('/home', passport.checkAuthentication ,homeController.home);
 router.get('/home/profile/:id', passport.checkAuthentication, homeController.profile);
 router.get('/auth/google', passport.authenticate('google', {scope:['profile', 'email']}));
 router.get('/auth/google/callback', passport.authenticate('google', {failureRedirect:'/'}), homeController.session);
-
+router.get('/home/friends', homeController.friends);
 
 //post methods
 router.post('/destroy', homeController.destroy );

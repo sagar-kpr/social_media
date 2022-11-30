@@ -276,3 +276,10 @@ body header #user #info2 p a {
     display: none;
   }
 }
+
+
+@media screen and (max-width: 363px) {
+  header #logo-and-search #search-box{
+    display: none;
+  }
+}
