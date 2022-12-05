@@ -24,7 +24,7 @@
             <div id="all-stories">
                 <div class="user-story-box" >
                     <div class="user-story" style="height:75%; border-radius: 10px 10px 0 0; border-bottom: 1px solid lightgray;" >
-                        <img src="<%= user.avatar %>" style="border-radius: 10px 10px 0 0;" alt="<%= user.first %>">
+                        <img src="<%= user.avatar %>" style="border-radius: 10px 10px 0 0;" alt="">
                     </div>
                     <div id="create-story">
                          <div id="story-text">
@@ -44,7 +44,7 @@
                                         <img  src="<%= assetsPath('images/pic2.jpg') %>">
                                     </div>
                                     <div class="user-img">
-                                        <img src="<%= list.avatar %>" alt="<%= list.first %>">
+                                        <img src="<%= list.avatar %>" alt="">
                                     </div>
                                 </div>
                             <% } %>
@@ -59,7 +59,7 @@
             <% if(locals.user){ %>
                 <div id="form-inner">
                     <div id="my-img">
-                        <img src="<%=user.avatar %>" alt="<%= user.first %>">
+                        <img src="<%=user.avatar %>" alt="">
                     </div>
                     <div id="main-form">
                         <form action="/post/create" id="post-form" method="post">

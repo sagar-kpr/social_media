@@ -6,7 +6,7 @@
         <div id="profile-timeline">
             <div id="timeline-img">
                 <% if(thatUser.avatar2) { %>
-                    <img src="<%= thatUser.avatar2 %>" alt="<%= thatUser.first %>">
+                    <img src="<%= thatUser.avatar2 %>" alt="">
                 <% }  %> 
                 <% if(locals.user.id == thatUser.id){ %>
                     <div id="edit-timeline">
@@ -30,14 +30,14 @@
             <div id="user-box">
                 <div id="user-img">
                     <% if(thatUser.avatar) { %>
-                        <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>">
+                        <img src="<%= thatUser.avatar %>" alt="">
                     <% } else { %>
-                        <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= thatUser.first %>">
+                        <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="">
                     <% } %>
-                    <div id="camera">
-                        <i class="fa-solid fa-camera"></i>
-                    </div>
                     <% if(locals.user.id == thatUser.id){ %>
+                        <div id="camera">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
                         <div id="edit2" class="edit2">
                             <form action="/change/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
                                 <input id="inp" type="text" name = "first" value="<%= thatUser.first  %>" required >
