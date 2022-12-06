@@ -42,9 +42,9 @@
   "description": "social media application",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod_start": "echo \"process.env.CODIAL_ENV\" && nodemon index.js"
+    "prod_start": "echo \"process.env.CODIAL_ENV\" && node index.js"
   },
   "author": "'sagar kapoor'",
   "license": "ISC",
