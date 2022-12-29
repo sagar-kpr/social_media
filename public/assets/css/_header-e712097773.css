@@ -91,6 +91,11 @@ body header #home #inner-home a {
   color: black;
 }
 
+body header #home #inner-home #home-icon{
+  border-bottom: 4px solid #1877F2;
+}
+
+
 body header #home #inner-home a .home-icons {
   width: 100px;
   height: 50px;
@@ -172,6 +177,7 @@ body header #user .text #msg-box .chat-friends {
   justify-content: flex-start;
   gap: 5px;
   font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+  
 }
 
 body header #user .text #msg-box .chat-friends #chat-friends-img-box {

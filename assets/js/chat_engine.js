@@ -1,8 +1,9 @@
+const env = require('./environment');
 class ChatEngine{
     constructor(chatbox, email){
         this.chatbox = $(`#${chatbox}`)
         this.userEmail = email
-        this.socket = io.connect('http://localhost:5000');
+        this.socket = io.connect(`mongodb://localhost/${env.db}`);
         this.socketHandler()
     }
 

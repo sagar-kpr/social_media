@@ -1,4 +1,4 @@
-require('dotenv').config();
+//require('dotenv').config();
 const express = require('express');
 const env = require('./config/environment');
 const app = express();
@@ -75,8 +75,8 @@ app.use(session({
         maxAge: (1000*60*200)
     },
     store: mongoStore.create({
-        mongoUrl : process.env.MONGODB_URL || `mongodb://localhost/${env.db}`,
-        //mongoUrl: `mongodb://localhost/${env.db}`,
+        //mongoUrl : process.env.MONGODB_URL || `mongodb://localhost/${env.db}`,
+        mongoUrl: `mongodb://localhost/${env.db}`,
         autoRemove:'disabled',
     })
 }));

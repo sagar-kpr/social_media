@@ -36,11 +36,12 @@ class ToggleAdd{
                         <p><a href="/home/profile/${otherUser._id}">${otherUser.first}  ${otherUser.last}</a></p>
                     </div>
                     <div id="add-box">
-                        <a class="toggle-remove" style="background-color:rgb(185, 36, 36) ;" href="/remove/remove_toggle/?id=${otherUser._id}>">
+                        <a class="toggle-remove" style="background-color:rgb(185, 36, 36) ;" href="/remove/remove_toggle/?id=${otherUser._id}">
                             <span>Remove</span>
                         </a>
                     </div>
                 </div>
+            
                 `))
             
                 }

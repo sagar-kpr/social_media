@@ -32,7 +32,7 @@ btn2.addEventListener('click', function(){
 });
 
 
-//check if user online 
+/*check if user online 
 
 var status = window.navigator.onLine;
 
@@ -51,4 +51,4 @@ function online(){
 function ofline(){
     document.getElementById('status').style.backgroundColor = "red";
     document.getElementById('status').style.border= "2px solid white";
-}
+}*/

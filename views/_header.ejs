@@ -19,7 +19,7 @@
     <% if(locals.user){ %>
         <div id="home">
             <div id="inner-home">
-                <a href="/home" class="a-tag" data-value="true" >
+                <a href="/home" id="home-icon" class="a-tag" data-value="true" >
                     <div class="home-icons" >
                         <img class="img" src="<%= assetsPath('icons/home.png') %>" width="25">
                     </div>
@@ -35,7 +35,7 @@
                         <img class="img" src="<%= assetsPath('icons/market.png') %>" width="25">
                     </div>
                 </a>
-                <a class="a-tag" data-value="false">
+                <a class="a-tag" href="/home/friends" data-value="false">
                     <div class="home-icons" >
                         <img class="img" src="<%= assetsPath('icons/people.png') %>" width="25">
                     </div>
@@ -86,7 +86,7 @@
                 </a>    
             </div>
             <div class="text">
-                <a href="/home/profile/<%= user.id %>">
+                <a href="/home/profile/<%= user.id %>" id="user-logo">
                     <img src="<%=user.avatar%>" alt="<%=user.first%>">
                 </a>
             </div>
@@ -107,6 +107,7 @@
 </header>
 <script src="<%= assetsPath('js/_header.js') %>"></script>
 <script src="<%= assetsPath('js/chat_toggle.js') %>"></script>
+
 <script>
     $(' .chat-friends').each(function(){
         let self = this;

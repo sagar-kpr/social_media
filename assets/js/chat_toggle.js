@@ -46,9 +46,12 @@ class ChatToggle{
                         <input placeholder="Type here..." id="inp">
                         <div id="send"><i id="btn" class="fa-solid fa-paper-plane"></i></div>
                     </div>
-                </div>`)
-                let script = $(` <script>
-
+                </div>
+                 <script>  new ChatEngine('chat-box', '<%= user._id%>') </script>
+                `)
+                let script = $(`
+                <script>
+                   
                     var minimize = document.getElementById('minimize');
                     var j = 0 ;
 
@@ -63,6 +66,7 @@ class ChatToggle{
                         }
                         j++;
                     })
+                    
                 </script>`)  
 
                 $('#main').append(newMsg)

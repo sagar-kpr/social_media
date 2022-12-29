@@ -1,7 +1,8 @@
+const env = require('./environment');
 module.exports.chatserver = function(chatServer){
     let io = require('socket.io')(chatServer, {
         cors: {
-            origin: 'https://funbuk.herokuapp.com'
+            origin: `mongodb://localhost/${env.db}`
         }
     });
 

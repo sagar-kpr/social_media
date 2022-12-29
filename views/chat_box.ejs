@@ -1,13 +1,11 @@
-
 <div id="chat-box">
-
     <div id="chat-header">
         <div id="user-box">
             <div id="user-img">
-                <img src="/images/fb.jpg">
+                <img src="<%= user.avatar %>">
             </div>
             <div id="user-name">
-                <p>Sagar kapoor</p>
+                <p><%= user.first %> <%= user.last %></p>
             </div>
         </div>
         <div id="cross-box">
@@ -28,5 +26,6 @@
     </div>
 </div>
 
+<script> new ChatEngine('chat-box',' <%= user._id %>')</script>
 <script src="<%= assetsPath('js/chat_box.js') %>"></script>
-<script src="<%= assetsPath('js/chat_engine.js') %>"></script>
+

@@ -28,63 +28,66 @@
                 <% } %>   
             </div>
             <div id="user-box">
-                <div id="user-img">
-                    <% if(thatUser.avatar) { %>
-                        <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>">
-                    <% } else { %>
-                        <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= thatUser.first %>">
-                    <% } %>
-                    <div id="camera">
-                        <i class="fa-solid fa-camera"></i>
-                    </div>
-                    <% if(locals.user.id == thatUser.id){ %>
-                        <div id="edit2" class="edit2">
-                            <form action="/change/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
-                                <input id="inp" type="text" name = "first" value="<%= thatUser.first  %>" required >
-                                <input id="inp" type="text" name = "last" value="<%= thatUser.last  %>" required >
-                                <input id= "inp" type="file" name = "avatar" >
-                                <input id="btn" type="submit" value="Update">
-                            </form>
-                        </div>
-                    <% } %>
-                </div>
-                <div id="user-name">
-                    <div id="user-name-text">
-                        <h2><%= thatUser.first %> <%= thatUser.last %></h2>
-                        <span><%= thatUser.friends.length %> friends</span>
-                    </div>
-                    <div id="user-name-img">
-                        <% for (list of users) { %>
-                            <% if(locals.user.id != list.id) { %>
-                                <% for(frnds of thatUser.friends){ %>
-                                    <% if(frnds == list.id) { %>
-                                        <img src="<%= list.avatar %>">
-                                    <% } %>
-                                <% } %>
-                            <% } %>   
+                
+                    <div id="user-img">
+                        <% if(thatUser.avatar) { %>
+                            <img src="<%= thatUser.avatar %>" alt="<%= thatUser.first %>">
+                        <% } else { %>
+                            <img src="https://www.oseyo.co.uk/wp-content/uploads/2020/05/empty-profile-picture-png-2-281x300.png" alt="<%= thatUser.first %>">
                         <% } %>
+                        <% if(locals.user.id == thatUser.id){ %>
+                        <div id="camera">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                            <div id="edit2" class="edit2">
+                                <form action="/change/<%= thatUser.id %>" enctype="multipart/form-data" method="post">
+                                    <input id="inp" type="text" name = "first" value="<%= thatUser.first  %>" required >
+                                    <input id="inp" type="text" name = "last" value="<%= thatUser.last  %>" required >
+                                    <input id= "inp" type="file" name = "avatar" >
+                                    <input id="btn" type="submit" value="Update">
+                                </form>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div id="user-name">
+                        <div id="user-name-text">
+                            <h2><%= thatUser.first %> <%= thatUser.last %></h2>
+                            <span><%= thatUser.friends.length %> friends</span>
+                        </div>
+                        <div id="user-name-img">
+                            <% for (list of users) { %>
+                                <% if(locals.user.id != list.id) { %>
+                                    <% for(frnds of thatUser.friends){ %>
+                                        <% if(frnds == list.id) { %>
+                                            <img src="<%= list.avatar %>">
+                                        <% } %>
+                                    <% } %>
+                                <% } %>   
+                            <% } %>
                         
-                    </div>
+                        </div>
                    
-                </div>
-                <div id="user-edit">
-                    <div id="user-add-story">
-                         <div id="icon">
-                            <i class="fa-solid fa-plus"></i>
-                         </div>
-                         <div id="story-text">
-                            <span>Add to story</span>
-                         </div>
                     </div>
-                    <div id="edit-profile">
-                        <div id="icon">
-                            <i class="fa-solid fa-pencil"></i>
-                         </div>
-                         <div id="story-text">
-                            <span>Edit profile</span>
-                         </div> 
+                
+                    <div id="user-edit">
+                        <div id="user-add-story">
+                            <div id="icon">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <div id="story-text">
+                                <span>Add to story</span>
+                            </div>
+                        </div>
+                        <div id="edit-profile">
+                            <div id="icon">
+                                <i class="fa-solid fa-pencil"></i>
+                            </div>
+                            <div id="story-text">
+                                <span>Edit profile</span>
+                            </div> 
+                        </div>
                     </div>
-                </div>
+                
             </div>
             <div id="user-links">
                 <div id="link-name">
@@ -156,4 +159,6 @@
     </div>
 
 </header>    
+
+<script src="<%= assetsPath('js/profile.js') %>"></script>
 
